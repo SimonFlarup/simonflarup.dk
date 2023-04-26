@@ -30,6 +30,7 @@
   "lower-secondary-education": "Lower Secondary Education",
   "present": "Present",
   "software-developer": "Software Developer (Part-time)",
+  "software-engineer": "Software Engineer",
   "student-worker": "Student Worker",
   "apprentice": "Apprentice",
   "october-abbreviation": "oct.",
@@ -94,5 +95,6 @@
   "other_category_drivers_license": "Category B",
   "other_drivers_licence_title": "Drivers License",
   "other_glenten_title": "Member of the advisory board",
-  "other_title": "Other"
+  "other_title": "Other",
+  "resume_ur_full_desc": "Java software engineer for the control and programming interface Polyscope by Universal Robots."
 }

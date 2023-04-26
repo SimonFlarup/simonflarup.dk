@@ -33,6 +33,7 @@
   "sdu": "Syddansk Universitet",
   "student-worker": "Studentermedhjælper",
   "software-developer": "Software Udvikler (Deltid)",
+  "software-engineer": "Civilingeniør - Software Engineering",
   "about_title": "Om",
   "born-in": "Født i",
   "about_location": "Odense, Fyn (Danmark)",
@@ -94,5 +95,6 @@
   "other_redmew_ext_desc_p1": "Bidraget med udvikling af tilføjelser til Factorio, gennemgang og godkendelse af kode skrevet af andre frivillige, hovedansvarlig for crowdsourcing af oversættelser samt vedligeholdelse af online spil servere.",
   "other_redmew_ext_desc_tech": "Primært beskæftiget med Lua og C#",
   "other_redmew_title": "Udvikler og administrator",
-  "other_title": "Øvrigt"
+  "other_title": "Øvrigt",
+  "resume_ur_full_desc": "Java software ingeniør for kontrollering og programmering systemet Polyscope hos Universal Robots."
 }

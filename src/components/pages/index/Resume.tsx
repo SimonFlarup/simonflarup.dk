@@ -29,6 +29,16 @@ function DescTemplate(props: PropsWithChildren) {
   )
 }
 
+function URFullDescription() {
+  const intl = useIntl()
+
+  return(
+    <DescTemplate>
+      {intl.formatMessage({ id: "resume_ur_full_desc" })}
+    </DescTemplate>
+  )
+}
+
 function URDescription() {
   const intl = useIntl()
 
@@ -121,19 +131,29 @@ export function Resume() {
   let resume: Resume[] = [
     {
       company: 'Universal Robots A/S',
-      title: intl.$t({id: 'software-developer'}),
+      title: intl.formatMessage({id: 'software-engineer'}),
+      logo: urImg,
+      start: { label: 'apr.' + ' 2023' },
+      end: {
+        label: intl.formatMessage({id: 'present'}),
+        dateTime: new Date().getFullYear(),
+      },
+      description: URFullDescription(),
+    },
+    {
+      company: 'Universal Robots A/S',
+      title: intl.formatMessage({id: 'software-developer'}),
       logo: urImg,
       start: { label: 'jan.' + ' 2021' },
       end: {
-        label: intl.$t({id: 'present'}),
-        dateTime: new Date().getFullYear(),
+        label: 'apr.' + ' 2023'
       },
       description: URDescription(),
       extendedDescription: URExtendedDescription()
     },
     {
       company: 'BROEN Valve Technologies',
-      title: intl.$t({id: 'student-worker'}),
+      title: intl.formatMessage({id: 'student-worker'}),
       logo: broenImg,
       start: { label: 'aug. 2019' },
       end: { label: 'jan. 2021' },
@@ -142,7 +162,7 @@ export function Resume() {
     },
     {
       company: 'Aarhus Tech',
-      title: intl.$t({id: 'apprentice'}),
+      title: intl.formatMessage({id: 'apprentice'}),
       logo: aarhusTechImg,
       start: { label: 'jan. 2017' },
       end: { label: 'aug. 2017' },
@@ -153,7 +173,7 @@ export function Resume() {
       company: 'Elgiganten A/S',
       title: 'Merchandiser',
       logo: elgigantenImg,
-      start: { label: (intl.$t({id: 'october-abbreviation'}) + ' 2015') },
+      start: { label: (intl.formatMessage({id: 'october-abbreviation'}) + ' 2015') },
       end: { label: 'aug. 2016' },
       description: ElgigantenDescription()
     },
@@ -163,7 +183,7 @@ export function Resume() {
     <div className="rounded-2xl border border-zinc-100 pt-6 px-6 pb-4 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">{intl.$t({id: 'work'})}</span>
+        <span className="ml-3">{intl.formatMessage({id: 'work'})}</span>
       </h2>
       <ol className="mt-6">
         {resume.map((role: Resume, roleIndex) => (
@@ -176,15 +196,15 @@ export function Resume() {
                   {role.logo()}
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
-                  <dt className="sr-only">{intl.$t({id: 'sr-role'})}</dt>
+                  <dt className="sr-only">{intl.formatMessage({id: 'sr-role'})}</dt>
                   <dd className="w-full flex text-sm font-medium text-zinc-900 dark:text-zinc-100">
                     {role.title}
                   </dd>
-                  <dt className="sr-only">{intl.$t({id: 'sr-company'})}</dt>
+                  <dt className="sr-only">{intl.formatMessage({id: 'sr-company'})}</dt>
                   <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                     {role.company}
                   </dd>
-                  <dt className="sr-only">{intl.$t({id: 'sr-date'})}</dt>
+                  <dt className="sr-only">{intl.formatMessage({id: 'sr-date'})}</dt>
                   <dd
                     className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
                     aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
