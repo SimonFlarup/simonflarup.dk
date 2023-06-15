@@ -39,6 +39,19 @@ function URFullDescription() {
   )
 }
 
+function URFullExtendedDescription() {
+  const intl = useIntl()
+
+  return(
+    <DescTemplate>
+      <br/>
+      {intl.formatMessage({ id: "resume_ur_full_ext_desc" })}
+      <br/><br/>
+      {intl.formatMessage({ id: "resume_ur_full_ext_desc_2" })}
+    </DescTemplate>
+  )
+}
+
 function URDescription() {
   const intl = useIntl()
 
@@ -139,6 +152,7 @@ export function Resume() {
         dateTime: new Date().getFullYear(),
       },
       description: URFullDescription(),
+      extendedDescription: URFullExtendedDescription()
     },
     {
       company: 'Universal Robots A/S',

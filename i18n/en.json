@@ -96,5 +96,7 @@
   "other_drivers_licence_title": "Drivers License",
   "other_glenten_title": "Member of the advisory board",
   "other_title": "Other",
-  "resume_ur_full_desc": "Java software engineer for the control and programming interface Polyscope by Universal Robots."
+  "resume_ur_full_desc": "Java software engineer influencing the development of Polyscope, the control and programming interface empowering the collaborative robots from Universal Robots.",
+  "resume_ur_full_ext_desc": "Developing and maintaining the Java application enabling programming and operating collaborative robots, making efforts to drive further longevity through platform upgrades. Contributing to the framework for third-party contributable Java applications for integration of end of tool effectors.",
+  "resume_ur_full_ext_desc_2": "Primarily working in a native Java suite"
 }

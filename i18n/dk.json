@@ -96,5 +96,7 @@
   "other_redmew_ext_desc_tech": "Primært beskæftiget med Lua og C#",
   "other_redmew_title": "Udvikler og administrator",
   "other_title": "Øvrigt",
-  "resume_ur_full_desc": "Java software ingeniør for kontrollering og programmering systemet Polyscope hos Universal Robots."
+  "resume_ur_full_desc": "Civilingeniør indenfor Software Engineering med afsæt i udviklingen af Polyscope, styrings- og programmerings interfacet bag de kollaborative robotter fra Universal Robots.",
+  "resume_ur_full_ext_desc": "Jeg udvikler og vedligeholder Java applikationen som gør det muligt at programmere og opererer kollaborative robotter. Mit mål er at styrke Polyscope gennem platform opgraderinger og kontribuiere til platformen for tredje-parts tilføjelser for integrationen af `end-of-tool` produkter.",
+  "resume_ur_full_ext_desc_2": "Jeg beskæftiger mig primært med Java"
 }
