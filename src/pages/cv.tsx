@@ -31,6 +31,20 @@ function Experience(props: {experience: ExperienceProp}) {
   )
 }
 
+function URFullDesc() {
+  return(
+    <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
+      Java software engineer influencing the development of Polyscope, the control and programming interface empowering the collaborative robots from Universal Robots.
+      <br/><br/>
+      Developing and maintaining the Java application enabling programming and operating collaborative robots, making efforts to drive further longevity through platform upgrades.
+      <br/>
+      Contributing to the framework for third-party contributable Java applications for integration of end of tool effectors.
+      <br/><br/>
+      Primarily working in a native Java suite
+    </p>
+  )
+}
+
 function URDesc() {
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
@@ -145,9 +159,16 @@ const CV = ({location}: any) => {
   let workExperience: ExperienceProp[] = [
     {
       company: "Universal Robots A/S",
+      title: "Software Engineer",
+      start: "April 2023",
+      end: "now",
+      description: URFullDesc()
+    },
+    {
+      company: "Universal Robots A/S",
       title: "Software Developer (Part-time)",
       start: "January 2021",
-      end: "now",
+      end: "April 2023",
       description: URDesc()
     },
     {
