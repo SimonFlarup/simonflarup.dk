@@ -32,71 +32,87 @@ function Experience(props: {experience: ExperienceProp}) {
 }
 
 function URFullDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      Java software engineer influencing the development of Polyscope, the control and programming interface empowering the collaborative robots from Universal Robots.
+      {intl.formatMessage({id: 'resume_ur_full_desc'})}
       <br/><br/>
-      Developing and maintaining the Java application enabling programming and operating collaborative robots, making efforts to drive further longevity through platform upgrades.
+      {intl.formatMessage({id: 'cv_ur_full_desc_2'})}
       <br/>
-      Contributing to the framework for third-party contributable Java applications for integration of end of tool effectors.
+      {intl.formatMessage({id: 'cv_ur_full_desc_3'})}
       <br/><br/>
-      Primarily working in a native Java suite
+      {intl.formatMessage({id: 'cv_ur_full_desc_4'})}
     </p>
   )
 }
 
 function URDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      Integrated member of the development team, responsible for maintaining and developing the user interface for controlling and programming the worlds leading collaborative robotic arms.
+      {intl.formatMessage({id: 'resume_ur_desc'})}
       <br/><br/>
-      Primarily working with Java, OSGi, Docker and Python
+      {intl.formatMessage({id: 'resume_ur_ext_desc_tech'})}
       <br/><br/>
-      <u>Responsibility</u>
+      <u>{intl.formatMessage({id: 'responsibility'})}</u>
       <br/>
-      <ul className="list-disc ml-8">
-        <li>Addressing technical debt and improvements for the software architecture</li>
-        <li>Feature development for third-party extension framework, based on OSGi</li>
-        <li>Implementation of features and bug fixing</li>
-        <li>Migrating and upgrading external libraries including upgrading the Java environment</li>
-        <li>Improving Continuous Integration through Jenkins and Docker</li>
-      </ul>
+      <div className="ml-8">
+        {intl.formatMessage({id: 'resume_ur_ext_desc_p1'})}
+        <br/>
+        {intl.formatMessage({id: 'resume_ur_ext_desc_p2'})}
+        <br/>
+        {intl.formatMessage({id: 'resume_ur_ext_desc_p3'})}
+        <br/>
+        {intl.formatMessage({id: 'resume_ur_ext_desc_p4'})}
+        <br/>
+        {intl.formatMessage({id: 'resume_ur_ext_desc_p5'})}
+      </div>
     </p>
   )
 }
 
 function BroenDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        Industry 4.0 and Internet of Things pilot project. Prototyping of internet and cloud connected valves using Arduino and Microsoft Azure through NB-IoT.
-        <br/><br/>
-        Primarily working with C# and C++
+      {intl.formatMessage({id: 'resume_broen_desc'})}
+      <br/><br/>
+      {intl.formatMessage({id: 'resume_broen_ext_desc_tech'})}
     </p>
   )
 }
 
 function AarhusDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        Responsible for the development of software for internal usage, focusing on improving the processes of student intake and counseling within the vocational institution. Point of contact for domain users. Web and database development with server deployment.
-        <br/><br/>
-        Primarily working with PHP, SQL and HTML, JavaScript and CSS using the Bootstrap framework
+      {intl.formatMessage({id: 'cv_apprentice_desc_1'})}
+      <br/><br/>
+      {intl.formatMessage({id: 'resume_apprentice_ext_desc_tech'})}
     </p>
   )
 }
 
 function ElgigantenDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        Youth worker within technical customer support. Providing direct customer support, configuration of devices, product showcasing and troubleshooting. 
+      {intl.formatMessage({id: 'resume_elgiganten_desc'})}
     </p>
   )
 }
 
 function MScDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        <u>Projects</u>
+        <u>{intl.formatMessage({id: 'projects'})}</u>
         <br/>
         <ul className="list-disc ml-8">
           <li>The longevity of modern software: A study of operational risks connected to open source libraries</li>
@@ -107,9 +123,11 @@ function MScDesc() {
 }
 
 function BScDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        <u>Projects</u>
+        <u>{intl.formatMessage({id: 'projects'})}</u>
         <br/>
         <ul className="list-disc ml-8">
           <li>Data-driven mobile application for enhanced guest experiences</li>
@@ -119,22 +137,28 @@ function BScDesc() {
 }
 
 function HFDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        Tailored selection of courses for fast tracked entry to university. 2 years accredited in 11 months. 
+      {intl.formatMessage({id: 'education_hf_desc'})}
     </p>
   )
 }
 
 function EUXDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        Suspended combined upper secondary education and vocational education within information technology, networking and computer programming. Suspended for seeking direct admission to university. 
+      {intl.formatMessage({id: 'cv_education_eux_1'})}
     </p>
   )
 }
 
 function EfterskoleDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
     </p>
@@ -142,11 +166,13 @@ function EfterskoleDesc() {
 }
 
 function RedmewDesc() {
+  const intl = useIntl()
+
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      Developer and administrator for the online community Redmew in the video game Factorio. Contributed with development of scenarios and modifications for Factorio, code review and approvals,, maintenance of online servers and head of crowdsourcing localization.
+      {intl.formatMessage({id: 'cv_redmew_1'})}
       <br/><br/>
-      Primarily working with Lua og C#
+      {intl.formatMessage({id: 'other_redmew_ext_desc_tech'})}
     </p>
   )
 }
@@ -159,36 +185,36 @@ const CV = ({location}: any) => {
   let workExperience: ExperienceProp[] = [
     {
       company: "Universal Robots A/S",
-      title: "Software Engineer",
+      title: intl.formatMessage({id: 'software-engineer'}),
       start: "April 2023",
-      end: "now",
+      end: intl.formatMessage({id: 'present'}),
       description: URFullDesc()
     },
     {
       company: "Universal Robots A/S",
-      title: "Software Developer (Part-time)",
-      start: "January 2021",
+      title: intl.formatMessage({id: 'software-developer'}),
+      start: intl.formatMessage({id: 'january'}) + " 2021",
       end: "April 2023",
       description: URDesc()
     },
     {
       company: "BROEN Valve Technologies",
-      title: "Student Worker",
+      title: intl.formatMessage({id: 'student-worker'}),
       start: "August 2019",
-      end: "January 2021",
+      end: intl.formatMessage({id: 'january'}) + " 2021",
       description: BroenDesc()
     },
     {
       company: "Aarhus Tech",
-      title: "Apprentice",
+      title: intl.formatMessage({id: 'apprentice'}),
       start: "August 2016",
       end: "August 2017",
       description: AarhusDesc()
     },
     {
       company: "Elgiganten",
-      title: "Merchandiser (Part-time)",
-      start: "October 2015",
+      title: intl.formatMessage({id: 'cv_elgiganten_title'}),
+      start: intl.formatMessage({id: 'october'}) + " 2015",
       end: "August 2016",
       description: ElgigantenDesc()
     },
@@ -196,38 +222,38 @@ const CV = ({location}: any) => {
 
   let education: ExperienceProp[] = [
     {
-      company: "University of Southern Denmark",
-      title: "Master of Science - Software Engineering",
+      company: intl.formatMessage({id: 'sdu'}),
+      title: intl.formatMessage({id: 'cv_msc_title'}),
       start: "September 2021",
-      end: "July 2023",
+      end: intl.formatMessage({id: 'july'}) + "  2023",
       description: MScDesc()
     },
     {
-      company: "University of Southern Denmark",
-      title: "Bachelor of Science - Software Engineering",
+      company: intl.formatMessage({id: 'sdu'}),
+      title: intl.formatMessage({id: 'cv_bsc_title'}),
       start: "September 2018",
-      end: "July 2021",
+      end: intl.formatMessage({id: 'july'}) + "  2021",
       description: BScDesc()
     },
     {
       company: "Randers HF & VUC",
-      title: "Higher Preparatory Examination",
+      title: intl.formatMessage({id: 'higher-preparatory-examination'}),
       start: "August 2017",
-      end: "July 2018",
+      end: intl.formatMessage({id: 'july'}) + "  2018",
       description: HFDesc()
     },
     {
       company: "Aarhus Tech & Tradium Randers",
-      title: "Data technician (EUX)",
+      title: intl.formatMessage({id: 'cv_eux_title'}),
       start: "August 2015",
       end: "August 2017",
       description: EUXDesc()
     },
     {
       company: "Bjergsnæs Efterskole",
-      title: "Lower Secondary Education",
+      title: intl.formatMessage({id: 'lower-secondary-education'}),
       start: "August 2014",
-      end: "July 2015",
+      end: intl.formatMessage({id: 'july'}) + "  2015",
       description: EfterskoleDesc()
     }
   ]
@@ -251,7 +277,7 @@ const CV = ({location}: any) => {
                     Simon Holland Flarup
                   </h1>
                   <h1 className="text-lg text-zinc-800 dark:text-zinc-100">
-                    {intl.formatMessage({ id: "Young Software Engineer with a flair for software maintainability" })}
+                    {intl.formatMessage({ id: 'headline_index' })}
                   </h1>
                 </div>
               </div>
@@ -260,13 +286,13 @@ const CV = ({location}: any) => {
                 <div className="flex gap-2">
                   <CakeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
                   <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    24 years old
+                  {intl.formatMessage({ id: 'cv_age' })}
                   </p>
                 </div>
                 <div className="flex gap-2">
                   <HomeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
                   <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    5220 Odense SØ, Denmark
+                  {intl.formatMessage({ id: 'cv_location' })}
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -301,24 +327,20 @@ const CV = ({location}: any) => {
           <div className="rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <InfoCircleIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Summary'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'cv_summary_title'})}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              I am a young software engineer with a couple of years experience in software development. I have been working
-              as a software developer at Universal Robots A/S for a few years. The past years I have had a focus on improving
-              my skills for analyzing and improving software applications. I hope to be able to employ and refine these skills in
-              the future.
+              {intl.formatMessage({id: 'cv_summary_1'})}
               <br/><br/>
-              My primary programming languages are Java, Typescript and Python, but I am knowledgeable in a wide ranges of
-              technologies and programming languages. However, I would not pass on the chance of expanding my repertoire.
+              {intl.formatMessage({id: 'cv_summary_2'})}
             </p>
           </div>
 
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <BriefcaseIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Work experience'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'cv_work_title'})}</span>
             </h2>
             
             {workExperience.map((role: ExperienceProp) => (
@@ -329,7 +351,7 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <AcademicIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Education'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'education'})}</span>
             </h2>
             {education.map((role: ExperienceProp) => (
               <Experience experience={role}/>
@@ -343,18 +365,18 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <LanguageIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Language'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'cv_language_title'})}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <div className="grid grid-cols-2">
               <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>Danish</b> - Mother tongue
+                <b>{intl.formatMessage({id: 'cv_language_danish'})}</b> - {intl.formatMessage({id: 'cv_language_mother_tongue'})}
               </p>
               <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>German</b> - Basic
+                <b>{intl.formatMessage({id: 'cv_language_german'})}</b> - {intl.formatMessage({id: 'cv_language_basic'})}
               </p>
               <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>English</b> - Fluent
+                <b>{intl.formatMessage({id: 'cv_language_english'})}</b> - {intl.formatMessage({id: 'cv_language_fluent'})}
               </p>
             </div>
           </div>
@@ -362,14 +384,14 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <TagIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Other'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'other_title'})}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              <b>Drivers License</b> - Category B
+              <b>{intl.formatMessage({id: 'other_drivers_licence_title'})}</b> - {intl.formatMessage({id: 'other_category_drivers_license'})}
             </p>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              <b>Member of the advisory board</b> - Glenten Antennelaug (2018 - 2026)
+              <b>{intl.formatMessage({id: 'other_glenten_title'})}</b> - Glenten Antennelaug (2018 - 2026)
             </p>
           </div>
 
@@ -378,13 +400,13 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <SmileyIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Volunteering'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'volunteering'})}</span>
             </h2>
             <Experience experience={{
               company: "Redmew.com - Factorio community",
-              title: "Developer and administrator",
+              title: intl.formatMessage({id: 'other_redmew_title'}),
               start: "May 2018",
-              end: "now",
+              end: intl.formatMessage({id: 'present'}),
               description: RedmewDesc()
             }}/>
           </div>
@@ -394,7 +416,7 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <HashtagIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'Keywords'})}</span>
+              <span className="ml-3">{intl.formatMessage({id: 'cv_keywords_title'})}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
@@ -412,8 +434,6 @@ const CV = ({location}: any) => {
 
 export default CV
 
-import EN from "../../i18n/en.json"
-import DA from "../../i18n/dk.json"
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
 import { StaticImage } from "gatsby-plugin-image"
