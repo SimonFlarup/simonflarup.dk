@@ -267,7 +267,7 @@ const CV = ({location}: any) => {
               <div className="flex gap-8">
                 <div className="hidden print:block shrink basis-[20%] my-auto">
                   <StaticImage
-                    src={"../../images/simon_photocopy.png"}
+                    src={"../../images/simon_portait.jpg"}
                     alt=""
                     className={'rounded-full bg-zinc-100 object-scale-down dark:bg-zinc-800 aspect-square'}
                   />

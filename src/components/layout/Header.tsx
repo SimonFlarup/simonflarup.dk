@@ -232,9 +232,9 @@ const AvatarContainer: React.FC<PropsWithChildren<PropsWithClassName>> = props =
 const Avatar: React.FC<PropsWithChildren<PropsWithClassName>> = props => {
   return (
       <StaticImage
-        src={"../../images/simon_photocopy.png"}
+        src={"../../images/simon_portrait_small.jpg"}
         alt=""
-        className={'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-24 w-24'}
+        className={'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-28 w-28'}
       />
   )
 }

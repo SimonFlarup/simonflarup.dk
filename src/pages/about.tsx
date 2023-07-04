@@ -118,7 +118,7 @@ export default function About() {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <StaticImage
-                src="../images/photos/polarbear.jpg"
+                src="../images/simon_wall.jpg"
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-[9/10] -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
