@@ -19,7 +19,7 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-image", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/simon_portrait_small.jpg"
+      "icon": "src/images/simon_portrait_ur.jpg"
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", 'gatsby-plugin-postcss', {
       resolve: 'gatsby-source-filesystem',

@@ -264,13 +264,15 @@ const CV = ({location}: any) => {
         <div className="px-5 rounded-2xl">
           <div className="flex w-full flex-col">
             <div className="flex flex-col w-full">
-              <div className="flex gap-8">
+              <div className="flex gap-8 print:mt-5">
                 <div className="hidden print:block shrink basis-[20%] my-auto">
-                  <StaticImage
-                    src={"../../images/simon_portrait.jpg"}
-                    alt=""
-                    className={'rounded-full bg-zinc-100 object-scale-down dark:bg-zinc-800 aspect-square'}
-                  />
+                  <div className="">
+                    <StaticImage
+                      src={"../../images/simon_portrait_ur.jpg"}
+                      alt=""
+                      className={'rounded-full bg-zinc-100 object-scale-down dark:bg-zinc-800 aspect-square'}
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col my-auto w-full">
                   <h1 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
