@@ -72,14 +72,16 @@ export default function Home() {
           </div>
         </Container>
         <Photos />
-        <Container className="mt-24 md:mt-28 hidden xl:block">
-          <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-10 xl:max-w-none xl:grid-cols-2">
-            <div className="space-y-10 xl:pr-8">
-              <Resume />
-              <Other />
-            </div>
-            <div className="space-y-10 xl:pl-8">
-              <Education/>
+        <Container className="">
+          <div className="mt-24 md:mt-28 hidden xl:block">
+            <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-10 xl:max-w-none xl:grid-cols-2">
+              <div className="space-y-10 xl:pr-8">
+                <Resume />
+                <Other />
+              </div>
+              <div className="space-y-10 xl:pl-8">
+                <Education/>
+              </div>
             </div>
           </div>
         </Container>

@@ -13,7 +13,7 @@ export interface ExperienceProp {
 
 function Experience(props: {experience: ExperienceProp}) {
   return (
-    <div className="break-inside-avoid-page">
+    <div className="">
       <hr className="mt-3 border-t border-zinc-700/40 dark:border-zinc-200"/>
 
       <div className="flex mt-3">
