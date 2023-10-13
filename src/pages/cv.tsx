@@ -13,7 +13,7 @@ export interface ExperienceProp {
 
 function Experience(props: {experience: ExperienceProp}) {
   return (
-    <div className="">
+    <div className="break-inside-avoid-page">
       <hr className="mt-3 border-t border-zinc-700/40 dark:border-zinc-200"/>
 
       <div className="flex mt-3">
@@ -260,7 +260,7 @@ const CV = ({location}: any) => {
 
   return (
     <Layout printHide={true}>
-      <Container className="">
+      <Container printHide={true}>
         <div className="px-5 rounded-2xl">
           <div className="flex w-full flex-col">
             <div className="flex flex-col w-full">
@@ -284,43 +284,11 @@ const CV = ({location}: any) => {
                 </div>
               </div>
               <span className="my-3 border-t-2 border-zinc-700/40 dark:border-zinc-200"/>
-              <div className="grid print:grid-cols-2 md:grid-cols-2 gap-2">
-                <div className="flex gap-2">
-                  <CakeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                  {intl.formatMessage({ id: 'cv_age' })}
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <HomeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                  {intl.formatMessage({ id: 'cv_location' })}
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <OutlineMailIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    mail@simonflarup.dk
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <PhoneIcon className="h-6 w-6 print:h-5 print:w-5flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    (+45) 20 99 55 63
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    www.simonflarup.dk
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
-                  <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-                    www.linkedin.com/in/simonflarup
-                  </p>
-                </div>
+              <div className="">
+                <CVData className="grid print:hidden md:grid-cols-2 2xl:grid-cols-3 gap-2"/>
+              </div>
+              <div className="">
+                <CVData className="hidden print:grid grid-cols-3 gap-2"/>
               </div>
             </div>
           </div>
@@ -350,7 +318,7 @@ const CV = ({location}: any) => {
             ))}
           </div>
 
-          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
+          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <AcademicIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
               <span className="ml-3">{intl.formatMessage({id: 'education'})}</span>
@@ -364,7 +332,7 @@ const CV = ({location}: any) => {
 
           <div className="flex flex-col justify-between">
 
-          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
+          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <LanguageIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
               <span className="ml-3">{intl.formatMessage({id: 'cv_language_title'})}</span>
@@ -383,7 +351,7 @@ const CV = ({location}: any) => {
             </div>
           </div>
 
-          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
+          <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <TagIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
               <span className="ml-3">{intl.formatMessage({id: 'other_title'})}</span>
@@ -431,6 +399,51 @@ const CV = ({location}: any) => {
 
       </Container>
     </Layout>
+  )
+}
+
+function CVData(props:{className:string}) {
+  const intl = useIntl()
+
+  return(
+    <div className={props.className}>
+      <div className="flex gap-2">
+        <CakeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+        {intl.formatMessage({ id: 'cv_age' })}
+        </p>
+      </div>
+      <div className="flex gap-2">
+        <HomeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+        {intl.formatMessage({ id: 'cv_location' })}
+        </p>
+      </div>
+      <div className="flex gap-2">
+        <OutlineMailIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+          mail@simonflarup.dk
+        </p>
+      </div>
+      <div className="flex gap-2">
+        <PhoneIcon className="h-6 w-6 print:h-5 print:w-5flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+          (+45) 20 99 55 63
+        </p>
+      </div>
+      <div className="flex gap-2">
+        <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+          www.simonflarup.dk
+        </p>
+      </div>
+      <div className="flex gap-2">
+        <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
+        <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
+          www.linkedin.com/in/simonflarup
+        </p>
+      </div>
+    </div>
   )
 }
 
