@@ -328,7 +328,7 @@ const CV = ({location}: any) => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-8 break-inside-avoid-page">
+          <div className="grid print:grid-cols-2 print:gap-8 xl:grid-cols-2 xl:gap-8 break-inside-avoid-page">
 
           <div className="flex flex-col justify-between">
 
@@ -338,14 +338,14 @@ const CV = ({location}: any) => {
               <span className="ml-3">{intl.formatMessage({id: 'cv_language_title'})}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
-            <div className="grid grid-cols-2">
+            <div className="grid print:grid-cols-2 lg:grid-cols-2 lg:gap-1 print:gap-1">
               <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
                 <b>{intl.formatMessage({id: 'cv_language_danish'})}</b> - {intl.formatMessage({id: 'cv_language_mother_tongue'})}
               </p>
-              <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="mt-2 order-last print:order-2 lg:order-2 print:text-xs text-zinc-500 dark:text-zinc-400">
                 <b>{intl.formatMessage({id: 'cv_language_german'})}</b> - {intl.formatMessage({id: 'cv_language_basic'})}
               </p>
-              <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="mt-2 print:order-3 lg:order-3 print:text-xs text-zinc-500 dark:text-zinc-400">
                 <b>{intl.formatMessage({id: 'cv_language_english'})}</b> - {intl.formatMessage({id: 'cv_language_fluent'})}
               </p>
             </div>
