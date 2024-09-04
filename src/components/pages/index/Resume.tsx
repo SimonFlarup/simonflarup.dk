@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, ReactNode } from "react"
 import { useIntl } from "react-intl"
 import { BriefcaseIcon } from "../../icons/MiscIcons"
-import { aarhusTechImg } from "./educationImages"
+import { aarhusTechImg } from "./EducationImages"
 import { urImg, broenImg, elgigantenImg } from "./WorkImages"
 import { Disclosure } from "@headlessui/react"
 

@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, ReactNode } from "react"
 import { useIntl } from "react-intl"
 import { AcademicIcon } from "../../icons/MiscIcons"
-import { sduImg, randersHfImg, aarhusTechImg, tradiumImg, bsImg } from "./educationImages"
 import { Disclosure } from "@headlessui/react"
+import { aarhusTechImg, bsImg, randersHfImg, sduImg, tradiumImg } from "./EducationImages"
 
 export interface Education {
     company: string,
