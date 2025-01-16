@@ -1,5 +1,5 @@
 import * as React from "react"
-import { HeadFC, navigate } from "gatsby"
+import { graphql, HeadFC, navigate, useStaticQuery } from "gatsby"
 import { useIntl } from "react-intl"
 import Seo from "../components/layout/Seo"
 
@@ -192,6 +192,8 @@ function RedmewDesc() {
 const CV = ({location}: any) => {
   const intl = useIntl()
 
+  const data = useStaticQuery(graphql`query { file(relativePath: { eq: "simon_portrait_ur.jpg" }) { childImageSharp { gatsbyImageData } } } `)
+
   let workExperience: ExperienceProp[] = [
     {
       company: "Universal Robots A/S",
@@ -277,11 +279,8 @@ const CV = ({location}: any) => {
               <div className="flex gap-8 print:mt-5">
                 <div className="hidden print:block shrink basis-[20%] my-auto">
                   <div className="">
-                    <StaticImage
-                      src={"../../images/simon_portrait_ur.jpg"}
-                      alt=""
-                      className={'rounded-full bg-zinc-100 object-scale-down dark:bg-zinc-800 aspect-square'}
-                    />
+                    <GatsbyImage image={data.file.childImageSharp.gatsbyImageData}
+                    className={'rounded-full bg-zinc-100 object-scale-down dark:bg-zinc-800 aspect-square'} alt={"Profile Picture of Simon Holland Flarup"}                    />
                   </div>
                 </div>
                 <div className="flex flex-col my-auto w-full">
@@ -461,7 +460,7 @@ export default CV
 
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { ReactNode } from "react"
 import { AcademicIcon, BriefcaseIcon, CakeIcon, HashtagIcon, HomeIcon, InfoCircleIcon, LanguageIcon, OutlineMailIcon, PhoneIcon, SmileyIcon, TagIcon, WebIcon } from "../components/icons/MiscIcons"
 
