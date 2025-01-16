@@ -400,7 +400,7 @@ const CV = ({location}: any) => {
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              Java – Python – Typescript – C++ – C# – .NET – OSGi – SCRUM – LUA – PHP – JavaScript – Groovy – REST – JSON
+              Java – Python – Typescript – C++ – C# – .NET – OSGi – SCRUM – LUA – PHP – JUnit – Spring Boot – JavaScript – Angular – NX – Cypress – Karma – Jest – Groovy – REST – JSON
               – Docker – IntelliJ IDEA – Atlassian – Jira – Bitbucket – Confluence – Jenkins
             </p>
           </div>
