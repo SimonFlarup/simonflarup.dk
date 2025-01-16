@@ -38,11 +38,21 @@ function URFullDesc() {
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
       {intl.formatMessage({id: 'resume_ur_full_desc'})}
       <br/><br/>
-      {intl.formatMessage({id: 'cv_ur_full_desc_2'})}
-      <br/>
-      {intl.formatMessage({id: 'cv_ur_full_desc_3'})}
-      <br/><br/>
       {intl.formatMessage({id: 'cv_ur_full_desc_4'})}
+      <br/><br/>
+      <u>{intl.formatMessage({id: 'achievements'})}</u>
+      <br/>
+      <div className="ml-8">
+        {intl.formatMessage({id: 'cv_ur_full_li_1'})}
+        <br/>
+        {intl.formatMessage({id: 'cv_ur_full_li_2'})}
+        <br/>
+        {intl.formatMessage({id: 'cv_ur_full_li_3'})}
+        <br/>
+        {intl.formatMessage({id: 'cv_ur_full_li_4'})}
+        <br/>
+        {intl.formatMessage({id: 'cv_ur_full_li_5'})}
+      </div>
     </p>
   )
 }
@@ -375,7 +385,7 @@ const CV = ({location}: any) => {
             <Experience experience={{
               company: "Redmew.com - Factorio community",
               title: intl.formatMessage({id: 'other_redmew_title'}),
-              start: "May 2018",
+              start: intl.formatMessage({id: 'may'}) + "  2018",
               end: intl.formatMessage({id: 'present'}),
               description: RedmewDesc()
             }}/>
