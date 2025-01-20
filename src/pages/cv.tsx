@@ -36,9 +36,13 @@ function URFullDesc() {
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'resume_ur_full_desc'})}
+      {intl.formatMessage({id: 'resume_ur_full_stack_desc'})}
       <br/><br/>
-      {intl.formatMessage({id: 'cv_ur_full_desc_4'})}
+      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc'})}
+      <br/><br/>
+      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc_2'})}
+      <br/><br/>
+      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc_3'})}
       <br/><br/>
       <u>{intl.formatMessage({id: 'achievements'})}</u>
       <br/>
@@ -261,13 +265,13 @@ const CV = ({location}: any) => {
       end: "August 2017",
       description: EUXDesc()
     },
-    {
+    /*{
       company: "Bjergsnæs Efterskole",
       title: intl.formatMessage({id: 'lower-secondary-education'}),
       start: "August 2014",
       end: intl.formatMessage({id: 'july'}) + "  2015",
       description: EfterskoleDesc()
-    }
+    }*/
   ]
 
   return (
@@ -431,25 +435,25 @@ function CVData(props:{className:string}) {
       <div className="flex gap-2">
         <OutlineMailIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-          mail@simonflarup.dk
+          <a href="mailto:mail@simonflarup.dk">mail@simonflarup.dk</a>
         </p>
       </div>
       <div className="flex gap-2">
         <PhoneIcon className="h-6 w-6 print:h-5 print:w-5flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-          (+45) 20 99 55 63
+          <a href="tel:+4520995563">(+45) 20 99 55 63</a>
         </p>
       </div>
       <div className="flex gap-2">
         <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-          www.simonflarup.dk
+          <a href="https://www.simonflarup.dk">www.simonflarup.dk</a>
         </p>
       </div>
       <div className="flex gap-2">
         <WebIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-          www.linkedin.com/in/simonflarup
+          <a href="https://www.linkedin.com/in/simonflarup">www.linkedin.com/in/simonflarup</a>
         </p>
       </div>
     </div>

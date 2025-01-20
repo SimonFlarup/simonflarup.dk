@@ -29,6 +29,31 @@ function DescTemplate(props: PropsWithChildren) {
   )
 }
 
+function URFullStackDescription() {
+  const intl = useIntl()
+
+  return(
+    <DescTemplate>
+      {intl.formatMessage({id: "resume_ur_full_stack_desc"})}
+    </DescTemplate>
+  )
+}
+
+function URFullStackExtendedDescription() {
+  const intl = useIntl()
+
+  return(
+    <DescTemplate>
+      <br/>
+      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc" })}
+      <br/><br/>
+      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc_2" })}
+      <br/><br/>
+      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc_3" })}
+    </DescTemplate>
+  )
+}
+
 function URFullDescription() {
   const intl = useIntl()
 
@@ -144,12 +169,23 @@ export function Resume() {
   let resume: Resume[] = [
     {
       company: 'Universal Robots A/S',
-      title: intl.formatMessage({id: 'software-engineer'}),
+      title: intl.formatMessage({id: 'full-stack-software-engineer'}),
       logo: urImg,
-      start: { label: 'apr.' + ' 2023' },
+      start: { label: 'apr.' + ' 2024' },
       end: {
         label: intl.formatMessage({id: 'present'}),
         dateTime: new Date().getFullYear(),
+      },
+      description: URFullStackDescription(),
+      extendedDescription: URFullStackExtendedDescription()
+    },
+    {
+      company: 'Universal Robots A/S',
+      title: intl.formatMessage({id: 'java-software-engineer'}),
+      logo: urImg,
+      start: { label: 'apr.' + ' 2023' },
+      end: {
+        label: 'apr.' + ' 2024'
       },
       description: URFullDescription(),
       extendedDescription: URFullExtendedDescription()
