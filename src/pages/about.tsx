@@ -98,7 +98,7 @@ function IdIcon(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
 
 
 export default function About() {
-  const intl = useIntl()
+  const {t} = useTranslation();
   const [age, setAge] = useState(24)
 
   function calculateAge(birthday: Date) {
@@ -127,26 +127,26 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              {intl.formatMessage({ id: "about_header" })}
+              {t("about_header")}
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                {intl.formatMessage({ id: "about_content_p1" })} <b>{intl.formatMessage({ id: "about_velocity" })}</b>, <b>{intl.formatMessage({ id: "about_quality" })}</b> {intl.formatMessage({ id: "about_and" })} <b>{intl.formatMessage({ id: "about_longevity" })}</b>
+                {t("about_content_p1")} <b>{t("about_velocity")}</b>, <b>{t("about_quality")}</b> {t("about_and")} <b>{t("about_longevity")}</b>
               </p>
               <p>
-                {intl.formatMessage({ id: "about_content_p2" })}
+                {t("about_content_p2")}
               </p>
               <p>
-                {intl.formatMessage({ id: "about_content_p3" })}
+                {t("about_content_p3")}
               </p>
               <p>
-                {intl.formatMessage({ id: "about_content_p4" })}
+                {t("about_content_p4")}
               </p>
               <p>
-                {intl.formatMessage({ id: "about_content_p5" })}
+                {t("about_content_p5")}
               </p>
               <p>
-                {intl.formatMessage({ id: "about_content_p6" })} <a className="text-red-500 dark:text-red-400" href={"mailto:mail+contact@simonflarup.dk"}>{intl.formatMessage({ id: "about_content_contant_catch_phrase" })}</a>
+                {t("about_content_p6")} <a className="text-red-500 dark:text-red-400" href={"mailto:mail+contact@simonflarup.dk"}>{t("about_content_contant_catch_phrase")}</a>
               </p>
             </div>
           </div>
@@ -154,19 +154,19 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <Info icon={IdIcon} className="mt-4">
-                Simon Holland Flarup ({intl.formatMessage({ id: "pronoun" })})
+                Simon Holland Flarup ({t("pronoun")})
               </Info>
               <Info icon={CakeIcon} className="mt-4">
-                {intl.formatMessage({ id: "born-in" })} 1998 ({age} {intl.formatMessage({ id: "years_old_abbr" })})
+                {t("born-in")} 1998 ({age} {t("years_old_abbr")})
               </Info>
               <Info icon={HomeIcon} className="mt-4">
-                {intl.formatMessage({ id: "about_location" })}
+                {t("about_location")}
               </Info>
               <SocialLink href="https://github.com/SimonFlarup" icon={GitHubIcon} className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
-              {intl.formatMessage({ id: "aria-follow-on-github" })}
+              {t("aria-follow-on-github")}
               </SocialLink>
               <SocialLink href="https://linkedin.com/in/SimonFlarup" icon={LinkedInIcon} className="mt-4">
-              {intl.formatMessage({ id: "aria-follow-on-linkedin" })}
+              {t("aria-follow-on-linkedin")}
               </SocialLink>
               <SocialLink
                 href="mailto:mail+contact@simonflarup.dk"
@@ -190,17 +190,28 @@ export default function About() {
   )
 }
 
-import EN from "../../i18n/en.json"
-import DA from "../../i18n/da.json"
 import Seo from "../components/layout/Seo"
-import { HeadFC } from "gatsby"
-import { useIntl } from 'react-intl'
+import { graphql, HeadFC } from "gatsby"
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 export const Head: HeadFC = (props) => {
-  const locale = (props.pageContext as { locale: string }).locale
-  const title = { "en-US": EN["about_title"], "da-DK": DA["about_title"] }
+  const {t} = useTranslation();
 
   return (
-    <Seo locale={locale} title={title} />
+    <Seo title={t("about_title")} />
   )
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

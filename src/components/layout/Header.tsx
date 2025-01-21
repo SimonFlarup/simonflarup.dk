@@ -1,13 +1,12 @@
 import { Menu, Popover, Transition } from '@headlessui/react'
 
 import { Container } from '../Container'
-import React, { Fragment, PropsWithChildren, useEffect, useRef } from 'react'
+import {Link, useI18next, useTranslation} from 'gatsby-plugin-react-i18next';
+import React, { Fragment, PropsWithChildren } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import darkModeToggleHandler from '../DarkModeSwitchScript'
-import { navigate } from 'gatsby'
-import { useIntl } from 'react-intl'
 import { ChevronDownIcon, CloseIcon, GlobeIcon, SunIcon, MoonIcon } from '../icons/HeaderIcons'
-import { changeLocale, Link } from 'gatsby-plugin-intl'
+import { graphql } from 'gatsby';
 
 const MobileNavItem: React.FC<PropsWithChildren> = props => {
   return (
@@ -20,11 +19,12 @@ const MobileNavItem: React.FC<PropsWithChildren> = props => {
 }
 
 const MobileNavigation: React.FC<PropsWithChildren<PropsWithClassName>> = props => {
-  const intl = useIntl()
+  const {t} = useTranslation();
+
   return (
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-        {intl.formatMessage({id: "menu"})}
+        {t("menu")}
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
       <Transition.Root>
@@ -53,17 +53,17 @@ const MobileNavigation: React.FC<PropsWithChildren<PropsWithClassName>> = props 
             className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
           >
             <div className="flex flex-row-reverse items-center justify-between">
-              <Popover.Button aria-label={intl.formatMessage({id: "aria-close-menu"})} className="-m-1 p-1">
+              <Popover.Button aria-label={t("aria-close-menu")} className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
               <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                {intl.formatMessage({id: "navigation"})}
+                {t("navigation")}
               </h2>
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem><Link to={"/"}>{intl.formatMessage({id: "home"})}</Link></MobileNavItem>
-                <MobileNavItem><Link to={"/about/"}>{intl.formatMessage({id: "about"})}</Link></MobileNavItem>
+                <MobileNavItem><Link to={"/"}>{t("home")}</Link></MobileNavItem>
+                <MobileNavItem><Link to={"/about/"}>{t("about")}</Link></MobileNavItem>
                 {/*
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
                 <MobileNavItem href="/speaking">Speaking</MobileNavItem>
@@ -98,13 +98,13 @@ const NavItem: React.FC<PropsWithChildren> = props => {
 }
 
 function DesktopNavigation(props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLElement> & React.HTMLAttributes<HTMLElement>) {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem><Link to={"/"}>{intl.formatMessage({id: "home"})}</Link></NavItem>
-        <NavItem><Link to={"/about/"}>{intl.formatMessage({id: "about"})}</Link></NavItem>
+        <NavItem><Link to={"/"}>{t("home")}</Link></NavItem>
+        <NavItem><Link to={"/about/"}>{t("about")}</Link></NavItem>
       </ul>
     </nav>
   )
@@ -116,11 +116,11 @@ enum Language {
 }
 
 function LanguageDropdown() {
-  const intl = useIntl();
+  const {languages, changeLanguage} = useI18next();
 
 
   const switchLanguage = (language: Language) => {
-    changeLocale(language)
+    changeLanguage(language)
   }
 
   return (
@@ -175,7 +175,7 @@ function LanguageDropdown() {
 }
 
 function ModeToggle() {
-  const intl = useIntl()
+  const {t} = useTranslation()
 
   const toggleOnClick = function () {
     if (localStorage.theme === 'light') {
@@ -190,7 +190,7 @@ function ModeToggle() {
   return (
     <button
       type="button"
-      aria-label={intl.formatMessage({id: "aria-toggle-dark-mode"})}
+      aria-label={t("aria-toggle-dark-mode")}
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleOnClick}
     >
@@ -205,12 +205,12 @@ type PropsWithClassName<P = unknown> = P & {
 }
 
 const AvatarContainer: React.FC<PropsWithChildren<PropsWithClassName>> = props => {
-  const intl = useIntl()
+  const {t} = useTranslation()
   
   return (
     <Link
       to="/"
-      aria-label={intl.formatMessage({id: "home"})}
+      aria-label={t("home")}
       className={props.className + ' pointer-events-auto'}
       {...props}
     >
@@ -266,3 +266,17 @@ export default function Header(props: {printHide?: boolean}) {
     </>
   )
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

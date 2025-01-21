@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, ReactNode } from "react"
-import { useIntl } from "react-intl"
 import { TagIcon } from "../../icons/MiscIcons"
 import { Disclosure } from "@headlessui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export interface Other {
     company: string,
@@ -27,51 +27,51 @@ function DescTemplate(props: PropsWithChildren) {
 }
 
 function RedMewDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "other_redmew_desc" })}
+      {t("other_redmew_desc")}
     </DescTemplate>
   )
 }
 
 function RedMewExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "other_redmew_ext_desc_p1" })}
+      {t("other_redmew_ext_desc_p1")}
       <br/><br/>
-      {intl.formatMessage({ id: "other_redmew_ext_desc_tech" })}
+      {t("other_redmew_ext_desc_tech")}
     </DescTemplate>
   )
 }
 
   
 export function Other() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   let other: Other[] = [
     {
       company: 'RedMew.com - Factorio Community',
-      title: intl.formatMessage({ id: "other_redmew_title" }),
+      title: t("other_redmew_title"),
       start: { label: '2018' },
       end: {
-        label: intl.formatMessage({id: 'present'}),
+        label: t("present"),
         dateTime: new Date().getFullYear(),
       },
       description: RedMewDescription(),
       extendedDescription: RedMewExtendedDescription()
     },
     {
-      company: intl.formatMessage({ id: "other_category_drivers_license" }),
-      title: intl.formatMessage({ id: "other_drivers_licence_title" }),
+      company: t("other_category_drivers_license"),
+      title: t("other_drivers_licence_title"),
     },
     {
       company: 'Glenten Antennelaug', 
-      title: intl.formatMessage({ id: "other_glenten_title" }),
+      title: t("other_glenten_title"),
       start: { label: '2018' },
       end: { label: '2026' },
     }
@@ -81,7 +81,7 @@ export function Other() {
     <div className="rounded-2xl border border-zinc-100 pt-6 px-6 pb-4 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <TagIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">{intl.formatMessage({id: 'other_title'})}</span>
+        <span className="ml-3">{t("other_title")}</span>
       </h2>
       <ol className="mt-6">
         {other.map((role: Other, roleIndex) => (
@@ -91,16 +91,16 @@ export function Other() {
               <Disclosure.Button className="flex flex-col" disabled={role.extendedDescription ? false : true}>
                 <div className="w-full flex gap-4">
                 <dl className="flex flex-auto flex-wrap gap-x-2">
-                  <dt className="sr-only">{intl.$t({id: 'sr-role'})}</dt>
+                  <dt className="sr-only">{t('sr-role')}</dt>
                   <dd className="w-full flex text-sm font-medium text-zinc-900 dark:text-zinc-100">
                     {role.title}
                   </dd>
-                  <dt className="sr-only">{intl.$t({id: 'sr-company'})}</dt>
+                  <dt className="sr-only">{t('sr-company')}</dt>
                   <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                     {role.company}
                   </dd>
                   {role.start && role.end ? <div className="flex flex-auto">
-                  <dt className="sr-only">{intl.$t({id: 'sr-date'})}</dt>
+                  <dt className="sr-only">{t('sr-date')}</dt>
                   <dd
                     className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
                     aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
@@ -123,7 +123,7 @@ export function Other() {
                     {role.description}
                 </div>
                 <div className={open || !role.extendedDescription ? 'hidden' : 'block w-full text-xs text-zinc-500 dark:text-zinc-400 text-right'}>
-                  {intl.formatMessage({ id: "disclosure_read_more" })}
+                  {t("disclosure_read_more")}
                 </div>
                 <Disclosure.Panel className="flex gap-4">
                   <span className="relative flex w-4 flex-none"/>

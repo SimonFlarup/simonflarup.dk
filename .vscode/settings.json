@@ -3,5 +3,17 @@
         "i18n"
     ],
     "i18n-ally.keystyle": "nested",
-    "i18n-ally.sourceLanguage": "en"
+    "i18n-ally.sourceLanguage": "en",
+    "i18n-ally.dirStructure": "dir",
+    "i18n-ally.enabledFrameworks": [
+        "react-i18next"
+    ],
+    "i18n-ally.extract.ignored": [
+        "\r\n  query ($language: String!) {\r\n    locales: allLocale(filter: { language: { eq: $language } }) {\r\n      edges {\r\n        node {\r\n          ns\r\n          data\r\n          language\r\n        }\r\n      }\r\n    }\r\n    file(relativePath: { eq: \"simon_portrait_ur.jpg\" }) {\r\n      childImageSharp {\r\n        gatsbyImageData\r\n      }\r\n    }\r\n  }\r\n"
+    ],
+    "i18n-ally.extract.ignoredByFiles": {
+        "src\\pages\\cv.tsx": [
+            "\r\n  query ($language: String!) {\r\n    locales: allLocale(filter: { language: { eq: $language } }) {\r\n      edges {\r\n        node {\r\n          ns\r\n          data\r\n          language\r\n        }\r\n      }\r\n    }\r\n    file(relativePath: { eq: \"simon_portrait_ur.jpg\" }) {\r\n      childImageSharp {\r\n        gatsbyImageData\r\n      }\r\n    }\r\n  }\r\n"
+        ]
+    }
 }

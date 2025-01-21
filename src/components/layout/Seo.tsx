@@ -8,14 +8,9 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-interface translations {
-  [key: string]: string
-}
-
 interface SEOProps {
-  description?: translations,
-  title: translations,
-  locale: string,
+  description?: string,
+  title: string,
   children?: React.ReactNode
 }
 
@@ -35,12 +30,12 @@ const Seo = (props: SEOProps) => {
 
   let metaDescription = site.siteMetadata.description
   if (props.description !== undefined) {
-    metaDescription = props.description[props.locale] || metaDescription
+    metaDescription = props.description || metaDescription
   }
   
   const defaultTitle = site.siteMetadata?.title
 
-  const title = props.title[props.locale]
+  const title = props.title
 
   return (
     <>

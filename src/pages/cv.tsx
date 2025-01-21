@@ -1,6 +1,5 @@
 import * as React from "react"
-import { graphql, HeadFC, navigate, useStaticQuery } from "gatsby"
-import { useIntl } from "react-intl"
+import { graphql, HeadFC } from "gatsby"
 import Seo from "../components/layout/Seo"
 
 export interface ExperienceProp {
@@ -32,101 +31,101 @@ function Experience(props: {experience: ExperienceProp}) {
 }
 
 function URFullDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'resume_ur_full_stack_desc'})}
+      {t("resume_ur_full_stack_desc")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc'})}
+      {t("resume_ur_full_stack_ext_desc")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc_2'})}
+      {t("resume_ur_full_stack_ext_desc_2")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_ur_full_stack_ext_desc_3'})}
+      {t("resume_ur_full_stack_ext_desc_3")}
       <br/><br/>
-      <u>{intl.formatMessage({id: 'achievements'})}</u>
+      <u>{t("achievements")}</u>
       <br/>
       <div className="ml-8">
-        {intl.formatMessage({id: 'cv_ur_full_li_1'})}
+        {t("cv_ur_full_li_1")}
         <br/>
-        {intl.formatMessage({id: 'cv_ur_full_li_2'})}
+        {t("cv_ur_full_li_2")}
         <br/>
-        {intl.formatMessage({id: 'cv_ur_full_li_3'})}
+        {t("cv_ur_full_li_3")}
         <br/>
-        {intl.formatMessage({id: 'cv_ur_full_li_4'})}
+        {t("cv_ur_full_li_4")}
         <br/>
-        {intl.formatMessage({id: 'cv_ur_full_li_5'})}
+        {t("cv_ur_full_li_5")}
       </div>
     </p>
   )
 }
 
 function URDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'resume_ur_desc'})}
+      {t("resume_ur_desc")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_ur_ext_desc_tech'})}
+      {t("resume_ur_ext_desc_tech")}
       <br/><br/>
-      <u>{intl.formatMessage({id: 'responsibility'})}</u>
+      <u>{t("responsibility")}</u>
       <br/>
       <div className="ml-8">
-        {intl.formatMessage({id: 'resume_ur_ext_desc_p1'})}
+        {t("resume_ur_ext_desc_p1")}
         <br/>
-        {intl.formatMessage({id: 'resume_ur_ext_desc_p2'})}
+        {t("resume_ur_ext_desc_p2")}
         <br/>
-        {intl.formatMessage({id: 'resume_ur_ext_desc_p3'})}
+        {t("resume_ur_ext_desc_p3")}
         <br/>
-        {intl.formatMessage({id: 'resume_ur_ext_desc_p4'})}
+        {t("resume_ur_ext_desc_p4")}
         <br/>
-        {intl.formatMessage({id: 'resume_ur_ext_desc_p5'})}
+        {t("resume_ur_ext_desc_p5")}
       </div>
     </p>
   )
 }
 
 function BroenDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'resume_broen_desc'})}
+      {t("resume_broen_desc")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_broen_ext_desc_tech'})}
+      {t("resume_broen_ext_desc_tech")}
     </p>
   )
 }
 
 function AarhusDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'cv_apprentice_desc_1'})}
+      {t("cv_apprentice_desc_1")}
       <br/><br/>
-      {intl.formatMessage({id: 'resume_apprentice_ext_desc_tech'})}
+      {t("resume_apprentice_ext_desc_tech")}
     </p>
   )
 }
 
 function ElgigantenDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'resume_elgiganten_desc'})}
+      {t("resume_elgiganten_desc")}
     </p>
   )
 }
 
 function MScDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        <u>{intl.formatMessage({id: 'projects'})}</u>
+        <u>{t("projects")}</u>
         <br/>
         <ul className="list-disc ml-8">
           <li>The longevity of modern software: A study of operational risks connected to open source libraries</li>
@@ -137,11 +136,11 @@ function MScDesc() {
 }
 
 function BScDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-        <u>{intl.formatMessage({id: 'projects'})}</u>
+        <u>{t("projects")}</u>
         <br/>
         <ul className="list-disc ml-8">
           <li>Data-driven mobile application for enhanced guest experiences</li>
@@ -151,27 +150,27 @@ function BScDesc() {
 }
 
 function HFDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'education_hf_desc'})}
+      {t("education_hf_desc")}
     </p>
   )
 }
 
 function EUXDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'cv_education_eux_1'})}
+      {t("cv_education_eux_1")}
     </p>
   )
 }
 
 function EfterskoleDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
@@ -180,57 +179,53 @@ function EfterskoleDesc() {
 }
 
 function RedmewDesc() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {intl.formatMessage({id: 'cv_redmew_1'})}
+      {t("cv_redmew_1")}
       <br/><br/>
-      {intl.formatMessage({id: 'other_redmew_ext_desc_tech'})}
+      {t("other_redmew_ext_desc_tech")}
     </p>
   )
 }
 
-
-
-const CV = ({location}: any) => {
-  const intl = useIntl()
-
-  const data = useStaticQuery(graphql`query { file(relativePath: { eq: "simon_portrait_ur.jpg" }) { childImageSharp { gatsbyImageData } } } `)
+const CV = ({data}: any) => {
+  const {t} = useTranslation();
 
   let workExperience: ExperienceProp[] = [
     {
       company: "Universal Robots A/S",
-      title: intl.formatMessage({id: 'software-engineer'}),
+      title: t("software-engineer"),
       start: "April 2023",
-      end: intl.formatMessage({id: 'present'}),
+      end: t("present"),
       description: URFullDesc()
     },
     {
       company: "Universal Robots A/S",
-      title: intl.formatMessage({id: 'software-developer'}),
-      start: intl.formatMessage({id: 'january'}) + " 2021",
+      title: t("software-developer"),
+      start: t("january") + " 2021",
       end: "April 2023",
       description: URDesc()
     },
     {
       company: "BROEN Valve Technologies",
-      title: intl.formatMessage({id: 'student-worker'}),
+      title: t("student-worker"),
       start: "August 2019",
-      end: intl.formatMessage({id: 'january'}) + " 2021",
+      end: t("january") + " 2021",
       description: BroenDesc()
     },
     {
       company: "Aarhus Tech",
-      title: intl.formatMessage({id: 'apprentice'}),
+      title: t("apprentice"),
       start: "August 2016",
       end: "August 2017",
       description: AarhusDesc()
     },
     {
       company: "Elgiganten",
-      title: intl.formatMessage({id: 'cv_elgiganten_title'}),
-      start: intl.formatMessage({id: 'october'}) + " 2015",
+      title: t("cv_elgiganten_title"),
+      start: t("october") + " 2015",
       end: "August 2016",
       description: ElgigantenDesc()
     },
@@ -238,38 +233,38 @@ const CV = ({location}: any) => {
 
   let education: ExperienceProp[] = [
     {
-      company: intl.formatMessage({id: 'sdu'}),
-      title: intl.formatMessage({id: 'cv_msc_title'}),
+      company: t("sdu"),
+      title: t("cv_msc_title"),
       start: "September 2021",
-      end: intl.formatMessage({id: 'july'}) + "  2023",
+      end: t("july") + "  2023",
       description: MScDesc()
     },
     {
-      company: intl.formatMessage({id: 'sdu'}),
-      title: intl.formatMessage({id: 'cv_bsc_title'}),
+      company: t("sdu"),
+      title: t("cv_bsc_title"),
       start: "September 2018",
-      end: intl.formatMessage({id: 'july'}) + "  2021",
+      end: t("july") + "  2021",
       description: BScDesc()
     },
     {
       company: "Randers HF & VUC",
-      title: intl.formatMessage({id: 'higher-preparatory-examination'}),
+      title: t("higher-preparatory-examination"),
       start: "August 2017",
-      end: intl.formatMessage({id: 'july'}) + "  2018",
+      end: t("july") + "  2018",
       description: HFDesc()
     },
     {
       company: "Aarhus Tech & Tradium Randers",
-      title: intl.formatMessage({id: 'cv_eux_title'}),
+      title: t("cv_eux_title"),
       start: "August 2015",
       end: "August 2017",
       description: EUXDesc()
     },
     /*{
       company: "Bjergsnæs Efterskole",
-      title: intl.formatMessage({id: 'lower-secondary-education'}),
+      title: t("lower-secondary-education"),
       start: "August 2014",
-      end: intl.formatMessage({id: 'july'}) + "  2015",
+      end: t("july") + "  2015",
       description: EfterskoleDesc()
     }*/
   ]
@@ -292,7 +287,7 @@ const CV = ({location}: any) => {
                     Simon Holland Flarup
                   </h1>
                   <h1 className="text-lg text-zinc-800 dark:text-zinc-100">
-                    {intl.formatMessage({ id: 'headline_index' })}
+                    {t("headline_index")}
                   </h1>
                 </div>
               </div>
@@ -310,20 +305,20 @@ const CV = ({location}: any) => {
           <div className="rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <InfoCircleIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'cv_summary_title'})}</span>
+              <span className="ml-3">{t("cv_summary_title")}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              {intl.formatMessage({id: 'cv_summary_1'})}
+              {t("cv_summary_1")}
               <br/><br/>
-              {intl.formatMessage({id: 'cv_summary_2'})}
+              {t("cv_summary_2")}
             </p>
           </div>
 
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <BriefcaseIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'cv_work_title'})}</span>
+              <span className="ml-3">{t("cv_work_title")}</span>
             </h2>
             
             {workExperience.map((role: ExperienceProp) => (
@@ -334,7 +329,7 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <AcademicIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'education'})}</span>
+              <span className="ml-3">{t("education")}</span>
             </h2>
             {education.map((role: ExperienceProp) => (
               <Experience experience={role}/>
@@ -348,18 +343,18 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <LanguageIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'cv_language_title'})}</span>
+              <span className="ml-3">{t("cv_language_title")}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <div className="grid print:grid-cols-2 lg:grid-cols-2 lg:gap-1 print:gap-1">
               <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>{intl.formatMessage({id: 'cv_language_danish'})}</b> - {intl.formatMessage({id: 'cv_language_mother_tongue'})}
+                <b>{t("cv_language_danish")}</b> - {t("cv_language_mother_tongue")}
               </p>
               <p className="mt-2 order-last print:order-2 lg:order-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>{intl.formatMessage({id: 'cv_language_german'})}</b> - {intl.formatMessage({id: 'cv_language_basic'})}
+                <b>{t("cv_language_german")}</b> - {t("cv_language_basic")}
               </p>
               <p className="mt-2 print:order-3 lg:order-3 print:text-xs text-zinc-500 dark:text-zinc-400">
-                <b>{intl.formatMessage({id: 'cv_language_english'})}</b> - {intl.formatMessage({id: 'cv_language_fluent'})}
+                <b>{t("cv_language_english")}</b> - {t("cv_language_fluent")}
               </p>
             </div>
           </div>
@@ -367,14 +362,14 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <TagIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'other_title'})}</span>
+              <span className="ml-3">{t("other_title")}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              <b>{intl.formatMessage({id: 'other_drivers_licence_title'})}</b> - {intl.formatMessage({id: 'other_category_drivers_license'})}
+              <b>{t("other_drivers_licence_title")}</b> - {t("other_category_drivers_license")}
             </p>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              <b>{intl.formatMessage({id: 'other_glenten_title'})}</b> - Glenten Antennelaug (2018 - 2026)
+              <b>{t("other_glenten_title")}</b> - Glenten Antennelaug (2018 - 2026)
             </p>
           </div>
 
@@ -383,13 +378,13 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <SmileyIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'volunteering'})}</span>
+              <span className="ml-3">{t("volunteering")}</span>
             </h2>
             <Experience experience={{
               company: "Redmew.com - Factorio community",
-              title: intl.formatMessage({id: 'other_redmew_title'}),
-              start: intl.formatMessage({id: 'may'}) + "  2018",
-              end: intl.formatMessage({id: 'present'}),
+              title: t("other_redmew_title"),
+              start: t("may") + "  2018",
+              end: t("present"),
               description: RedmewDesc()
             }}/>
           </div>
@@ -399,7 +394,7 @@ const CV = ({location}: any) => {
           <div className="mt-3 rounded-2xl border-2 border-zinc-200 py-4 px-6 dark:border-zinc-700/40 break-inside-avoid-page">
             <h2 className="flex print:text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               <HashtagIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" />
-              <span className="ml-3">{intl.formatMessage({id: 'cv_keywords_title'})}</span>
+              <span className="ml-3">{t("cv_keywords_title")}</span>
             </h2>
             <hr className="mt-2 border-t border-zinc-700/40 dark:border-zinc-200"/>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
@@ -416,20 +411,20 @@ const CV = ({location}: any) => {
 }
 
 function CVData(props:{className:string}) {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <div className={props.className}>
       <div className="flex gap-2">
         <CakeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-        {intl.formatMessage({ id: 'cv_age' })}
+        {t("cv_age")}
         </p>
       </div>
       <div className="flex gap-2">
         <HomeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-        {intl.formatMessage({ id: 'cv_location' })}
+        {t("cv_location")}
         </p>
       </div>
       <div className="flex gap-2">
@@ -464,15 +459,34 @@ export default CV
 
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { ReactNode } from "react"
 import { AcademicIcon, BriefcaseIcon, CakeIcon, HashtagIcon, HomeIcon, InfoCircleIcon, LanguageIcon, OutlineMailIcon, PhoneIcon, SmileyIcon, TagIcon, WebIcon } from "../components/icons/MiscIcons"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export const Head: HeadFC = (props) => {
-  const locale = (props.pageContext as { locale: string }).locale
-  const title = { "en-US": "CV", "da-DK": "CV" }
+  const {t} = useTranslation();
 
   return (
-    <Seo locale={locale} title={title} />
+    <Seo title={t("CV")} description="Hello World?" />
   )
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    file(relativePath: { eq: "simon_portrait_ur.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`;

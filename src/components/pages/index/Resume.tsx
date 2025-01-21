@@ -1,9 +1,9 @@
 import React, { PropsWithChildren, ReactNode } from "react"
-import { useIntl } from "react-intl"
 import { BriefcaseIcon } from "../../icons/MiscIcons"
 import { aarhusTechImg } from "./EducationImages"
 import { urImg, broenImg, elgigantenImg } from "./WorkImages"
 import { Disclosure } from "@headlessui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export interface Resume {
     company: string,
@@ -30,150 +30,150 @@ function DescTemplate(props: PropsWithChildren) {
 }
 
 function URFullStackDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({id: "resume_ur_full_stack_desc"})}
+      {t("resume_ur_full_stack_desc")}
     </DescTemplate>
   )
 }
 
 function URFullStackExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc" })}
+      {t("resume_ur_full_stack_ext_desc")}
       <br/><br/>
-      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc_2" })}
+      {t("resume_ur_full_stack_ext_desc_2")}
       <br/><br/>
-      {intl.formatMessage({ id: "resume_ur_full_stack_ext_desc_3" })}
+      {t("resume_ur_full_stack_ext_desc_3")}
     </DescTemplate>
   )
 }
 
 function URFullDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "resume_ur_full_desc" })}
+      {t("resume_ur_full_desc")}
     </DescTemplate>
   )
 }
 
 function URFullExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "resume_ur_full_ext_desc" })}
+      {t("resume_ur_full_ext_desc")}
       <br/><br/>
-      {intl.formatMessage({ id: "resume_ur_full_ext_desc_2" })}
+      {t("resume_ur_full_ext_desc_2")}
     </DescTemplate>
   )
 }
 
 function URDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "resume_ur_desc" })}
+      {t("resume_ur_desc")}
     </DescTemplate>
   )
 }
 
 function URExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      <u>{intl.formatMessage({ id: "responsibility" })}</u>
+      <u>{t("responsibility")}</u>
       <br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_p1" })}
+      {t("resume_ur_ext_desc_p1")}
       <br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_p2" })}
+      {t("resume_ur_ext_desc_p2")}
       <br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_p3" })}
+      {t("resume_ur_ext_desc_p3")}
       <br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_p4" })}
+      {t("resume_ur_ext_desc_p4")}
       <br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_p5" })}
+      {t("resume_ur_ext_desc_p5")}
       <br/><br/>
-      {intl.formatMessage({ id: "resume_ur_ext_desc_tech" })}
+      {t("resume_ur_ext_desc_tech")}
     </DescTemplate>
   )
 }
 
 function BroenDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "resume_broen_desc" })}
+      {t("resume_broen_desc")}
     </DescTemplate>
   )
 }
 
 function BroenExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "resume_broen_ext_desc_tech" })}
+      {t("resume_broen_ext_desc_tech")}
     </DescTemplate>
   )
 }
 
 function ApprenticeDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "resume_apprentice_desc" })}
+      {t("resume_apprentice_desc")}
     </DescTemplate>
   )
 }
 
 function ApprenticeExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "resume_apprentice_ext_desc_tech" })}
+      {t("resume_apprentice_ext_desc_tech")}
     </DescTemplate>
   )
 }
 
 function ElgigantenDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "resume_elgiganten_desc" })}
+      {t("resume_elgiganten_desc")}
     </DescTemplate>
   )
 }
 
   
 export function Resume() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   let resume: Resume[] = [
     {
       company: 'Universal Robots A/S',
-      title: intl.formatMessage({id: 'full-stack-software-engineer'}),
+      title: t("full-stack-software-engineer"),
       logo: urImg,
       start: { label: 'apr.' + ' 2024' },
       end: {
-        label: intl.formatMessage({id: 'present'}),
+        label: t("present"),
         dateTime: new Date().getFullYear(),
       },
       description: URFullStackDescription(),
@@ -181,7 +181,7 @@ export function Resume() {
     },
     {
       company: 'Universal Robots A/S',
-      title: intl.formatMessage({id: 'java-software-engineer'}),
+      title: t("java-software-engineer"),
       logo: urImg,
       start: { label: 'apr.' + ' 2023' },
       end: {
@@ -192,7 +192,7 @@ export function Resume() {
     },
     {
       company: 'Universal Robots A/S',
-      title: intl.formatMessage({id: 'software-developer'}),
+      title: t("software-developer"),
       logo: urImg,
       start: { label: 'jan.' + ' 2021' },
       end: {
@@ -203,7 +203,7 @@ export function Resume() {
     },
     {
       company: 'BROEN Valve Technologies',
-      title: intl.formatMessage({id: 'student-worker'}),
+      title: t("student-worker"),
       logo: broenImg,
       start: { label: 'aug. 2019' },
       end: { label: 'jan. 2021' },
@@ -212,7 +212,7 @@ export function Resume() {
     },
     {
       company: 'Aarhus Tech',
-      title: intl.formatMessage({id: 'apprentice'}),
+      title: t("apprentice"),
       logo: aarhusTechImg,
       start: { label: 'jan. 2017' },
       end: { label: 'aug. 2017' },
@@ -223,7 +223,7 @@ export function Resume() {
       company: 'Elgiganten A/S',
       title: 'Merchandiser',
       logo: elgigantenImg,
-      start: { label: (intl.formatMessage({id: 'october-abbreviation'}) + ' 2015') },
+      start: { label: (t("october-abbreviation") + ' 2015') },
       end: { label: 'aug. 2016' },
       description: ElgigantenDescription()
     },
@@ -233,7 +233,7 @@ export function Resume() {
     <div className="rounded-2xl border border-zinc-100 pt-6 px-6 pb-4 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">{intl.formatMessage({id: 'work'})}</span>
+        <span className="ml-3">{t("work")}</span>
       </h2>
       <ol className="mt-6">
         {resume.map((role: Resume, roleIndex) => (
@@ -246,15 +246,15 @@ export function Resume() {
                   {role.logo()}
                 </div>
                 <dl className="flex flex-auto flex-wrap gap-x-2">
-                  <dt className="sr-only">{intl.formatMessage({id: 'sr-role'})}</dt>
+                  <dt className="sr-only">{t("sr-role")}</dt>
                   <dd className="w-full flex text-sm font-medium text-zinc-900 dark:text-zinc-100">
                     {role.title}
                   </dd>
-                  <dt className="sr-only">{intl.formatMessage({id: 'sr-company'})}</dt>
+                  <dt className="sr-only">{t("sr-company")}</dt>
                   <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                     {role.company}
                   </dd>
-                  <dt className="sr-only">{intl.formatMessage({id: 'sr-date'})}</dt>
+                  <dt className="sr-only">{t("sr-date")}</dt>
                   <dd
                     className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
                     aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
@@ -275,7 +275,7 @@ export function Resume() {
                     {role.description}
                 </div>
                 <div className={open || !role.extendedDescription ? 'hidden' : 'block w-full text-xs text-zinc-500 dark:text-zinc-400 text-right'}>
-                  {intl.formatMessage({ id: "disclosure_read_more" })}
+                  {t("disclosure_read_more")}
                 </div>
                 <Disclosure.Panel className="flex gap-4">
                   <span className="relative flex w-11 flex-none items-center justify-center"/>

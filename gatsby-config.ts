@@ -1,7 +1,5 @@
 import type { GatsbyConfig } from "gatsby"
-
-import English from "./i18n/en.json"
-import Danish from "./i18n/da.json"
+import { serialize } from "v8";
 
 const siteURL: string = process.env.URL || "https://www.simonflarup.dk"
 
@@ -36,45 +34,82 @@ const config: GatsbyConfig = {
       },
       __key: "pages"
     }, {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // language JSON resource path
-        path: `${__dirname}/i18n`,
-        // supported language
-        languages: [`en`, `da`],
-        // language file path
-        defaultLanguage: `en`,
-        // option to redirect to `/en` when connecting `/`
-        redirect: false,
+        "name": "locale",
+        "path": "./i18n"
       },
+      __key: "locale"
     }, {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `da`],
+        defaultLanguage: `en`,
+        siteUrl: siteURL,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: 'always',
+        // you can pass any i18next options
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false // not needed for react as it escapes by default
+          },
+        },
+      }
+    }, {
+      resolve: "gatsby-plugin-sitemap",
       options: {
         excludes: ["/**/404", "/**/404.html"],
-        query: `{
-          allSitePage(filter: {context: {prefix: {eq: "en"}}}) {
-          nodes {
-            path
-          }
-        }
-      }`,
         resolveSiteUrl: () => siteURL,
-        serialize: (props: {path: any}) => {
-            return {
-              url: siteURL + props.path,
-              changefreq: 'daily',
-              priority: 0.7,
-              links: [
-                { lang: 'en', url: siteURL + props.path },
-                { lang: 'da', url: `${siteURL}/da${props.path}` },
-                // The default in case page for user's language is not localized.
-                { lang: 'x-default', url: siteURL + props.path }
-              ]
-            };
+        query: `
+          {
+            allSitePage {
+              edges {
+                node {
+                  pageContext
+                }
+              }
+            }
           }
-      }
-    },
-    {
+        `,
+        resolvePages: ({ allSitePage: { edges } }: any) => {
+          return edges
+            .filter(
+              ({ node }: any) => !["/404/", "/404.html"].includes(node.pageContext.i18n.originalPath)
+            )
+            .map(({ node: { pageContext } }: any) => {
+              const { languages, originalPath, path, defaultLanguage } = pageContext.i18n;
+              const baseUrl = siteURL + originalPath;
+              const links = [{ lang: "x-default", url: baseUrl }];
+
+              console.log("i18n: ", pageContext.i18n)
+    
+              languages.forEach((lang: any) => {
+                const isDefaultLang = lang === defaultLanguage;
+                const isDefaultPath = path === originalPath;
+                const isLangSubDir = path.includes(`${lang}/`);
+    
+                if (isDefaultLang && isDefaultPath) return;
+                if (!isDefaultLang && isLangSubDir) return;
+    
+                links.push({
+                  lang,
+                  url: isDefaultLang ? baseUrl : `${siteURL}/${lang}${originalPath}`,
+                });
+              });
+    
+              return {
+                path,
+                url: path === "/" ? siteURL : `${siteURL}` + (`/${path}`).replace(/\/\//g, '/'),
+                changefreq: "daily",
+                priority: originalPath === "/" ? 1.0 : 0.7,
+                links,
+              };
+            });
+        },
+        serialize: (page: any) => page,
+      },
+    }, {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
         code: 'simonflarup',

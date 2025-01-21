@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, ReactNode } from "react"
-import { useIntl } from "react-intl"
 import { AcademicIcon } from "../../icons/MiscIcons"
 import { Disclosure } from "@headlessui/react"
 import { aarhusTechImg, bsImg, randersHfImg, sduImg, tradiumImg } from "./EducationImages"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export interface Education {
     company: string,
@@ -29,87 +29,87 @@ function DescTemplate(props: PropsWithChildren) {
 }
 
 function MScDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      <u>{intl.formatMessage({ id: "projects" })}</u>
+      <u>{t("projects")}</u>
       <br/>
-      {intl.formatMessage({ id: "education_msc_thesis_title" })}
+      {t("education_msc_thesis_title")}
     </DescTemplate>
   )
 }
 
 function MScExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "education_msc_company_project_title" })}
+      {t("education_msc_company_project_title")}
     </DescTemplate>
   )
 }
 
 function BScDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      <u>{intl.formatMessage({ id: "projects" })}</u>
+      <u>{t("projects")}</u>
       <br/>
-      {intl.formatMessage({ id: "education_bsc_thesis_title" })}
+      {t("education_bsc_thesis_title")}
     </DescTemplate>
   )
 }
 
 function HFDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "education_hf_desc" })}
+      {t("education_hf_desc")}
     </DescTemplate>
   )
 }
 
 function AarhusTechDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "education_aarhustech_desc" })}
+      {t("education_aarhustech_desc")}
     </DescTemplate>
   )
 }
 
 function AarhusTechExtendedDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
       <br/>
-      {intl.formatMessage({ id: "education_aarhustech_ext_desc" })}
+      {t("education_aarhustech_ext_desc")}
     </DescTemplate>
   )
 }
 
 function TradiumDescription() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return(
     <DescTemplate>
-      {intl.formatMessage({ id: "education_tradium_desc" })}
+      {t("education_tradium_desc")}
     </DescTemplate>
   )
 }
 
 export function Education() {
-    const intl = useIntl()
+    const {t} = useTranslation();
     
     let education: Education[] = [
       {
-        company: intl.formatMessage({id: 'sdu'}),
-        title: intl.formatMessage({id: 'msc-software-engineering'}),
+        company: t("sdu"),
+        title: t("msc-software-engineering"),
         logo: sduImg,
         start: { label: '2021' },
         end: { label: '2023'},
@@ -117,8 +117,8 @@ export function Education() {
         extendedDescription: MScExtendedDescription()
       },
       {
-        company: intl.formatMessage({id: 'sdu'}),
-        title: intl.formatMessage({id: 'bsc-software-engineering'}),
+        company: t("sdu"),
+        title: t("bsc-software-engineering"),
         logo: sduImg,
         start: { label: '2018' },
         end: { label: '2021' },
@@ -126,7 +126,7 @@ export function Education() {
       },
       {
         company: 'Randers HF & VUC',
-        title: intl.formatMessage({id: 'higher-preparatory-examination'}),
+        title: t("higher-preparatory-examination"),
         logo: randersHfImg,
         start: { label: '2017' },
         end: { label: '2018' },
@@ -134,7 +134,7 @@ export function Education() {
       },
       {
         company: 'Aarhus Tech',
-        title: intl.formatMessage({id: 'eux-data-technician-programming'}),
+        title: t("eux-data-technician-programming"),
         logo: aarhusTechImg,
         start: { label: '2016' },
         end: { label: '2017' },
@@ -143,7 +143,7 @@ export function Education() {
       },
       {
         company: 'Tradium Randers',
-        title: intl.formatMessage({id: 'eux-data-technician-programming'}),
+        title: t("eux-data-technician-programming"),
         logo: tradiumImg,
         start: { label: '2015' },
         end: { label: '2016' },
@@ -151,7 +151,7 @@ export function Education() {
       },
       {
         company: 'Bjergsnæs Efterskole',
-        title: intl.formatMessage({id: 'lower-secondary-education'}),
+        title: t("lower-secondary-education"),
         logo: bsImg,
         start: { label: '2014' },
         end: { label: '2015' },
@@ -162,7 +162,7 @@ export function Education() {
       <div className="rounded-2xl border border-zinc-100 pt-6 px-6 pb-4 dark:border-zinc-700/40">
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <AcademicIcon className="h-6 w-6 flex-none" />
-          <span className="ml-3">{intl.formatMessage({id: 'education'})}</span>
+          <span className="ml-3">{t("education")}</span>
         </h2>
         <ol className="mt-6">
           {education.map((role: Education, roleIndex) => (
@@ -175,15 +175,15 @@ export function Education() {
                         {role.logo()}
                     </div>
                     <dl className="flex flex-auto flex-wrap gap-x-2 mt-1">
-                      <dt className="sr-only">{intl.formatMessage({id: 'sr-role'})}</dt>
+                      <dt className="sr-only">{t("sr-role")}</dt>
                       <dd className="w-full flex text-sm font-medium text-zinc-900 dark:text-zinc-100">
                       {role.title}
                       </dd>
-                      <dt className="sr-only">{intl.formatMessage({id: 'sr-company'})}</dt>
+                      <dt className="sr-only">{t("sr-company")}</dt>
                       <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                       {role.company}
                       </dd>
-                      <dt className="sr-only">{intl.formatMessage({id: 'sr-date'})}</dt>
+                      <dt className="sr-only">{t("sr-date")}</dt>
                       <dd
                         className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
                         aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
@@ -204,7 +204,7 @@ export function Education() {
                     {role.description}
                   </div>
                   <div className={open || !role.extendedDescription ? 'hidden' : 'block w-full text-xs text-zinc-500 dark:text-zinc-400 text-right'}>
-                  {intl.formatMessage({ id: "disclosure_read_more" })}
+                  {t("disclosure_read_more")}
                   </div>
                   <Disclosure.Panel className="flex gap-4">
                     <span className="relative flex w-11 flex-none items-center justify-center"/>

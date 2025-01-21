@@ -38,7 +38,7 @@ function Photos() {
 }
 
 export default function Home() {
-  const intl = useIntl()
+  const {t} = useTranslation();
 
   return (
     <>
@@ -46,26 +46,26 @@ export default function Home() {
         <Container className="mt-9">
           <div className="max-w-2xl">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            {intl.formatMessage({id: 'headline_index'})}
+            {t("headline_index")}
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {intl.formatMessage({id: 'intro_index'})}
+            {t("intro_index")}
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {intl.formatMessage({id: "intro_p2"})}
+            {t("intro_p2")}
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {intl.formatMessage({id: "intro_p3"})}
+            {t("intro_p3")}
             </p>
             <div className="mt-6 flex gap-6">
               <SocialLink
                 href="https://github.com/SimonFlarup"
-                aria-label={intl.formatMessage({id: 'aria-follow-on-github'})}
+                aria-label={t("aria-follow-on-github")}
                 icon={GitHubIcon}
               />
               <SocialLink
                 href="https://linkedin.com/in/SimonFlarup"
-                aria-label={intl.formatMessage({id: 'aria-follow-on-linkedin'})}
+                aria-label={t("aria-follow-on-linkedin")}
                 icon={LinkedInIcon}
               />
             </div>
@@ -99,21 +99,32 @@ export default function Home() {
   )
 }
 
-import EN from "../../i18n/en.json"
-import DA from "../../i18n/da.json"
 import Seo from "../components/layout/Seo"
-import { HeadFC } from "gatsby"
-import { useIntl } from "react-intl"
+import { graphql, HeadFC } from "gatsby"
 import { flightImg, keyboardImg, sedenImg, polarcaseImg, domeImg } from "../components/pages/index/FeaturedImages"
 import { Resume } from "../components/pages/index/Resume"
 import { Education } from "../components/pages/index/Education"
 import { Other } from "../components/pages/index/Other"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 export const Head: HeadFC = (props) => {
-  const locale = (props.pageContext as { locale: string }).locale
-  const title = { "en-US": EN["index_title"], "da-DK": DA["index_title"] }
+  const {t} = useTranslation();
 
   return (
-    <Seo locale={locale} title={title} />
+    <Seo title={t("index_title")} />
   )
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
