@@ -194,11 +194,12 @@ import Seo from "../components/layout/Seo"
 import { graphql, HeadFC } from "gatsby"
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-export const Head: HeadFC = (props) => {
-  const {t} = useTranslation();
+export const Head = ({pageContext}: any) => {
+  const lang = pageContext?.i18n.language;
+  const title = lang == "en" ? "About" : "Om"
 
   return (
-    <Seo title={t("about_title")} />
+    <Seo title={title} />
   )
 }
 

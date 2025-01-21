@@ -107,11 +107,12 @@ import { Education } from "../components/pages/index/Education"
 import { Other } from "../components/pages/index/Other"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-export const Head: HeadFC = (props) => {
-  const {t} = useTranslation();
+export const Head = ({pageContext}: any) => {
+  const lang = pageContext?.i18n.language;
+  const title = lang == "en" ? "Home Page" : "Forside"
 
   return (
-    <Seo title={t("index_title")} />
+    <Seo title={title} />
   )
 }
 

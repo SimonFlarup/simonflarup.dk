@@ -27,11 +27,12 @@ import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 
-export const Head: HeadFC = (props) => {
-  const {t} = useTranslation();
+export const Head = ({pageContext}: any) => {
+  const lang = pageContext?.i18n.language;
+  const title = lang == "en" ? "Page not found" : "Siden blev ikke fundet"
 
   return (
-    <Seo title={t("404_title")} />
+    <Seo title={title} />
   )
 }
 

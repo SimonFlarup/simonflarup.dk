@@ -464,11 +464,12 @@ import { ReactNode } from "react"
 import { AcademicIcon, BriefcaseIcon, CakeIcon, HashtagIcon, HomeIcon, InfoCircleIcon, LanguageIcon, OutlineMailIcon, PhoneIcon, SmileyIcon, TagIcon, WebIcon } from "../components/icons/MiscIcons"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-export const Head: HeadFC = (props) => {
-  const {t} = useTranslation();
+export const Head = ({pageContext}: any) => {
+  const lang = pageContext?.i18n.language;
+  const title = lang == "en" ? "CV" : "CV"
 
   return (
-    <Seo title={t("CV")} description="Hello World?" />
+    <Seo title={title} />
   )
 }
 

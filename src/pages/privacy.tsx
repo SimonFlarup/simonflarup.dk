@@ -44,11 +44,12 @@ import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-export const Head: HeadFC = (props) => {
-  const {t} = useTranslation();
+export const Head = ({pageContext}: any) => {
+  const lang = pageContext?.i18n.language;
+  const title = lang == "en" ? "Privacy Policy" : "Privatlivspolitik"
 
   return (
-    <Seo title={t("privacy_title")} />
+    <Seo title={title} />
   )
 }
 
