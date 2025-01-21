@@ -1,0 +1,9 @@
+{
+  "menu": "Menu",
+  "navigation": "Navigation",
+  "home": "Home",
+  "about": "About",
+  "portfolio": "Portfolio",
+  "aria-close-menu": "Close menu",
+  "aria-toggle-dark-mode": "Toggle dark mode"
+}

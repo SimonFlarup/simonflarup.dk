@@ -1,0 +1,15 @@
+{
+    "privacy_title": "Privacy Policy",
+    "privacy_subtitle": "This website does not store any personal information.",
+    "privacy_analytical_purposes": "For analytical purposes page visits are registered through Javascript. Disabling scripts in your browser will prevent registering page visits.",
+    "privacy_anonymous_information_collected": "The following anonymous information is collected when navigating this website:",
+    "privacy_list_url": "URL of the visited page.",
+    "privacy_list_referer": "Referer header.",
+    "privacy_list_user_agent": "User-Agent header.",
+    "privacy_list_screensize": "Screen size.",
+    "privacy_list_country": "Country and region name based on IP address.",
+    "privacy_list_hash": "A hash of the IP address, User-Agent, and an random number.",
+    "privacy_generated_hash_info": "IP addresses are never stored by the analytics. The generated hash is kept in process memory to filter repeat visits. The hash is stored for 8 hours.",
+    "privacy_github_notice": "For security purposes certain information may be stored by the hosting provider.",
+    "privacy_github_more_info": "For more information visit"
+}

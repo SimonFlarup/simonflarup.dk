@@ -112,7 +112,7 @@ function DesktopNavigation(props: JSX.IntrinsicAttributes & React.ClassAttribute
 
 enum Language {
   English = "en",
-  Danish = "da"
+  Danish = "da-DK"
 }
 
 function LanguageDropdown() {

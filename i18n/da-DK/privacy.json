@@ -1,0 +1,15 @@
+{
+  "privacy_title": "Privatlivspolitik",
+  "privacy_analytical_purposes": "Besøg på denne hjemmeside bliver registeret gennem Javascript. Slå scripts fra i din browser, for at forhindre registreringen.",
+  "privacy_anonymous_information_collected": "Disse følgende informationer bliver anonymt gemt når du besøger denne hjemmeside:",
+  "privacy_generated_hash_info": "IP-adresser bliver ikke gemt af analyseværktøjet. Den genererede hash-kode gemmes midlertidigt i proces hukommelse for at sammenholde gentagende besøg. Hash-koden slettes efter 8 timer.",
+  "privacy_github_more_info": "For mere information besøg",
+  "privacy_github_notice": "Af sikkerhedsmæssige årsager kan nogle informationer blive gemt af hosting udbyderen.",
+  "privacy_list_country": "Land og region udledt af IP-adresse.",
+  "privacy_list_hash": "En hash-kode baseret på IP-adressen, User-Agent og et tilfældigt tal.",
+  "privacy_list_referer": "Referer headerfelt.",
+  "privacy_list_screensize": "Skærmstørrelse",
+  "privacy_list_url": "URL af den besøgte side.",
+  "privacy_list_user_agent": "User-Agent headerfelt",
+  "privacy_subtitle": "Denne hjemmeside gemmer ikke personlige informationer."
+}
