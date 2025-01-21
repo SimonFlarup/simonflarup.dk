@@ -1,16 +1,17 @@
-import { LocalizedLink } from "gatsby-plugin-i18n-l10n"
 import React, { PropsWithChildren } from "react"
 import { useIntl } from "react-intl"
 import { Container } from '../Container'
+import { Link } from "gatsby-plugin-intl"
+import { GatsbyLinkProps } from "gatsby"
 
-function NavLink({ href, children }: PropsWithChildren<{href: string}>) {
+function NavLink({ children, ...props }: PropsWithChildren<GatsbyLinkProps<any>>) {
   return (
-    <LocalizedLink
-      to={href}
+    <Link
+      to={props.to}
       className="transition hover:text-red-500 dark:hover:text-red-400"
     >
       {children}
-    </LocalizedLink>
+    </Link>
   )
 }
 
@@ -27,9 +28,9 @@ export function Footer(props: {printHide?: boolean}) {
             <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
               {
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                <NavLink href="/">{intl.formatMessage({id: "home"})}</NavLink>
-                <NavLink href="/about/">{intl.formatMessage({id: "about"})}</NavLink>
-                <NavLink href="/privacy/">{intl.formatMessage({ id: "privacy_title" })}</NavLink>
+                <NavLink to="/">{intl.formatMessage({id: "home"})}</NavLink>
+                <NavLink to="/about/">{intl.formatMessage({id: "about"})}</NavLink>
+                <NavLink to="/privacy/">{intl.formatMessage({ id: "privacy_title" })}</NavLink>
               </div>
               }
               <p className="text-sm text-zinc-400 dark:text-zinc-500 text-center">

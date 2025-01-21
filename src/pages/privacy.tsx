@@ -42,7 +42,7 @@ const PrivacyPage = ({location}: any) => {
 export default PrivacyPage
 
 import EN from "../../i18n/en.json"
-import DA from "../../i18n/dk.json"
+import DA from "../../i18n/da.json"
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
 

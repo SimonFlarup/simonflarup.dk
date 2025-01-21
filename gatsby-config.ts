@@ -1,7 +1,7 @@
 import type { GatsbyConfig } from "gatsby"
 
 import English from "./i18n/en.json"
-import Danish from "./i18n/dk.json"
+import Danish from "./i18n/da.json"
 
 const siteURL: string = process.env.URL || "https://www.simonflarup.dk"
 
@@ -36,37 +36,16 @@ const config: GatsbyConfig = {
       },
       __key: "pages"
     }, {
-      resolve: `gatsby-plugin-i18n-l10n`,
+      resolve: `gatsby-plugin-intl`,
       options: {
-        // IETF BCP 47 language tag: default locale, which won't be prefixed
-        defaultLocale: `en-US`,
-        // string: absolute site url
-        siteUrl: siteURL + "/",
-        // locales[]: all locales, which should be available
-        locales: [
-          {
-            // IETF BCP 47 language tag of this language
-            locale: `en-US`,
-            // string: prefix for this language, which will be used to prefix the url, if it's not the default locale
-            prefix: `en`,
-            // object: mapping of given urls (by filename) to translated urls, if no mapping exists, given url will be used
-            slugs: {},
-            // object: this messages will be handed over to react-intl and available throughout the website
-            messages: English
-          },
-          // another language
-          {
-            locale: `da-DK`,
-            prefix: `da`,
-            slugs: {},
-            messages: Danish
-          },
-        ],
-        // omit certain path segments (relative directories)
-        // be careful not to cause path collisions
-        pathBlacklist: [
-          '/pages' // /pages/products/gummibears becomes /products/gummibears
-        ]
+        // language JSON resource path
+        path: `${__dirname}/i18n`,
+        // supported language
+        languages: [`en`, `da`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: false,
       },
     }, {
       resolve: `gatsby-plugin-sitemap`,

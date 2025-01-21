@@ -191,7 +191,7 @@ export default function About() {
 }
 
 import EN from "../../i18n/en.json"
-import DA from "../../i18n/dk.json"
+import DA from "../../i18n/da.json"
 import Seo from "../components/layout/Seo"
 import { HeadFC } from "gatsby"
 import { useIntl } from 'react-intl'

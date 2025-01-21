@@ -4,10 +4,10 @@ import { Container } from '../Container'
 import React, { Fragment, PropsWithChildren, useEffect, useRef } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import darkModeToggleHandler from '../DarkModeSwitchScript'
-import { LocalizedLink, useI18nL10nContext } from 'gatsby-plugin-i18n-l10n'
 import { navigate } from 'gatsby'
 import { useIntl } from 'react-intl'
 import { ChevronDownIcon, CloseIcon, GlobeIcon, SunIcon, MoonIcon } from '../icons/HeaderIcons'
+import { changeLocale, Link } from 'gatsby-plugin-intl'
 
 const MobileNavItem: React.FC<PropsWithChildren> = props => {
   return (
@@ -62,8 +62,8 @@ const MobileNavigation: React.FC<PropsWithChildren<PropsWithClassName>> = props 
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem><LocalizedLink to={"/"}>{intl.formatMessage({id: "home"})}</LocalizedLink></MobileNavItem>
-                <MobileNavItem><LocalizedLink to={"/about/"}>{intl.formatMessage({id: "about"})}</LocalizedLink></MobileNavItem>
+                <MobileNavItem><Link to={"/"}>{intl.formatMessage({id: "home"})}</Link></MobileNavItem>
+                <MobileNavItem><Link to={"/about/"}>{intl.formatMessage({id: "about"})}</Link></MobileNavItem>
                 {/*
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
                 <MobileNavItem href="/speaking">Speaking</MobileNavItem>
@@ -103,28 +103,24 @@ function DesktopNavigation(props: JSX.IntrinsicAttributes & React.ClassAttribute
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem><LocalizedLink to={"/"}>{intl.formatMessage({id: "home"})}</LocalizedLink></NavItem>
-        <NavItem><LocalizedLink to={"/about/"}>{intl.formatMessage({id: "about"})}</LocalizedLink></NavItem>
+        <NavItem><Link to={"/"}>{intl.formatMessage({id: "home"})}</Link></NavItem>
+        <NavItem><Link to={"/about/"}>{intl.formatMessage({id: "about"})}</Link></NavItem>
       </ul>
     </nav>
   )
 }
 
 enum Language {
-  English = "en-US",
-  Danish = "da-DK"
+  English = "en",
+  Danish = "da"
 }
 
 function LanguageDropdown() {
-  const context = useI18nL10nContext();
+  const intl = useIntl();
+
 
   const switchLanguage = (language: Language) => {
-    context.translations?.forEach(element => {
-      if (language == element.locale) {
-        navigate(element.path)
-        return
-      }
-    });
+    changeLocale(language)
   }
 
   return (
@@ -212,7 +208,7 @@ const AvatarContainer: React.FC<PropsWithChildren<PropsWithClassName>> = props =
   const intl = useIntl()
   
   return (
-    <LocalizedLink
+    <Link
       to="/"
       aria-label={intl.formatMessage({id: "home"})}
       className={props.className + ' pointer-events-auto'}
@@ -225,7 +221,7 @@ const AvatarContainer: React.FC<PropsWithChildren<PropsWithClassName>> = props =
       }
       {...props}
     />
-    </LocalizedLink>
+    </Link>
   )
 }
 

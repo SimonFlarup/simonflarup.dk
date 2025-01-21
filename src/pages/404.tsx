@@ -5,21 +5,6 @@ import Seo from "../components/layout/Seo"
 
 const NotFoundPage = ({location}: any) => {
   const intl = useIntl()
-  /*const context = useI18nL10nContext();
-
-  useEffect(() => {
-    const locationSplit = location.pathname.split("/")
-
-    if (locationSplit[1] === context.prefix) {
-      return;
-    }
-
-    context.translations?.forEach(element => {
-      if (element.path.split("/")[1] === locationSplit[1]) {
-        navigate(element.path)
-      }
-    });
-  }, []);*/
 
   return (
     <Layout>
@@ -29,7 +14,7 @@ const NotFoundPage = ({location}: any) => {
             {intl.formatMessage({ id: "404" })}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <a className="text-red-500 dark:text-red-400" href={"#"} onClick={() => navigate(-1)}>{intl.formatMessage({ id: "404_go_back" })}</a> {intl.formatMessage({ id: "404_or" })} <LocalizedLink to={"/"} className="text-red-500 dark:text-red-400">{intl.formatMessage({ id: "404_go_home" })}</LocalizedLink>
+            <a className="text-red-500 dark:text-red-400" href={"#"} onClick={() => navigate(-1)}>{intl.formatMessage({ id: "404_go_back" })}</a> {intl.formatMessage({ id: "404_or" })} <Link to={"/"} className="text-red-500 dark:text-red-400">{intl.formatMessage({ id: "404_go_home" })}</Link>
           </p>
         </div>
       </Container>
@@ -40,10 +25,10 @@ const NotFoundPage = ({location}: any) => {
 export default NotFoundPage
 
 import EN from "../../i18n/en.json"
-import DA from "../../i18n/dk.json"
-import { LocalizedLink } from "gatsby-plugin-i18n-l10n"
+import DA from "../../i18n/da.json"
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
+import { Link } from "gatsby-plugin-intl"
 
 export const Head: HeadFC = (props) => {
   const locale = (props.pageContext as { locale: string }).locale
