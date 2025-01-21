@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, HeadFC, navigate } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import Seo from "../components/layout/Seo"
 
 const NotFoundPage = () => {

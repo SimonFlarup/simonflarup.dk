@@ -1,5 +1,4 @@
 import type { GatsbyConfig } from "gatsby"
-import { serialize } from "v8";
 
 const siteURL: string = process.env.URL || "https://www.simonflarup.dk"
 
