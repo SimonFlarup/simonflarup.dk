@@ -43,7 +43,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `da-DK`],
+        languages: [`en`, `da`],
         defaultLanguage: `en`,
         siteUrl: siteURL,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
