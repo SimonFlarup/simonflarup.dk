@@ -46,11 +46,14 @@
   "other_title": "Øvrigt",
   "resume_ur_full_desc": "Softwareingeniør med ansvar for udviklingen og vedligeholdelse af PolyScope 5, styrings- og programmerings interfacet bag de kollaborative robotter fra Universal Robots.",
   "resume_ur_full_ext_desc": "Min primære opgave er udviklen og vedligeholdelsen af Java applikationen som gør det muligt at programmere og operere kollaborative robotter. Jeg har hovedansvaret for udviklingen af brugergrænsefladen til PolyScope 5. ",
-  "resume_ur_full_ext_desc_2": "Jeg beskæftiger mig primært med Java, Docker, TypeScript og Angular",
+  "resume_ur_full_ext_desc_2": "Primært beskæftiget med Java, OSGi og Docker",
   "full-stack-software-engineer": "Full-stack Softwareingeniør (Java, Angular)",
   "java-software-engineer": "Softwareingeniør (Java)",
   "resume_ur_full_stack_desc": "Full-stack softwareingeniør til næste generation af PolyScope X, kontrol- og programmeringsgrænsefladen, bag de kollaborative robotter fra Universal Robots.",
   "resume_ur_full_stack_ext_desc": "Udvikling af full-stack funktioner til den webbaserede applikation, som muliggør programmering og drift af kollaborative robotter. Ansvarlig for forretningskritisk vedligeholdelse af den nuværende generation af PolyScope 5.",
   "resume_ur_full_stack_ext_desc_2": "PolyScope X er en Angular-baseret web-frontend-applikation med en Spring Boot-baseret backend. Kommunikation gennem HTTP restful grænseflader, websockets og ROS2. De primære programmeringssprog er Java og TypeScript inklusive HTML og CSS.",
-  "resume_ur_full_stack_ext_desc_3": "PolyScope 5 er en Java Swing-baseret applikation, der understøttes af det modulær og plugbar framework OSGi."
+  "resume_ur_full_stack_ext_desc_3": "PolyScope 5 er en Java Swing-baseret applikation, der understøttes af det modulær og plugbar framework OSGi.",
+  "polyscope-5-desc": "Den fortrukne platform til styring af kollaborative robotter.",
+  "polyscope-x-desc": "Næste generationsplatforn til styring af kollaborative robotter.",
+  "polyscope-learn-more": "Læs mere på universal-robots.com"
 }

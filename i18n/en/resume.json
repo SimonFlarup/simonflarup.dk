@@ -52,5 +52,8 @@
   "java-software-engineer": "Software Engineer (Java)",
   "full-stack-software-engineer": "Full-Stack Software Engineer (Java, Angular)",
   "student-worker": "Student Worker",
-  "apprentice": "Apprentice"
+  "apprentice": "Apprentice",
+  "polyscope-5-desc": "The mainstream software for controlling collaborative robots.",
+  "polyscope-x-desc": "The next generation software for controlling collaborative robots.",
+  "polyscope-learn-more": "Learn more at universal-robots.com"
 }

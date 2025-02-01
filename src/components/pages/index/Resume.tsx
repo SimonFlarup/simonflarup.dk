@@ -36,28 +36,30 @@ function URFullCustomFooter() {
   const {t} = useTranslation();
 
   return(
-    <div className="text-sm text-zinc-500 dark:text-zinc-400 text-left">
-      <div className="flex gap-4 border-2 rounded-2xl mt-4 p-4 border-zinc-100 dark:border-zinc-700/40">
-      <div className="flex flex-col">
+    <div style={{marginInline: "auto"}} className="text-sm text-zinc-500 dark:text-zinc-400 text-left">
+      <div className="flex flex-col lg:flex-row gap-4 mt-4 p-4">
+      <div className="flex flex-col flex-1 max-w-96">
         <StaticImage
               src={"../../../images/portfolio/polyscope_5.png"}
               alt=""
-              className="w-96 object-contain"
+              className="max-w-96 object-contain"
               objectFit="contain"
           />
-          <b>PolyScope 5</b>
-          <p>The mainstream software for controlling collaborative robots</p>
+          <b className="text-lg">PolyScope 5</b>
+          <p>{t("polyscope-5-desc")}</p>
+          <a href="https://www.universal-robots.com/products/polyscope-5/" className="underline">{t("polyscope-learn-more")}</a>
       </div>
       <span style={{marginLeft: "-2px"}} className="border-r-2 border-zinc-100 dark:border-zinc-700/40"/>
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-1 max-w-96">
         <StaticImage
               src={"../../../images/portfolio/polyscope_x.png"}
               alt=""
-              className="w-96 object-contain"
+              className="max-w-96 object-contain"
               objectFit="contain"
           />
-          <b>PolyScope X</b>
-          <p>The next generation software for controlling collaborative robots</p>
+          <b className="text-lg">PolyScope X</b>
+          <p>{t("polyscope-x-desc")}</p>
+          <a href="https://www.universal-robots.com/products/polyscope-x/" className="underline">{t("polyscope-learn-more")}</a>
       </div>
       </div>
     </div>
