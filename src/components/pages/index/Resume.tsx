@@ -1,33 +1,11 @@
 import React, { PropsWithChildren, ReactNode } from "react"
-import { BriefcaseIcon } from "../../icons/MiscIcons"
+import { ArrowDownIcon, BriefcaseIcon } from "../../icons/MiscIcons"
 import { aarhusTechImg } from "./EducationImages"
 import { urImg, broenImg, elgigantenImg } from "./WorkImages"
 import { Disclosure } from "@headlessui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-
-export interface Resume {
-    company: string,
-    title: string,
-    logo: () => ReactNode,
-    start: {
-      label: string,
-      dateTime?: number
-    },
-    end: {
-      label: string,
-      dateTime?: number
-    },
-    description?: ReactNode,
-    extendedDescription?: ReactNode
-  }
-
-function DescTemplate(props: PropsWithChildren) {
-  return(
-    <i className="text-xs text-zinc-500 dark:text-zinc-400 text-left">
-      {props.children}
-    </i>
-  )
-}
+import { DescTemplate, Timeline, TimelineContent } from "./Timeline"
+import { StaticImage } from "gatsby-plugin-image"
 
 function URFullStackDescription() {
   const {t} = useTranslation();
@@ -51,6 +29,38 @@ function URFullStackExtendedDescription() {
       <br/><br/>
       {t("resume_ur_full_stack_ext_desc_3")}
     </DescTemplate>
+  )
+}
+
+function URFullCustomFooter() {
+  const {t} = useTranslation();
+
+  return(
+    <div className="text-sm text-zinc-500 dark:text-zinc-400 text-left">
+      <div className="flex gap-4 border-2 rounded-2xl mt-4 p-4 border-zinc-100 dark:border-zinc-700/40">
+      <div className="flex flex-col">
+        <StaticImage
+              src={"../../../images/portfolio/polyscope_5.png"}
+              alt=""
+              className="w-96 object-contain"
+              objectFit="contain"
+          />
+          <b>PolyScope 5</b>
+          <p>The mainstream software for controlling collaborative robots</p>
+      </div>
+      <span style={{marginLeft: "-2px"}} className="border-r-2 border-zinc-100 dark:border-zinc-700/40"/>
+      <div className="flex flex-col">
+        <StaticImage
+              src={"../../../images/portfolio/polyscope_x.png"}
+              alt=""
+              className="w-96 object-contain"
+              objectFit="contain"
+          />
+          <b>PolyScope X</b>
+          <p>The next generation software for controlling collaborative robots</p>
+      </div>
+      </div>
+    </div>
   )
 }
 
@@ -166,9 +176,9 @@ function ElgigantenDescription() {
 export function Resume() {
   const {t} = useTranslation();
 
-  let resume: Resume[] = [
+  let resume: TimelineContent[] = [
     {
-      company: 'Universal Robots A/S',
+      subtitle: 'Universal Robots A/S',
       title: t("full-stack-software-engineer"),
       logo: urImg,
       start: { label: 'apr.' + ' 2024' },
@@ -177,10 +187,11 @@ export function Resume() {
         dateTime: new Date().getFullYear(),
       },
       description: URFullStackDescription(),
-      extendedDescription: URFullStackExtendedDescription()
+      extendedDescription: URFullStackExtendedDescription(),
+      customFooter: URFullCustomFooter()
     },
     {
-      company: 'Universal Robots A/S',
+      subtitle: 'Universal Robots A/S',
       title: t("java-software-engineer"),
       logo: urImg,
       start: { label: 'apr.' + ' 2023' },
@@ -191,7 +202,7 @@ export function Resume() {
       extendedDescription: URFullExtendedDescription()
     },
     {
-      company: 'Universal Robots A/S',
+      subtitle: 'Universal Robots A/S',
       title: t("software-developer"),
       logo: urImg,
       start: { label: 'jan.' + ' 2021' },
@@ -202,7 +213,7 @@ export function Resume() {
       extendedDescription: URExtendedDescription()
     },
     {
-      company: 'BROEN Valve Technologies',
+      subtitle: 'BROEN Valve Technologies',
       title: t("student-worker"),
       logo: broenImg,
       start: { label: 'aug. 2019' },
@@ -211,7 +222,7 @@ export function Resume() {
       extendedDescription: BroenExtendedDescription()
     },
     {
-      company: 'Aarhus Tech',
+      subtitle: 'Aarhus Tech',
       title: t("apprentice"),
       logo: aarhusTechImg,
       start: { label: 'jan. 2017' },
@@ -220,7 +231,7 @@ export function Resume() {
       extendedDescription: ApprenticeExtendedDescription()
     },
     {
-      company: 'Elgiganten A/S',
+      subtitle: 'Elgiganten A/S',
       title: 'Merchandiser',
       logo: elgigantenImg,
       start: { label: (t("october-abbreviation") + ' 2015') },
@@ -230,70 +241,12 @@ export function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 pt-6 px-6 pb-4 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">{t("work")}</span>
-      </h2>
-      <ol className="mt-6">
-        {resume.map((role: Resume, roleIndex) => (
-          <li key={roleIndex} className="flex flex-col">
-            <Disclosure>
-            {({ open }) => (
-              <Disclosure.Button className="flex flex-col" disabled={role.extendedDescription ? false : true}>
-                <div className="w-full flex gap-4">
-                <div className="relative mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  {role.logo()}
-                </div>
-                <dl className="flex flex-auto flex-wrap gap-x-2">
-                  <dt className="sr-only">{t("sr-role")}</dt>
-                  <dd className="w-full flex text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                    {role.title}
-                  </dd>
-                  <dt className="sr-only">{t("sr-company")}</dt>
-                  <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                    {role.company}
-                  </dd>
-                  <dt className="sr-only">{t("sr-date")}</dt>
-                  <dd
-                    className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                    aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
-                      }`}
-                  >
-                    <time dateTime={(role.start.dateTime ?? role.start.label).toString()}>
-                      {role.start.label ?? role.start}
-                    </time>{' '}
-                    <span aria-hidden="true">—</span>{' '}
-                    <time dateTime={(role.end.dateTime ?? role.end).toString()}>
-                      {role.end.label ?? role.end}
-                    </time>
-                  </dd>
-                </dl>
-                </div>
-                <div className={role.description ? "flex gap-4 mt-2" : 'hidden'}>
-                    <span className="relative flex w-11 flex-none items-center justify-center"/>
-                    {role.description}
-                </div>
-                <div className={open || !role.extendedDescription ? 'hidden' : 'block w-full text-xs text-zinc-500 dark:text-zinc-400 text-right'}>
-                  {t("disclosure_read_more")}
-                </div>
-                <Disclosure.Panel className="flex gap-4">
-                  <span className="relative flex w-11 flex-none items-center justify-center"/>
-                  {role.extendedDescription}
-                </Disclosure.Panel>
-                <span className={open || !role.extendedDescription ? 'p-2' : 'hidden'}/>
-              </Disclosure.Button>
-            )}
-            </Disclosure>
-          </li>
-        ))}
-      </ol>
-      {/*
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-      */}
-    </div>
+    <Timeline icon={icon} title={t('work')} content={resume}/>
+  )
+}
+
+const icon = () => {
+  return(
+    <BriefcaseIcon className="h-10 w-10 flex-none" />
   )
 }

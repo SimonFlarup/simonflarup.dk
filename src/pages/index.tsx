@@ -45,11 +45,17 @@ export default function Home() {
       <Layout>
         <Container className="mt-9">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl xs:text-2xl">
             {t("headline_index")}
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {t("intro_index")}
+            {t("intro_i_am") + " "}
+            <b className="text-red-500 dark:text-red-500">Simon</b>
+            {", " + t("intro_index") + " "}
+            <b className="text-red-500 dark:text-red-500">{t("intro_location")}</b>
+            {". " + t("intro_p1") + " "}
+            <a href="https://universal-robots.com"><b className="text-red-500 dark:text-red-500">{t("intro_company")}</b></a>
+            .
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             {t("intro_p2")}
@@ -72,21 +78,8 @@ export default function Home() {
           </div>
         </Container>
         <Photos />
-        <Container className="">
-          <div className="mt-24 md:mt-28 hidden xl:block">
-            <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-10 xl:max-w-none xl:grid-cols-2">
-              <div className="space-y-10 xl:pr-8">
-                <Resume />
-                <Other />
-              </div>
-              <div className="space-y-10 xl:pl-8">
-                <Education/>
-              </div>
-            </div>
-          </div>
-        </Container>
-        <Container className="mt-24 md:mt-28 xl:hidden">
-          <div className="grid mx-auto max-w-xl lg:max-w-2xl gap-y-10 xl:max-w-none xl:grid-cols-2">
+        <Container className="mt-24 md:mt-28">
+          <div className="grid mx-auto gap-y-10 xl:max-w-none">
             <div className="space-y-10">
               <Resume />
               <Education/>

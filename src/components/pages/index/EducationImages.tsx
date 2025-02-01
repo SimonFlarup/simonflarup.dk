@@ -6,7 +6,7 @@ export function sduImg() {
         <StaticImage
             src={"../../../images/logos/sdu.jpg"}
             alt=""
-            className="h-7 w-7 object-contain"
+            className="h-9 w-9 object-contain"
         />
     )
 }
@@ -16,7 +16,7 @@ export function randersHfImg() {
         <StaticImage
             src={"../../../images/logos/randershf.png"}
             alt=""
-            className="h-7 w-7 object-contain"
+            className="h-9 w-9 object-contain"
         />
     )
 }
@@ -26,7 +26,7 @@ export function aarhusTechImg() {
         <StaticImage
             src={"../../../images/logos/aarhustech.jpg"}
             alt=""
-            className="h-7 w-7 object-contain"
+            className="h-9 w-9 object-contain"
         />
     )
 }
@@ -36,7 +36,7 @@ export function tradiumImg() {
         <StaticImage
             src={"../../../images/logos/tradium.jpg"}
             alt=""
-            className="h-7 w-7 object-contain"
+            className="h-9 w-9 object-contain"
             objectFit="contain"
         />
     )
@@ -47,7 +47,7 @@ export function bsImg() {
         <StaticImage
             src={"../../../images/logos/bs.png"}
             alt=""
-            className="h-7 w-7 object-contain"
+            className="h-9 w-9 object-contain"
         />
     )
 }
