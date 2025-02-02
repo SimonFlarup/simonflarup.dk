@@ -1,8 +1,9 @@
 {
   "about_title": "About",
-  "about_header": "Hello! I'm Simon Holland Flarup",
-  "about_content_p1": "I am a young software engineer located in Odense, Denmark. I have an Master in Software Engineering from the University of Southern Denmark. I value creating software solutions where efficient development means balancing",
-  "about_content_p2": "I have an background in various software development positions and projects. I'm currently empowering the development and maintenance of interactive software for the worlds leading collaborative robotic arms. Attributing to a renewed longevity and resolving accumulated technical debt for improved development velocity.",
+  "about_header": "Hello! 👋",
+  "about_header_sub": "I am Simon Holland Flarup",
+  "about_content_p1": "A young software engineer located in Odense, Denmark. I have an Master in Software Engineering from the University of Southern Denmark. I value creating software solutions where efficient development means balancing",
+  "about_content_p2": "I have experience with various software development positions and projects. I'm currently empowering the development and maintenance of interactive software for the worlds leading collaborative robotics company. Attributing to a renewed longevity and resolving accumulated technical debt for improved development velocity.",
   "about_content_p3": "Previously, I've had the pleasure of applying software solutions to accelerate the adoption of Industry 4.0 and Internet of Things. Being responsible for creating a functional prototype for a cloud connected industry valve to improve monitoring and fault-detection in water, district heating and gas infrastructure.",
   "about_content_p4": "My apprenticeship involved leading the design, development and operation of a software automation application for enhancing the management of student registration and counseling. This experience made me focus on studying to become a software engineer.",
   "about_content_p5": "Before being able to gain admittance to an university, I had to graduate from an upper secondary education. To fast track this process, an educational program was personalized for me to complete a two-year education within 11 months.",

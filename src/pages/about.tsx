@@ -130,6 +130,9 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               {t("about_header")}
             </h1>
+            <h2 className="text-2xl text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+              {t("about_header_sub")}
+            </h2>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 {t("about_content_p1")} <b>{t("about_velocity")}</b>, <b>{t("about_quality")}</b> {t("about_and")} <b>{t("about_longevity")}</b>

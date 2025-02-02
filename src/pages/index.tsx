@@ -76,7 +76,7 @@ export default function Home() {
                 icon={LinkedInIcon}
               />
               
-              <Link className="flex flex-col gap-2 text-base text-zinc-600 dark:text-zinc-400" to={"/cv"}>
+              <Link className="group -m-1 p-1" to={"/cv"}>
                 <CVIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
               </Link>
             </div>
