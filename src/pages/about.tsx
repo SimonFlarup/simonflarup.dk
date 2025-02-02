@@ -114,9 +114,9 @@ export default function About() {
 
   return (
     <Layout>
-      <Container className="mt-16 sm:mt-32">
+      <Container className="lg:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-          <div className="lg:pl-20">
+          <div className="hidden lg:block lg:pl-20 justify-items-center">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <StaticImage
                 src="../images/simon_wall.jpg"

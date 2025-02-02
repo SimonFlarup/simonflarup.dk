@@ -37,7 +37,7 @@ export function Timeline(props: {icon: () => ReactNode, title: string, content: 
           {props.icon()}
           <span className="">{props.title}</span>
         </div>
-        <Link className="ml-auto gap-2 flex flex-row items-center border-2 bg-zinc-100/5 dark:bg-zinc-900/20 border-zinc-100 dark:border-zinc-700/40 rounded-xl px-4 py-1 font-normal text-lg" to="/cv">
+        <Link className="hidden ml-auto gap-2 xs:flex flex-row items-center border-2 bg-zinc-100/5 dark:bg-zinc-900/20 border-zinc-100 dark:border-zinc-700/40 rounded-xl px-4 py-1 font-normal text-lg" to="/cv">
           <CVIcon className="h-8 w-8 fill-zinc-200 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
           {t("download_cv")}
         </Link>
