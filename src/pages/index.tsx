@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import { Container } from '../components/Container'
 import {
+  CVIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '../components/icons/SocialIcons'
@@ -74,6 +75,10 @@ export default function Home() {
                 aria-label={t("aria-follow-on-linkedin")}
                 icon={LinkedInIcon}
               />
+              
+              <Link className="flex flex-col gap-2 text-base text-zinc-600 dark:text-zinc-400" to={"/cv"}>
+                <CVIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+              </Link>
             </div>
           </div>
         </Container>
@@ -93,7 +98,7 @@ export default function Home() {
 }
 
 import Seo from "../components/layout/Seo"
-import { graphql, HeadFC } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { flightImg, keyboardImg, sedenImg, polarcaseImg, domeImg } from "../components/pages/index/FeaturedImages"
 import { Resume } from "../components/pages/index/Resume"
 import { Education } from "../components/pages/index/Education"
