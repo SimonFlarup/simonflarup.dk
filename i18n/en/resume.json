@@ -5,7 +5,7 @@
   "resume_ur_full_stack_ext_desc_3": "PolyScope 5 is a Java Swing based application supported by the modular and plugable framework OSGi.",
   "resume_ur_full_desc": "Software engineer with responsiblity for the development and maintenance of PolyScope 5, the control and programming interface empowering the collaborative robots from Universal Robots.",
   "resume_ur_full_ext_desc": "Primarily responsible for the development and maintainance of the Java application enabling programming and operating collaborative robots. Main responsible for the development of the user interface for PolyScope 5.",
-  "resume_ur_full_ext_desc_2": "Primarily working with Java, Docker, TypeScript and Angular",
+  "resume_ur_full_ext_desc_2": "Primarily working with Java, OSGi and Docker",
   "projects": "Projects:",
   "education_msc_thesis_title": "• The longevity of modern software: A study of operational risks connected to open source libraries",
   "education_msc_company_project_title": "• Mitigating the accumulation of technical debt and addressing existing productivity inhibitors",
