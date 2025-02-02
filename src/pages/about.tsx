@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { Container } from '../components/Container'
 import {
+  CVIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '../components/icons/SocialIcons'
@@ -12,7 +13,7 @@ function SocialLink({ className, href, children, icon: Icon }: PropsWithChildren
     <li className={className + ' flex'}>
       <a
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-red-500 dark:text-zinc-200 dark:hover:text-red-500"
+        className="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-red-500 dark:text-zinc-200 dark:hover:text-red-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-500" />
         <span className="ml-4">{children}</span>
@@ -25,7 +26,7 @@ function Info({ className, children, icon: Icon }: PropsWithChildren<{ className
   return (
     <li className={className + ' flex'}>
       <div
-        className="group flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
+        className="group flex items-center text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition" />
         <span className="ml-4">{children}</span>
@@ -99,7 +100,7 @@ function IdIcon(props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
 
 export default function About() {
   const {t} = useTranslation();
-  const [age, setAge] = useState(24)
+  const [age, setAge] = useState(26)
 
   function calculateAge(birthday: Date) {
     var ageDifMs = Date.now() - birthday.getTime();
@@ -168,6 +169,11 @@ export default function About() {
               <SocialLink href="https://linkedin.com/in/SimonFlarup" icon={LinkedInIcon} className="mt-4">
               {t("aria-follow-on-linkedin")}
               </SocialLink>
+              <Link className="mt-4 group flex items-center text-sm font-medium text-zinc-800 transition hover:text-red-500 dark:text-zinc-200 dark:hover:text-red-500" to={"/cv"}>
+                <CVIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-red-500" />
+                <span className="ml-4">{t("download_cv_full")}</span>
+              </Link>
+
               <SocialLink
                 href="mailto:mail+contact@simonflarup.dk"
                 icon={MailIcon}
@@ -191,7 +197,7 @@ export default function About() {
 }
 
 import Seo from "../components/layout/Seo"
-import { graphql, HeadFC } from "gatsby"
+import { graphql, HeadFC, Link } from "gatsby"
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 export const Head = ({pageContext}: any) => {

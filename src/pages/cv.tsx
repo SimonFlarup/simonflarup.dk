@@ -369,7 +369,7 @@ const CV = ({data}: any) => {
               <b>{t("other_drivers_licence_title")}</b> - {t("other_category_drivers_license")}
             </p>
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-              <b>{t("other_glenten_title")}</b> - Glenten Antennelaug (2018 - 2026)
+              <b>{t("other_glenten_title")}</b> - Glenten Antennelaug (2018 - 2025)
             </p>
           </div>
 
@@ -413,12 +413,24 @@ const CV = ({data}: any) => {
 function CVData(props:{className:string}) {
   const {t} = useTranslation();
 
+  const [age, setAge] = useState(26)
+  
+  function calculateAge(birthday: Date) {
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+
+  useEffect(() => {
+    setAge(calculateAge(new Date("1998-12-01")))
+  }, []);
+
   return(
     <div className={props.className}>
       <div className="flex gap-2">
         <CakeIcon className="h-6 w-6 print:h-5 print:w-5 flex-none transition" strokeWidth={2}/>
         <p className="print:text-xs text-zinc-500 dark:text-zinc-400 break-all">
-        {t("cv_age")}
+        {age} {t("cv_age")}
         </p>
       </div>
       <div className="flex gap-2">
@@ -460,7 +472,7 @@ export default CV
 import Layout from "../components/layout/Layout"
 import { Container } from "../components/Container"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { ReactNode } from "react"
+import { ReactNode, useEffect, useState } from "react"
 import { AcademicIcon, BriefcaseIcon, CakeIcon, HashtagIcon, HomeIcon, InfoCircleIcon, LanguageIcon, OutlineMailIcon, PhoneIcon, SmileyIcon, TagIcon, WebIcon } from "../components/icons/MiscIcons"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
