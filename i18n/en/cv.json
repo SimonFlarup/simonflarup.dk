@@ -1,10 +1,11 @@
 {
     "cv_ur_full_desc_4": "Core competencies within Java, Docker, TypeScript og Angular",
-    "cv_ur_full_li_1": "• Contributed to the release of 11 minor releases of PolyScope 5.",
-    "cv_ur_full_li_2": "• Responsible for 6 minor releases within a year.",
-    "cv_ur_full_li_3": "• Co-responsible for the design and release of public APIs.",
-    "cv_ur_full_li_4": "• Contributed to development of 3 minor releases of the next generation software: PolyScope X.",
-    "cv_ur_full_li_5": "• Top performing developer multiple years in a row.",
+    "cv_ur_full_li_1": "• Led development for PolyScope 5, managing technical strategies, sprint planning, and collaboration with key accounts.",
+    "cv_ur_full_li_2": "• Delivered 11 feature releases, achieving technical ownership and advancing user-facing software across Universal Robots’ ecosystem.",
+    "cv_ur_full_li_3": "• Designed and implemented multi-stacked architectures using Java, Spring Boot, TypeScript, Angular, Docker, and Quarkus.",
+    "cv_ur_full_li_4": "• Co-developed public APIs, improving integration accessibility for users and third-party developers.",
+    "cv_ur_full_li_5": "• Played a pivotal role in PolyScope X, contributing to three impactful releases that strengthened platform scalability.",
+    "cv_ur_full_li_6": "• Provided long-term software support for major clients, ensuring reliability and customer satisfaction across critical deployments.",
     "cv_apprentice_desc_1": "Responsible for the development of software for internal usage, focusing on improving the processes of student intake and counseling within the vocational institution. Point of contact for domain users. Web and database development with server deployment.",
     "cv_education_eux_1": "Suspended combined upper secondary education and vocational education within information technology, networking and computer programming. Suspended for seeking direct admission to university.",
     "cv_redmew_1": "Developer and administrator for the online community Redmew in the video game Factorio. Contributed with development of scenarios and modifications for Factorio, code review and approvals, maintenance of online servers and head of crowdsourcing localization.",
@@ -14,7 +15,7 @@
     "cv_eux_title": "Data technician (EUX)",
     "cv_age": "years old",
     "cv_location": "5220 Odense SE, Denmark",
-    "cv_summary_1": "Young and passionate Software Engineer, seeking new opportunities and experiences after over four years as a software engineer at Universal Robots A/S. I have been involved in the development and maintenance of new and existing projects across different technology stack including Java/Spring Boot and Typescript/Angular. Currently I drive the maintenance of business critical software extending the longevity in anticipation of the launch of the next generation software.",
+    "cv_summary_1": "Passionate Software Engineer, seeking new opportunities and experiences after over four years as a software engineer at Universal Robots A/S. I have been involved in the development and maintenance of new and existing projects across different technology stack including Java/Spring Boot and Typescript/Angular. Currently I drive the maintenance of business critical software extending the longevity in anticipation of the launch of the next generation software.",
     "cv_summary_2": "I believe that software engineering is not only about delivering functionality. It is about creating a balance of development velocity, quality assurance and system longevity. I am looking for exciting opportunities to develop and apply my passion for creating great digital experiences.",
     "cv_summary_3": "My core competencies are Java and Typescript, and I have experience in several different technologies and programming languages. I am eager for next opportunities to expanding my repertoire.",
     "cv_summary_4": "I am a young software engineer passionate about upholding the quality and maintainability of software. For the past four years I have been applying and developing my passion and skills at Universal Robots A/S, improving the longevity of the Java application Polyscope while enhancing the developer and customer experiences. I have a Master of Science in Software Engineering and I have been actively involved in different software projects for the last seven years, utilizing languages such as Java, C#, C++, Lua, Python and PHP.",
@@ -29,5 +30,7 @@
     "cv_summary_title": "Summary",
     "cv_keywords_title": "Keywords",
     "achievements": "Achievements:",
-    "volunteering": "Volunteering"
+    "responsibilitiy_achievements": "Responsibilities and achievements:",
+    "volunteering": "Volunteering",
+    "cv_ur_part_2": "Optimized software architecture to improve adaptability and efficiency while reducing technical debt. Led dependency migrations with Maven and enhanced third-party integrations using OSGi. Developed UI functionality in Swing, refined CI/CD pipelines with Jenkins, and collaborated in debugging to ensure reliability."
 }

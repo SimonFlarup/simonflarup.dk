@@ -35,17 +35,12 @@ function URFullDesc() {
 
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
-      {t("resume_ur_full_stack_desc")}
-      <br/><br/>
+      {t("resume_ur_full_stack_desc") + " "}
       {t("resume_ur_full_stack_ext_desc")}
       <br/><br/>
-      {t("resume_ur_full_stack_ext_desc_2")}
-      <br/><br/>
-      {t("resume_ur_full_stack_ext_desc_3")}
-      <br/><br/>
-      <u>{t("achievements")}</u>
+      <u>{t("responsibilitiy_achievements")}</u>
       <br/>
-      <div className="ml-8">
+      <div className="">
         {t("cv_ur_full_li_1")}
         <br/>
         {t("cv_ur_full_li_2")}
@@ -55,6 +50,8 @@ function URFullDesc() {
         {t("cv_ur_full_li_4")}
         <br/>
         {t("cv_ur_full_li_5")}
+        <br/>
+        {t("cv_ur_full_li_6")}
       </div>
     </p>
   )
@@ -67,21 +64,7 @@ function URDesc() {
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
       {t("resume_ur_desc")}
       <br/><br/>
-      {t("resume_ur_ext_desc_tech")}
-      <br/><br/>
-      <u>{t("responsibility")}</u>
-      <br/>
-      <div className="ml-8">
-        {t("resume_ur_ext_desc_p1")}
-        <br/>
-        {t("resume_ur_ext_desc_p2")}
-        <br/>
-        {t("resume_ur_ext_desc_p3")}
-        <br/>
-        {t("resume_ur_ext_desc_p4")}
-        <br/>
-        {t("resume_ur_ext_desc_p5")}
-      </div>
+      {t("cv_ur_part_2")}
     </p>
   )
 }
@@ -104,8 +87,6 @@ function AarhusDesc() {
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
       {t("cv_apprentice_desc_1")}
-      <br/><br/>
-      {t("resume_apprentice_ext_desc_tech")}
     </p>
   )
 }
@@ -184,8 +165,6 @@ function RedmewDesc() {
   return(
     <p className="mr-2 mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
       {t("cv_redmew_1")}
-      <br/><br/>
-      {t("other_redmew_ext_desc_tech")}
     </p>
   )
 }
@@ -221,13 +200,6 @@ const CV = ({data}: any) => {
       start: "August 2016",
       end: "August 2017",
       description: AarhusDesc()
-    },
-    {
-      company: "Elgiganten",
-      title: t("cv_elgiganten_title"),
-      start: t("october") + " 2015",
-      end: "August 2016",
-      description: ElgigantenDesc()
     },
   ]
 
