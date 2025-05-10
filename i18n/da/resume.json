@@ -51,15 +51,15 @@
   "polyscope-5-desc": "Den fortrukne platform til styring af kollaborative robotter.",
   "polyscope-x-desc": "Næste generationsplatforn til styring af kollaborative robotter.",
   "polyscope-learn-more": "Læs mere på universal-robots.com",
-  "cv_ur_full_li_1": "• Drev udviklingen af PolyScope 5, tekniske beslutninger, sprintplanlægning og samarbejde med kunder.",
-  "cv_ur_full_li_2": "• Leverede 11 funktionsudgivelser, opnåede teknisk ejerskab og forbedrede brugerorienteret software på tværs af Universal Robots’ økosystem.",
-  "cv_ur_full_li_3": "• Designede og implementerede systemer ved brug af Java, Spring Boot, TypeScript, Angular, Docker og Quarkus.",
-  "cv_ur_full_li_4": "• Udviklede offentlige API'er, hvilket forbedrede integrationsmuligheder for både brugere og tredjepartsudviklere.",
-  "cv_ur_full_li_5": "• Central rolle i PolyScope X og bidrog til tre betydningsfulde udgivelser, der styrkede platformens skalerbarhed.",
-  "cv_ur_full_li_6": "• Langsigtet software understøttelse til kunder, sikrende driftssikkerhed og kundetilfredshed på tværs af kritiske løsninger.",
+  "cv_ur_full_li_1": "• Drevet udviklingen af PolyScope 5, tekniske beslutninger, sprintplanlægning og samarbejde med kunder.",
+  "cv_ur_full_li_2": "• Leveret 11 funktionsudgivelser, opnåede teknisk ejerskab og forbedrede brugerorienteret software på tværs af Universal Robots’ økosystem.",
+  "cv_ur_full_li_3": "• Designet og implementerede systemer ved brug af Java, Spring Boot, TypeScript, Angular, Docker og Quarkus.",
+  "cv_ur_full_li_4": "• Udviklet offentlige API'er, hvilket forbedrede integrationsmuligheder for både brugere og tredjepartsudviklere.",
+  "cv_ur_full_li_5": "• Central rolle i PolyScope X og bidraget til tre betydningsfulde udgivelser, der har styrket platformens skalerbarhed.",
+  "cv_ur_full_li_6": "• Langsigtet software understøttelse til kunder, sikret driftssikkerhed og kundetilfredshed på tværs af kritiske løsninger.",
   "resume_broen_desc": "Bidrog til et pilotprojekt, der undersøgte Industry 4.0 og Internet of Things (IoT) gennem udviklingen af et cyber-fysisk system. Arbejdede med prototyping, konnektivitet og cloud-infrastruktur for at muliggøre realtidsløsninger inden for industriel automation.",
   "resume_broen_ext_desc_tech": "Prototype udvikling af en indlejret platform til Industry 4.0-applikationer med fokus på systemarkitektur og funktionalitet. Designede og implementerede IoT-forbindelsesløsninger med NB-IoT for at sikre pålidelig dataoverførsel til industrielle sensorer. Derudover udviklede og optimerede cloud-baseret databehandling og lagringssystemer ved hjælp af Microsoft Azure for at forbedre skalerbarhed og effektivitet.",
   "resume_ur_desc": "Bidrog til udviklingen og optimeringen af PolyScope 5, kontrol- og programmeringsgrænsefladen, der driver Universal Robots’ kollaborative robotter. Arbejdede tæt sammen med teamet for at forbedre softwarearkitektur, reducere teknisk gæld og implementere ny funktionalitet, hvilket sikrede problemfri drift og integration i industriel automation.",
-  "resume_ur_full_stack_desc": "Alsidig softwareingeniør, der leder den tekniske udvikling af PolyScope 5, driver forretningskritiske forbedringer for nøglekunder og sikrer driftssikkerhed på over 100.000 implementerede robotter.",
-  "resume_ur_full_stack_ext_desc": "Full-stack udvikling af den næste generation af PolyScope X-platformen, hvor jeg forbedrer tilpasningsevne og ydeevne til industriel automation."
+  "resume_ur_full_stack_desc": "Alsidig softwareingeniør med ansvar for den tekniske udvikling af PolyScope 5, driver forretningskritiske forbedringer for nøglekunder og sikrer driftssikkerhed på over 100.000 implementerede robotter.",
+  "resume_ur_full_stack_ext_desc": "Full-stack udvikling af den næste generation af PolyScope X-platformen, hvor jeg forbedrer tilpasnings- og ydeevne for industriel automation."
 }
