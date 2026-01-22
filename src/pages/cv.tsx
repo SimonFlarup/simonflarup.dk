@@ -283,6 +283,8 @@ const CV = ({data}: any) => {
             <p className="mt-2 print:text-xs text-zinc-500 dark:text-zinc-400">
               {t("cv_summary_1")}
               <br/><br/>
+              {t("cv_summary_3")}
+              <br/><br/>
               {t("cv_summary_2")}
             </p>
           </div>
