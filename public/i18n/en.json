@@ -1,7 +1,19 @@
 {
+  "HEADER": {
+    "LIGHT": "Light",
+    "DARK": "Dark"
+  },
   "ABOUT": {
     "TITLE": "About",
-    "HEADLINE": "Hello!",
-    "SUBLINE": "I am Simon Holland Flarup"
+    "HEADLINE": "Hello! \uD83D\uDC4B",
+    "SUBLINE": "I am Simon Holland Flarup",
+    "CONTENT": {
+      "INTRO": "A young software engineer located in Odense, Denmark. I have an Master in Software Engineering from the University of Southern Denmark. I value creating software solutions where efficient development means balancing <b>velocity</b>, <b>quality</b> and <b>longevity</b>.",
+      "BACKGROUND-UR": "I have experience with various software development positions and projects. I'm currently empowering the development and maintenance of interactive software for the worlds leading collaborative robotics company. Attributing to a renewed longevity and resolving accumulated technical debt for improved development velocity.",
+      "BACKGROUND-BROEN": "Previously, I've had the pleasure of applying software solutions to accelerate the adoption of Industry 4.0 and Internet of Things. Being responsible for creating a functional prototype for a cloud connected industry valve to improve monitoring and fault-detection in water, district heating and gas infrastructure.",
+      "BACKGROUND-APPRENTICE": "My apprenticeship involved leading the design, development and operation of a software automation application for enhancing the management of student registration and counseling. This experience made me focus on studying to become a software engineer.",
+      "BACKGROUND-EDUCATION": "Before being able to gain admittance to an university, I had to graduate from an upper secondary education. To fast track this process, an educational program was personalized for me to complete a two-year education within 11 months.",
+      "OUTRO": "I graduated as a MSc in Software Engineering in 2023, and have since grown in my current position at Universal Robots A/S to be responsible for the user interface of PolyScope 5. If you are still curious, or think I could be someone you need, then let's have a chat."
+    }
   }
 }
