@@ -1,0 +1,30 @@
+<header class="relative z-50 flex mb-5 top-0 pt-6">
+    <div>
+      <a routerLink="/">
+        <img
+          ngSrc="images/simon_portrait_ur.jpg"
+          width="112"
+          height="112"
+          alt="Portrait of Simon Flarup"
+          class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
+          priority
+        />
+      </a>
+    </div>
+  <div class="flex-1 flex justify-center items-center">
+    <nav class="flex rounded-full bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <a routerLink="/" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">Home</a>
+      <a routerLink="/about" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">About</a>
+    </nav>
+  </div>
+  <div class="content-center ml-auto">
+    <div class="flex gap-2">
+    <button (click)="toggleDarkMode()" class="flex rounded-full px-4 py-2 bg-white/90 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      {{ darkMode() ? '🌙 ' + ("HEADER.DARK" | translate) : '☀️ ' + ("HEADER.LIGHT" | translate) }}
+    </button>
+    <button (click)="toggleLanguage()" class="flex rounded-full px-4 py-2 bg-white/90 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      {{ language() === 'en' ? '🇬🇧 English' : '🇩🇰 Dansk' }}
+    </button>
+    </div>
+  </div>
+</header>
