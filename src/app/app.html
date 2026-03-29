@@ -1,5 +1,13 @@
-<main class="main">
-  <a routerLink="/about">About</a>
+<main>
+  <div class=" dark:bg-black bg-zinc-50" style="min-height:100vh">
+    <div class="flex inset-0 justify-center sm:px-8 md:px-16">
+      <div class="flex flex-col w-full lg:px-8 px-2 md:px-4 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 gap-4" style="min-height:100vh">
+        <app-header/>
+        <div class="grow">
+        <router-outlet />
+        </div>
+        <app-footer/>
+      </div>
+    </div>
+  </div>
 </main>
-
-<router-outlet />
