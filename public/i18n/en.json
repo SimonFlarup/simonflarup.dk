@@ -30,7 +30,12 @@
     "LIGHT": "Light"
   },
   "HOME": {
-    "TITLE": "Home"
+    "TITLE": "Home",
+    "HEADLINE": "Passionate Software Engineer, making impactful systems that thrives",
+    "INTRO": "I'm <b>Simon</b> a passionate software engineer based in <b>Odense, Denmark</b>. I develop the current and next generation user interaction software for the collaborative robots by <b>Universal Robots</b>.",
+    "INTRO_MOTIVATION": "To me, software engineering is more than just shipping new features and fixing bugs. It's a fine balance of development velocity, quality assurance and system longevity.",
+    "INTRO_ACTION": "Take a look around or visit my social profiles to learn more about me.",
+    "DOWNLOAD_CV": "Download"
   },
   "PRIVACY_POLICY": {
     "TITLE": "Privacy Policy"
