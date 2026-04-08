@@ -1,12 +1,12 @@
 <footer class="border-t border-zinc-100 py-4 mb-4 dark:border-zinc-700/40">
   <div class="flex-1 flex items-center">
     <nav class="flex px-3 py-2 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-      <a routerLink="/" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">Home</a>
-      <a routerLink="/about" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">About</a>
-      <a routerLink="/privacy" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">Privacy Policy</a>
+      <a routerLink="/" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">{{ 'HOME.TITLE' | translate }}</a>
+      <a routerLink="/about" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">{{ 'ABOUT.TITLE' | translate }}</a>
+      <a routerLink="/privacy" class="px-3 transition hover:text-red-500 dark:hover:text-red-400">{{ 'PRIVACY_POLICY.TITLE' | translate }}</a>
     </nav>
     <div class="text-sm text-zinc-400 dark:text-zinc-500 text-center ml-auto">
-      <p>Powered by <a href="https://angular.dev/">Angular</a> - <a href="https://tailwindcss.com/">TailwindCSS</a> - <a href="https://ionic.io/ionicons">Ionicons</a> | Hosted on <a href="https://pages.github.com/">GitHub Pages</a></p>
+      <p>{{ 'FOOTER.TECH.POWERED_BY' | translate }} <a href="https://angular.dev/">Angular</a> - <a href="https://tailwindcss.com/">TailwindCSS</a> - <a href="https://ionic.io/ionicons">Ionicons</a> | {{ 'FOOTER.TECH.HOSTED_ON' | translate }} <a href="https://pages.github.com/">GitHub Pages</a></p>
     </div>
   </div>
 </footer>

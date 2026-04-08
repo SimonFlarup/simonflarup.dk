@@ -1,19 +1,38 @@
 {
-  "HEADER": {
-    "LIGHT": "Lys",
-    "DARK": "Mørk"
-  },
   "ABOUT": {
-    "TITLE": "Om",
-    "HEADLINE": "Hej! \uD83D\uDC4B",
-    "SUBLINE": "Jeg hedder Simon Holland Flarup",
+    "AGE": "{{age}} år",
+    "BIRTHDAY": "Født i 1998",
     "CONTENT": {
+      "BACKGROUND_APPRENTICE": "Som lærling fik jeg muligheden for at lede designet, udviklingen og operationen af et digitaliseringsværktøj til effektivisering af administrationen blandt elevoptag og vejledning. Denne erfaring motiverede mig til at gå målrettet efter at blive civilingeniør.",
+      "BACKGROUND_BROEN": "Jeg har tidligere haft glæden ved at kunne anvende software løsninger til at fremme anvendelsen af Internet of Things og Industry 4.0. Som ansvarlig for prototypeudviklingen af en sky forbundet industriel ventil til at forbedre overvågning og fejlfinding i vand-, fjernvarme- og gasledninger.",
+      "BACKGROUND_EDUCATION": "Som adgangskrav til universitet, blev jeg nødt til at gennemføre en gymnasial uddannelse. Et personligt uddannelsesforløb blev oprettet for at jeg hurtigt kunne blive optaget på et universitet. Dette forløb bestod af gennemførelsen af en 2-årig HF på 11 måneder.",
+      "BACKGROUND_UR": "Min baggrund kommer fra forskellige projekter og stillinger indenfor softwareudvikling. Jeg beskæftiger mig i øjeblikket med udvikling og vedligeholdelse af software til brugerstyring af verdens førende kollaborative robot arme. Mit ansvar har hjulpet med fornyet fremtidssikring og fjernelse af teknisk gæld der har samlet sig, for at forbedre fremdriften i videreudvikling.",
       "INTRO": "Jeg er en ung softwareingeniør, bosat i Odense. Jeg er uddannet Civilingeniør i Software Engineering fra Syddansk Universitet. Jeg brænder for at skabe software løsninger hvor effektiv udvikling involverer balancering af <b>fremdrift</b>, <b>kvalitet</b> og <b>fremtidssikring</b>.",
-      "BACKGROUND-UR": "Min baggrund kommer fra forskellige projekter og stillinger indenfor softwareudvikling. Jeg beskæftiger mig i øjeblikket med udvikling og vedligeholdelse af software til brugerstyring af verdens førende kollaborative robot arme. Mit ansvar har hjulpet med fornyet fremtidssikring og fjernelse af teknisk gæld der har samlet sig, for at forbedre fremdriften i videreudvikling.",
-      "BACKGROUND-BROEN": "Jeg har tidligere haft glæden ved at kunne anvende software løsninger til at fremme anvendelsen af Internet of Things og Industry 4.0. Som ansvarlig for prototypeudviklingen af en sky forbundet industriel ventil til at forbedre overvågning og fejlfinding i vand-, fjernvarme- og gasledninger.",
-      "BACKGROUND-APPRENTICE": "Som lærling fik jeg muligheden for at lede designet, udviklingen og operationen af et digitaliseringsværktøj til effektivisering af administrationen blandt elevoptag og vejledning. Denne erfaring motiverede mig til at gå målrettet efter at blive civilingeniør.",
-      "BACKGROUND-EDUCATION": "Som adgangskrav til universitet, blev jeg nødt til at gennemføre en gymnasial uddannelse. Et personligt uddannelsesforløb blev oprettet for at jeg hurtigt kunne blive optaget på et universitet. Dette forløb bestod af gennemførelsen af en 2-årig HF på 11 måneder.",
       "OUTRO": "Jeg dimitterede som Civilingeniør i Software Engineering i 2023, og jeg har siden da vokset i min nuværende position how Universal Robots A/S til at være hovedansvarlig for brugergrænsefladen til PolyScope 5. Hvis du stadig er nysgerrig, eller tænker jeg er lige den de mangler, så lad os tage en snak."
+    },
+    "CV_ACTION": "Hent mit CV",
+    "GITHUB_ACTION": "Find mig på GitHub",
+    "HEADLINE": "Hej! 👋",
+    "LINKEDIN_ACTION": "Find mig på LinkedIn",
+    "LOCATION": "Odense, Fyn",
+    "PRONOUN": "(Han/Ham)",
+    "SUBLINE": "Jeg hedder Simon Holland Flarup",
+    "TITLE": "Om"
+  },
+  "FOOTER": {
+    "TECH": {
+      "HOSTED_ON": "Hostet af",
+      "POWERED_BY": "Skabt med"
     }
+  },
+  "HEADER": {
+    "DARK": "Mørk",
+    "LIGHT": "Lys"
+  },
+  "HOME": {
+    "TITLE": "Forside"
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Privatlivspolitik"
   }
 }

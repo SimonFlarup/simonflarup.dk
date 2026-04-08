@@ -8,10 +8,10 @@
     </h2>
     <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
       <p [innerHTML]="'ABOUT.CONTENT.INTRO' | translate"></p>
-      <p>{{ 'ABOUT.CONTENT.BACKGROUND-UR' | translate }}</p>
-      <p>{{ 'ABOUT.CONTENT.BACKGROUND-BROEN' | translate }}</p>
-      <p>{{ 'ABOUT.CONTENT.BACKGROUND-APPRENTICE' | translate }}</p>
-      <p>{{ 'ABOUT.CONTENT.BACKGROUND-EDUCATION' | translate }}</p>
+      <p>{{ 'ABOUT.CONTENT.BACKGROUND_UR' | translate }}</p>
+      <p>{{ 'ABOUT.CONTENT.BACKGROUND_BROEN' | translate }}</p>
+      <p>{{ 'ABOUT.CONTENT.BACKGROUND_APPRENTICE' | translate }}</p>
+      <p>{{ 'ABOUT.CONTENT.BACKGROUND_EDUCATION' | translate }}</p>
       <p>{{ 'ABOUT.CONTENT.OUTRO' | translate }}</p>
     </div>
   </div>
@@ -34,19 +34,19 @@
           <div class="text-zinc-500">
             <ng-icon name="ionPersonSharp" size="24" />
           </div>
-          <p>Simon Holland Flarup (He/Him)</p>
+          <p>Simon Holland Flarup {{ 'ABOUT.PRONOUN' | translate }}</p>
         </li>
         <li class="flex gap-4 items-center">
           <div class="text-zinc-500">
             <ng-icon name="ionBalloonSharp" size="24" />
           </div>
-          <p>Born in 1998 (27 y/o)</p>
+          <p>{{ 'ABOUT.BIRTHDAY' | translate }} {{ 'ABOUT.AGE' | translate : {age: age} }}</p>
         </li>
         <li class="flex gap-4 items-center">
           <div class="text-zinc-500">
             <ng-icon name="ionHomeSharp" size="24" />
           </div>
-          <p>Odense, Funen (Denmark)</p>
+          <p>{{ 'ABOUT.LOCATION' | translate }}</p>
         </li>
       </ul>
 
@@ -59,19 +59,19 @@
           <div class="text-zinc-500">
             <ng-icon name="ionLogoGithub" size="24" />
           </div>
-          <p>Follow on GitHub</p>
+          <p>{{ 'ABOUT.GITHUB_ACTION' | translate }}</p>
         </li>
         <li class="flex gap-4 items-center">
           <div class="text-zinc-500">
             <ng-icon name="ionLogoLinkedin" size="24" />
           </div>
-          <p>Follow on LinkedIn</p>
+          <p>{{ 'ABOUT.LINKEDIN_ACTION' | translate }}</p>
         </li>
         <li class="flex gap-4 items-center">
           <div class="text-zinc-500">
             <ng-icon name="ionDocumentText" size="24" />
           </div>
-          <p>Download CV</p>
+          <p>{{ 'ABOUT.CV_ACTION' | translate }}</p>
         </li>
       </ul>
 

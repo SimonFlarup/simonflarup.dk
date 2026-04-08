@@ -16,8 +16,31 @@ import {
 @Component({
   selector: 'app-about',
   imports: [TranslatePipe, NgOptimizedImage, NgIcon],
-  providers: [provideIcons({ ionPersonSharp, ionHomeSharp, ionBalloonSharp, ionLogoLinkedin, ionLogoGithub, ionDocumentText, ionMail, ionCallSharp })],
+  providers: [
+    provideIcons({
+      ionPersonSharp,
+      ionHomeSharp,
+      ionBalloonSharp,
+      ionLogoLinkedin,
+      ionLogoGithub,
+      ionDocumentText,
+      ionMail,
+      ionCallSharp,
+    }),
+  ],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {}
+export class About {
+  age: number = this.calculateAge();
+
+  private calculateAge(): number {
+    const today = new Date();
+    let age = today.getFullYear() - 1998;
+    if (today.getMonth() < 11) {
+      age--;
+    }
+    return age;
+  }
+}
+
