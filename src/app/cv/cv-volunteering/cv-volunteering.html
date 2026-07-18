@@ -3,15 +3,13 @@
     {{ 'CV.VOLUNTEERING.TITLE' | translate }}
   </h2>
   <hr />
-  <div class="flex mt-3">
-    <p class="mr-2 cv-text">
-      <b>{{ entry().titleKey | translate }}</b><br />
-      {{ entry().company }}
-    </p>
-    <p class="ml-auto cv-text text-right">
-      <i>{{ entry().startKey | translate }} - {{ entry().endKey | translate }}</i>
-    </p>
-  </div>
+  <app-cv-entry-header
+    [titleKey]="entry().titleKey"
+    [company]="entry().company"
+    [startKey]="entry().startKey"
+    [endKey]="entry().endKey"
+    [largeTopMargin]="true"
+  />
   <p class="mt-2 cv-text">
     {{ entry().descriptionKey! | translate }}
   </p>

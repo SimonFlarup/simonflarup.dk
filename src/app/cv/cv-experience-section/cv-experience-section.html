@@ -5,15 +5,12 @@
 
   @for (entry of entries(); track entry.company + entry.titleKey) {
     <hr />
-    <div class="cv-detail-title">
-      <p class="mr-2 cv-text">
-        <b>{{ entry.titleKey | translate }}</b><br />
-        {{ entry.company }}
-      </p>
-      <p class="ml-auto cv-text text-right">
-        <i>{{ entry.startKey | translate }} - {{ entry.endKey | translate }}</i>
-      </p>
-    </div>
+    <app-cv-entry-header
+      [titleKey]="entry.titleKey"
+      [company]="entry.company"
+      [startKey]="entry.startKey"
+      [endKey]="entry.endKey"
+    />
 
     <div class="cv-detail-content">
       @if (entry.descriptionKey) {

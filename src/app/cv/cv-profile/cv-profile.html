@@ -21,32 +21,26 @@
   <hr class="my-2" />
 
   <div class="cv-grid-3col text-sm cv-text">
-    <div class="cv-personal">
-      <ng-icon name="ionBalloonSharp" size="20" />
+    <app-cv-personal-item [icon]="'ionBalloonSharp'">
       <p>{{ age() }} {{ 'CV.AGE' | translate }}</p>
-    </div>
-    <div class="cv-personal">
-      <ng-icon name="ionHomeSharp" size="20" />
+    </app-cv-personal-item>
+    <app-cv-personal-item [icon]="'ionHomeSharp'">
       <p>{{ 'CV.LOCATION' | translate }}</p>
-    </div>
-    <div class="cv-personal">
-      <ng-icon name="ionMail" size="20" />
+    </app-cv-personal-item>
+    <app-cv-personal-item [icon]="'ionMail'">
       <a class="hover:underline" href="mailto:mail@simonflarup.dk">mail&#64;simonflarup.dk</a>
-    </div>
-    <div class="cv-personal">
-      <ng-icon name="ionCallSharp" size="20" />
+    </app-cv-personal-item>
+    <app-cv-personal-item [icon]="'ionCallSharp'">
       <a class="hover:underline" href="tel:+4520995563">(+45) 20 99 55 63</a>
-    </div>
-    <div class="cv-personal">
-      <ng-icon name="ionDocumentText" size="20" />
+    </app-cv-personal-item>
+    <app-cv-personal-item [icon]="'ionDocumentText'">
       <a class="hover:underline" href="https://www.simonflarup.dk">www.simonflarup.dk</a>
-    </div>
-    <div class="cv-personal">
-      <ng-icon name="ionPersonSharp" size="20" />
+    </app-cv-personal-item>
+    <app-cv-personal-item [icon]="'ionPersonSharp'">
       <a class="hover:underline" href="https://www.linkedin.com/in/simonflarup">
         www.linkedin.com/in/simonflarup
       </a>
-    </div>
+    </app-cv-personal-item>
   </div>
 </section>
 

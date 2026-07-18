@@ -14,7 +14,7 @@ app-cv hr {
 }
 
 app-cv .cv-text {
-  @apply text-zinc-500 dark:text-zinc-400;
+  @apply print:text-xs text-sm text-zinc-500 dark:text-zinc-400;
 }
 
 app-cv .cv-grid-2col {

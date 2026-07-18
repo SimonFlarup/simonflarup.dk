@@ -46,7 +46,11 @@ import { CvVolunteering } from './cv-volunteering/cv-volunteering';
   encapsulation: ViewEncapsulation.None,
 })
 export class Cv {
-  readonly age = this.calculateAge();
+  /*
+    * Calculate the age based on the date of birth (December 1, 1998)
+    * the month index is starts at 0 for January and ends at 11 for December (Not a very human friendly design)
+   */
+  readonly age = this.calculateAge(new Date(1998, 11, 1));
 
   readonly workExperience: ExperienceEntry[] = [
     {
@@ -138,12 +142,17 @@ export class Cv {
   readonly keywords =
     'Java - Python - TypeScript - C++ - C# - .NET - OSGi - SCRUM - LUA - PHP - JUnit - Spring Boot - JavaScript - Angular - NX - Cypress - Karma - Jest - Groovy - REST - JSON - Docker - IntelliJ IDEA - Atlassian - Jira - Bitbucket - Confluence - Jenkins';
 
-  private calculateAge(): number {
+  private calculateAge(dateOfBirth: Date): number {
     const today = new Date();
-    let age = today.getFullYear() - 1998;
-    if (today.getMonth() < 11) {
+    let age = today.getFullYear() - dateOfBirth.getFullYear();
+    const hasHadBirthdayThisYear =
+      today.getMonth() > dateOfBirth.getMonth() ||
+      (today.getMonth() === dateOfBirth.getMonth() && today.getDate() >= dateOfBirth.getDate());
+
+    if (!hasHadBirthdayThisYear) {
       age -= 1;
     }
+
     return age;
   }
 }
