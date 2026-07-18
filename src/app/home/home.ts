@@ -12,10 +12,11 @@ import {
   ionPersonSharp,
 } from '@ng-icons/ionicons';
 import { NgOptimizedImage } from '@angular/common';
+import { ImageRow } from './image-row/image-row';
 
 @Component({
   selector: 'app-home',
-  imports: [TranslatePipe, NgIcon, NgOptimizedImage],
+  imports: [TranslatePipe, NgIcon, ImageRow],
   providers: [
     provideIcons({
       ionLogoLinkedin,
