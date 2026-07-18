@@ -1,8 +1,6 @@
 <div class="grid md:grid-cols-2 gap-4">
   <section class="cv-section">
-    <h2 class="cv-heading">
-      {{ 'CV.LANGUAGE.TITLE' | translate }}
-    </h2>
+    <app-cv-heading icon='ionLanguage' [titleKey]="'CV.LANGUAGE.TITLE'" />
     <hr />
     <div class="cv-grid-2col">
       @for (language of languages(); track language.languageKey) {
@@ -14,9 +12,7 @@
   </section>
 
   <section class="cv-section">
-    <h2 class="cv-heading">
-      {{ 'CV.OTHER.TITLE' | translate }}
-    </h2>
+    <app-cv-heading icon="ionEllipsisHorizontal" [titleKey]="'CV.OTHER.TITLE'" />
     <hr />
     <p class="mt-2 cv-text">
       <b>{{ 'CV.OTHER.DRIVERS_LICENSE_TITLE' | translate }}</b> -

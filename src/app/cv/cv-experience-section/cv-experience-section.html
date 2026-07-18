@@ -1,7 +1,5 @@
 <section class="cv-section">
-  <h2 class="cv-heading">
-    {{ titleKey() | translate }}
-  </h2>
+  <app-cv-heading [icon]="icon()" [titleKey]="titleKey()" />
 
   @for (entry of entries(); track entry.company + entry.titleKey) {
     <hr />

@@ -6,7 +6,7 @@ app-cv .cv-section {
 }
 
 app-cv .cv-heading {
-  @apply font-semibold text-zinc-900 dark:text-zinc-100;
+  @apply print:text-sm font-semibold text-zinc-900 dark:text-zinc-100;
 }
 
 app-cv hr {

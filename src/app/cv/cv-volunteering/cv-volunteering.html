@@ -1,7 +1,5 @@
 <section class="cv-section">
-  <h2 class="cv-heading">
-    {{ 'CV.VOLUNTEERING.TITLE' | translate }}
-  </h2>
+  <app-cv-heading icon="ionBody" [titleKey]="'CV.VOLUNTEERING.TITLE'" />
   <hr />
   <app-cv-entry-header
     [titleKey]="entry().titleKey"

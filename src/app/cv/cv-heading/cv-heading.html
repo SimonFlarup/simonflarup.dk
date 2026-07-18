@@ -1,0 +1,9 @@
+<div class="flex gap-2 items-center">
+  @if (icon()) {
+    <ng-icon class="cv-text" [name]="icon()!" size="16" />
+  }
+  <h2 class="cv-heading">
+    {{ titleKey() | translate }}
+  </h2>
+</div>
+

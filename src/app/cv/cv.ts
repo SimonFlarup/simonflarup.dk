@@ -3,13 +3,19 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   ionBalloonSharp,
+  ionBody,
+  ionBriefcase,
   ionCallSharp,
+  ionCodeWorking,
   ionDocumentText,
+  ionEllipsisHorizontal,
   ionHomeSharp,
+  ionInformationCircle,
+  ionLanguage,
   ionMail,
   ionPersonSharp,
+  ionSchool,
 } from '@ng-icons/ionicons';
-import { TranslatePipe } from '@ngx-translate/core';
 import { CvExperienceSection } from './cv-experience-section/cv-experience-section';
 import { CvKeywords } from './cv-keywords/cv-keywords';
 import { ExperienceEntry, LanguageEntry } from './cv.models';
@@ -21,9 +27,6 @@ import { CvVolunteering } from './cv-volunteering/cv-volunteering';
 @Component({
   selector: 'app-cv',
   imports: [
-    TranslatePipe,
-    NgOptimizedImage,
-    NgIcon,
     CvProfile,
     CvSummary,
     CvExperienceSection,
@@ -39,6 +42,13 @@ import { CvVolunteering } from './cv-volunteering/cv-volunteering';
       ionMail,
       ionCallSharp,
       ionDocumentText,
+      ionBriefcase,
+      ionInformationCircle,
+      ionLanguage,
+      ionSchool,
+      ionBody,
+      ionCodeWorking,
+      ionEllipsisHorizontal
     }),
   ],
   templateUrl: './cv.html',

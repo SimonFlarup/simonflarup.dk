@@ -1,7 +1,5 @@
 <section class="cv-section">
-  <h2 class="cv-heading">
-    {{ 'CV.SUMMARY.TITLE' | translate }}
-  </h2>
+  <app-cv-heading icon='ionInformationCircle' [titleKey]="'CV.SUMMARY.TITLE'" />
   <hr />
   <p class="mt-1 cv-text">{{ 'CV.SUMMARY.LINE_1' | translate }}</p>
   <p class="mt-1 cv-text">{{ 'CV.SUMMARY.LINE_2' | translate }}</p>
