@@ -1,0 +1,52 @@
+<section>
+  <div class="flex flex-col md:flex-row md:items-center gap-6">
+    <div class="w-24 shrink-0 mx-auto md:mx-0 hidden print:block">
+      <img
+        ngSrc="images/simon_portrait_ur.jpg"
+        width="96"
+        height="96"
+        class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 aspect-square"
+        alt="Profile picture of Simon Holland Flarup"
+        priority
+      />
+    </div>
+    <div class="w-full">
+      <h1 class="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+        Simon Holland Flarup
+      </h1>
+      <h2 class="text-lg text-zinc-700 dark:text-zinc-200">{{ 'HOME.HEADLINE' | translate }}</h2>
+    </div>
+  </div>
+
+  <hr class="my-2" />
+
+  <div class="cv-grid-3col text-sm cv-text">
+    <div class="cv-personal">
+      <ng-icon name="ionBalloonSharp" size="20" />
+      <p>{{ age() }} {{ 'CV.AGE' | translate }}</p>
+    </div>
+    <div class="cv-personal">
+      <ng-icon name="ionHomeSharp" size="20" />
+      <p>{{ 'CV.LOCATION' | translate }}</p>
+    </div>
+    <div class="cv-personal">
+      <ng-icon name="ionMail" size="20" />
+      <a class="hover:underline" href="mailto:mail@simonflarup.dk">mail&#64;simonflarup.dk</a>
+    </div>
+    <div class="cv-personal">
+      <ng-icon name="ionCallSharp" size="20" />
+      <a class="hover:underline" href="tel:+4520995563">(+45) 20 99 55 63</a>
+    </div>
+    <div class="cv-personal">
+      <ng-icon name="ionDocumentText" size="20" />
+      <a class="hover:underline" href="https://www.simonflarup.dk">www.simonflarup.dk</a>
+    </div>
+    <div class="cv-personal">
+      <ng-icon name="ionPersonSharp" size="20" />
+      <a class="hover:underline" href="https://www.linkedin.com/in/simonflarup">
+        www.linkedin.com/in/simonflarup
+      </a>
+    </div>
+  </div>
+</section>
+

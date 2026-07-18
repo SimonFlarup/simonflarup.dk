@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   ionBalloonSharp,
@@ -10,21 +10,27 @@ import {
   ionPersonSharp,
 } from '@ng-icons/ionicons';
 import { TranslatePipe } from '@ngx-translate/core';
-
-interface ExperienceEntry {
-  company: string;
-  titleKey: string;
-  startKey: string;
-  endKey: string;
-  descriptionKey?: string;
-  descriptionSecondaryKey?: string;
-  responsibilitiesKeys?: string[];
-  projectKeys?: string[];
-}
+import { CvExperienceSection } from './cv-experience-section/cv-experience-section';
+import { CvKeywords } from './cv-keywords/cv-keywords';
+import { ExperienceEntry, LanguageEntry } from './cv.models';
+import { CvProfile } from './cv-profile/cv-profile';
+import { CvSideSections } from './cv-side-sections/cv-side-sections';
+import { CvSummary } from './cv-summary/cv-summary';
+import { CvVolunteering } from './cv-volunteering/cv-volunteering';
 
 @Component({
   selector: 'app-cv',
-  imports: [TranslatePipe, NgOptimizedImage, NgIcon],
+  imports: [
+    TranslatePipe,
+    NgOptimizedImage,
+    NgIcon,
+    CvProfile,
+    CvSummary,
+    CvExperienceSection,
+    CvSideSections,
+    CvVolunteering,
+    CvKeywords,
+  ],
   providers: [
     provideIcons({
       ionPersonSharp,
@@ -37,6 +43,7 @@ interface ExperienceEntry {
   ],
   templateUrl: './cv.html',
   styleUrl: './cv.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class Cv {
   readonly age = this.calculateAge();
@@ -114,7 +121,7 @@ export class Cv {
     },
   ];
 
-  readonly languages = [
+  readonly languages: LanguageEntry[] = [
     { languageKey: 'CV.LANGUAGE.DANISH', levelKey: 'CV.LANGUAGE.MOTHER_TONGUE' },
     { languageKey: 'CV.LANGUAGE.ENGLISH', levelKey: 'CV.LANGUAGE.FLUENT' },
     { languageKey: 'CV.LANGUAGE.GERMAN', levelKey: 'CV.LANGUAGE.BASIC' },

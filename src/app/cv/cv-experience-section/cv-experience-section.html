@@ -1,0 +1,48 @@
+<section class="cv-section">
+  <h2 class="cv-heading">
+    {{ titleKey() | translate }}
+  </h2>
+
+  @for (entry of entries(); track entry.company + entry.titleKey) {
+    <hr />
+    <div class="cv-detail-title">
+      <p class="mr-2 cv-text">
+        <b>{{ entry.titleKey | translate }}</b><br />
+        {{ entry.company }}
+      </p>
+      <p class="ml-auto cv-text text-right">
+        <i>{{ entry.startKey | translate }} - {{ entry.endKey | translate }}</i>
+      </p>
+    </div>
+
+    <div class="cv-detail-content">
+      @if (entry.descriptionKey) {
+        <p class="cv-text">{{ entry.descriptionKey | translate }}</p>
+      }
+      @if (entry.descriptionSecondaryKey) {
+        <p class="cv-text">{{ entry.descriptionSecondaryKey | translate }}</p>
+      }
+      @if (showResponsibilities() && entry.responsibilitiesKeys?.length) {
+        <div>
+          <p class="cv-text underline">{{ 'CV.RESPONSIBILITIES' | translate }}</p>
+          <ul class="list-disc ml-6 cv-text">
+            @for (responsibility of entry.responsibilitiesKeys; track responsibility) {
+              <li>{{ responsibility | translate }}</li>
+            }
+          </ul>
+        </div>
+      }
+      @if (showProjects() && entry.projectKeys?.length) {
+        <div>
+          <p class="cv-text underline">{{ 'CV.PROJECTS' | translate }}</p>
+          <ul class="list-disc ml-6 cv-text">
+            @for (project of entry.projectKeys; track project) {
+              <li>{{ project | translate }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  }
+</section>
+
