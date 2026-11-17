@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@reference "../../styles.css";
 
 app-cv .cv-section {
   @apply flex flex-col gap-1 rounded-2xl border-2 border-zinc-200 py-3 px-4 dark:border-zinc-700/40;
