@@ -24,8 +24,7 @@ describe('PrivacyPolicy', () => {
     expect(element?.querySelectorAll('section')).toHaveLength(3);
     expect(element?.querySelectorAll('li')).toHaveLength(4);
     expect(element?.querySelector('a[href="https://developers.cloudflare.com/web-analytics/about/"]')).not.toBeNull();
-    expect(element?.querySelector('a[href="https://www.cloudflare.com/privacypolicy/"]')).not.toBeNull();
-    expect(element?.querySelector('a[href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"]')).not.toBeNull();
+    expect(element?.querySelector('a[href="https://docs.github.com/en/pages"]')).not.toBeNull();
   });
 
   it('updates the policy when the language changes', async () => {
