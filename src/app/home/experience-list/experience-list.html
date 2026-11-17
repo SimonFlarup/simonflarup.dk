@@ -1,41 +1,40 @@
-<section class="rounded-2xl border border-zinc-200 p-4 text-zinc-600 sm:p-6 dark:border-zinc-800 dark:text-zinc-400">
-  <header class="mb-6 flex items-center justify-between gap-4">
-    <h2 class="flex items-center gap-3 text-xl font-semibold text-zinc-800 sm:text-2xl dark:text-zinc-100">
-      <ng-icon [name]="icon()" size="32" class="shrink-0 text-zinc-500" aria-hidden="true" />
+<section class="experience-section">
+  <header class="experience-header">
+    <h2 class="experience-heading">
+      <ng-icon [name]="icon()" size="32" class="experience-heading-icon" aria-hidden="true" />
       {{ titleKey() | translate }}
     </h2>
     <ng-content select="[list-action]" />
   </header>
 
-  <ol class="space-y-5">
+  <ol class="experience-entries">
     @for (entry of entries(); track (entry.company ?? entry.companyKey ?? '') + entry.titleKey) {
       <li>
-        <div class="flex items-center gap-4">
+        <div class="experience-entry-header">
           @if (showLogos()) {
-            <div class="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-zinc-100 ring-1 ring-zinc-200 sm:size-16 dark:bg-zinc-800 dark:ring-zinc-700">
-            @if (entry.logo) {
-              <img [src]="entry.logo" alt="" width="40" height="40" loading="lazy" class="size-10 object-contain" />
-            } @else {
-              <ng-icon [name]="icon()" size="28" aria-hidden="true" />
-            }
+            <div class="experience-logo">
+              @if (entry.logo) {
+                <img [src]="entry.logo" alt="" width="40" height="40" loading="lazy" />
+              } @else {
+                <ng-icon [name]="icon()" size="28" aria-hidden="true" />
+              }
             </div>
           }
-          <div class="min-w-0">
+          <div class="experience-entry-info">
             @if (entry.startKey && entry.endKey) {
-              <p class="text-xs text-zinc-500">{{ entry.startKey | translate }} &mdash; {{ entry.endKey | translate }}</p>
+              <p class="experience-date">{{ entry.startKey | translate }} &mdash; {{ entry.endKey | translate }}</p>
             }
-            <h3 class="mt-1 text-sm font-semibold text-zinc-800 dark:text-zinc-100">{{ entry.titleKey | translate }}</h3>
+            <h3 class="experience-entry-title">{{ entry.titleKey | translate }}</h3>
             @if (entry.companyKey) {
-              <p class="mt-1 text-sm">{{ entry.companyKey | translate }}</p>
+              <p class="experience-company">{{ entry.companyKey | translate }}</p>
             } @else if (entry.company) {
-              <p class="mt-1 text-sm">{{ entry.company }}</p>
+              <p class="experience-company">{{ entry.company }}</p>
             }
           </div>
         </div>
 
         @if (entry.descriptionKey || entry.descriptionSecondaryKey || entry.responsibilitiesKeys?.length || entry.projectKeys?.length || entry.portfolio?.length) {
-        <div class="mt-4 space-y-5 border-l-2 border-zinc-200 py-1 pl-4 text-sm leading-relaxed dark:border-zinc-800"
-             [class.ml-7]="showLogos()" [class.sm:ml-8]="showLogos()" [class.ml-4]="!showLogos()">
+        <div class="experience-details" [class.experience-details-compact]="!showLogos()">
           @if (entry.descriptionKey) {
             <p class="italic">{{ entry.descriptionKey | translate }}</p>
           }
@@ -44,8 +43,8 @@
           }
           @if (entry.responsibilitiesKeys?.length) {
             <div>
-              <p class="font-medium">{{ 'CV.RESPONSIBILITIES' | translate }}</p>
-              <ul class="mt-2 list-disc space-y-1 pl-6">
+              <p class="experience-detail-heading">{{ 'CV.RESPONSIBILITIES' | translate }}</p>
+              <ul class="experience-bullets">
                 @for (responsibility of entry.responsibilitiesKeys; track responsibility) {
                   <li>{{ responsibility | translate }}</li>
                 }
@@ -54,8 +53,8 @@
           }
           @if (entry.projectKeys?.length) {
             <div>
-              <p class="font-medium">{{ 'CV.PROJECTS' | translate }}</p>
-              <ul class="mt-2 list-disc space-y-1 pl-6">
+              <p class="experience-detail-heading">{{ 'CV.PROJECTS' | translate }}</p>
+              <ul class="experience-bullets">
                 @for (project of entry.projectKeys; track project) {
                   <li>{{ project | translate }}</li>
                 }
@@ -63,13 +62,13 @@
             </div>
           }
           @if (entry.portfolio?.length) {
-            <div class="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">
+            <div class="experience-portfolio">
               @for (project of entry.portfolio; track project.title) {
-                <article class="min-w-0 md:pl-4">
-                  <img [src]="project.image" [alt]="project.title" loading="lazy" class="aspect-[4/3] w-full object-contain" />
-                  <h4 class="mt-2 text-lg font-semibold">{{ project.title }}</h4>
+                <article class="experience-project">
+                  <img [src]="project.image" [alt]="project.title" loading="lazy" />
+                  <h4>{{ project.title }}</h4>
                   <p>{{ project.descriptionKey | translate }}</p>
-                  <a [href]="project.href" class="underline underline-offset-2 transition hover:text-zinc-900 dark:hover:text-zinc-100">
+                  <a [href]="project.href">
                     {{ 'HOME.EXPERIENCE.READ_MORE' | translate }}<span class="sr-only">: {{ project.title }}</span>
                   </a>
                 </article>

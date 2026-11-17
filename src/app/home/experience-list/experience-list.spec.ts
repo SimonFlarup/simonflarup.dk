@@ -87,8 +87,8 @@ describe('ExperienceList', () => {
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelectorAll('li ng-icon')).toHaveLength(0);
-    expect(element.querySelector('li .text-xs')).toBeNull();
-    expect(element.querySelector('li .border-l-2')).toBeNull();
+    expect(element.querySelector('.experience-date')).toBeNull();
+    expect(element.querySelector('.experience-details')).toBeNull();
     expect(element.textContent).toContain('Builds software');
 
     TestBed.inject(TranslateService).use('da');
@@ -108,5 +108,18 @@ describe('ExperienceList', () => {
     expect(article?.querySelector('img')?.getAttribute('alt')).toBe('PolyScope 5');
     expect(article?.querySelector('a')?.getAttribute('href')).toBe('https://www.universal-robots.com/');
     expect(article?.textContent).toContain('Builds software');
+  });
+
+  it('uses compact detail spacing only when logos are hidden', async () => {
+    const fixture = await render([{
+      titleKey: 'ROLE', descriptionKey: 'DESCRIPTION',
+    }]);
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelector('.experience-details-compact')).toBeNull();
+
+    fixture.componentRef.setInput('showLogos', false);
+    await fixture.whenStable();
+    expect(element.querySelector('.experience-details-compact')?.textContent).toContain('Builds software');
+    expect(element.querySelector('.experience-logo')).toBeNull();
   });
 });

@@ -23,6 +23,7 @@ export interface ExperienceListEntry extends Omit<ExperienceEntry, 'company' | '
   imports: [NgIcon, TranslatePipe],
   providers: [provideIcons({ ionBriefcaseOutline })],
   templateUrl: './experience-list.html',
+  styleUrl: './experience-list.css',
 })
 export class ExperienceList {
   readonly titleKey = input.required<string>();

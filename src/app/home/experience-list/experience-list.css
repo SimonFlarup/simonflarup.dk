@@ -1,0 +1,85 @@
+@reference "../../../styles.css";
+
+.experience-section {
+  @apply rounded-2xl border border-zinc-200 p-4 text-zinc-600 sm:p-6 dark:border-zinc-800 dark:text-zinc-400;
+}
+
+.experience-header {
+  @apply mb-6 flex items-center justify-between gap-4;
+}
+
+.experience-heading {
+  @apply flex items-center gap-3 text-xl font-semibold text-zinc-800 sm:text-2xl dark:text-zinc-100;
+}
+
+.experience-heading-icon {
+  @apply shrink-0 text-zinc-500;
+}
+
+.experience-entries {
+  @apply space-y-5;
+}
+
+.experience-entry-header {
+  @apply flex items-center gap-4;
+}
+
+.experience-logo {
+  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-zinc-100 ring-1 ring-zinc-200 sm:size-16 dark:bg-zinc-800 dark:ring-zinc-700;
+}
+
+.experience-logo img {
+  @apply size-10 object-contain;
+}
+
+.experience-entry-info {
+  @apply min-w-0;
+}
+
+.experience-date {
+  @apply text-xs text-zinc-500;
+}
+
+.experience-entry-title {
+  @apply mt-1 text-sm font-semibold text-zinc-800 dark:text-zinc-100;
+}
+
+.experience-company {
+  @apply mt-1 text-sm;
+}
+
+.experience-details {
+  @apply mt-4 ml-7 space-y-5 border-l-2 border-zinc-200 py-1 pl-4 text-sm leading-relaxed sm:ml-8 dark:border-zinc-800;
+}
+
+.experience-details-compact {
+  @apply ml-4 sm:ml-4;
+}
+
+.experience-detail-heading {
+  @apply font-medium;
+}
+
+.experience-bullets {
+  @apply mt-2 list-disc space-y-1 pl-6;
+}
+
+.experience-portfolio {
+  @apply grid grid-cols-1 gap-6 py-2 md:grid-cols-2;
+}
+
+.experience-project {
+  @apply min-w-0 md:pl-4;
+}
+
+.experience-project img {
+  @apply aspect-[4/3] w-full object-contain;
+}
+
+.experience-project h4 {
+  @apply mt-2 text-lg font-semibold;
+}
+
+.experience-project a {
+  @apply underline underline-offset-2 transition hover:text-zinc-900 dark:hover:text-zinc-100;
+}
