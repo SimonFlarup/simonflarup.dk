@@ -30,12 +30,14 @@ describe('PageTitleStrategy', () => {
       HOME: { TITLE: 'Home' },
       ABOUT: { TITLE: 'About' },
       CV: { TITLE: 'CV' },
+      PRIVACY_POLICY: { TITLE: 'Privacy Policy' },
       NOT_FOUND: { TITLE: 'Page not found' },
     });
     translate.setTranslation('da', {
       HOME: { TITLE: 'Forside' },
       ABOUT: { TITLE: 'Om' },
       CV: { TITLE: 'CV' },
+      PRIVACY_POLICY: { TITLE: 'Privatlivspolitik' },
       NOT_FOUND: { TITLE: 'Siden blev ikke fundet' },
     });
   });
@@ -46,7 +48,7 @@ describe('PageTitleStrategy', () => {
 
   it('sets the page name and site name on each navigation', async () => {
     const harness = await RouterTestingHarness.create();
-    for (const [url, pageName] of [['/', 'Home'], ['/about', 'About'], ['/cv', 'CV']]) {
+    for (const [url, pageName] of [['/', 'Home'], ['/about', 'About'], ['/cv', 'CV'], ['/privacy', 'Privacy Policy']]) {
       await harness.navigateByUrl(url);
       expect(document.title).toBe(`${pageName} | Simon Holland Flarup`);
     }

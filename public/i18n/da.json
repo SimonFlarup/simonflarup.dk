@@ -141,6 +141,22 @@
     "HOME_ACTION": "Tilbage til forsiden"
   },
   "PRIVACY_POLICY": {
-    "TITLE": "Privatlivspolitik"
+    "TITLE": "Privatlivspolitik",
+    "ANALYTICS_HEADING": "Privatlivsvenlig besøgsstatistik",
+    "ANALYTICS_INTRO": "Denne hjemmeside bruger Cloudflare Web Analytics til at forstå besøg og forbedre sidernes ydeevne. Statistik indsamles gennem et JavaScript fra Cloudflare.",
+    "DATA_INTRO": "Statistikken omfatter:",
+    "DATA_PAGES": "Besøgte domæner og sidestier samt henvisende hjemmesider.",
+    "DATA_DEVICE": "Browser, operativsystem og enhedstype.",
+    "DATA_COUNTRY": "Den besøgendes land.",
+    "DATA_PERFORMANCE": "Indlæsningstider og målinger af ydeevne, herunder Core Web Vitals.",
+    "ANALYTICS_PRIVACY": "Cloudflare Web Analytics er cookiefri og bruger ikke fingerprinting eller sporing på tværs af hjemmesider. Din browser opretter forbindelse til Cloudflare for at hente scriptet og sende målinger. Statistikken bruges til at forstå den samlede trafik, ikke til at identificere enkelte besøgende.",
+    "CLOUDFLARE_LINK": "Om Cloudflare Web Analytics",
+    "PREFERENCES_HEADING": "Gemte indstillinger",
+    "PREFERENCES": "Hjemmesiden gemmer dit valg af sprog og lyst/mørkt tema i browserens lokale lager under language og darkMode. Disse indstillinger bruges ikke som identifikatorer til statistik. Du kan fjerne dem ved at rydde hjemmesidens data i din browser.",
+    "HOSTING_HEADING": "Hosting",
+    "HOSTING": "Hjemmesiden hostes af GitHub Pages. GitHub kan behandle tekniske oplysninger om anmodninger, herunder IP-adresser, for at drive og sikre sine tjenester. Se GitHubs privatlivspolitik for flere oplysninger.",
+    "GITHUB_LINK": "Om GitHub Pages",
+    "CONTACT_HEADING": "Kontakt",
+    "CONTACT": "Hjemmesiden drives af Simon Holland Flarup. Har du spørgsmål om privatliv, kan du kontakte:"
   }
 }

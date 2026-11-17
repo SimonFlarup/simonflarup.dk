@@ -141,6 +141,22 @@
     "HOME_ACTION": "Back to Home"
   },
   "PRIVACY_POLICY": {
-    "TITLE": "Privacy Policy"
+    "TITLE": "Privacy Policy",
+    "ANALYTICS_HEADING": "Privacy-friendly visitor statistics",
+    "ANALYTICS_INTRO": "This website uses Cloudflare Web Analytics to understand visits and improve page performance. Statistics are collected through a JavaScript beacon supplied by Cloudflare.",
+    "DATA_INTRO": "The analytics reports include:",
+    "DATA_PAGES": "Visited domains and page paths, and referring websites.",
+    "DATA_DEVICE": "Browser, operating system, and device type.",
+    "DATA_COUNTRY": "The visitor's country.",
+    "DATA_PERFORMANCE": "Page loading times and performance measurements, including Core Web Vitals.",
+    "ANALYTICS_PRIVACY": "Cloudflare Web Analytics is cookie-free and does not fingerprint visitors or track individuals across websites. Your browser connects to Cloudflare to load the script and send measurements. The statistics are used to understand overall traffic, not to identify individual visitors.",
+    "CLOUDFLARE_LINK": "About Cloudflare Web Analytics",
+    "PREFERENCES_HEADING": "Saved preferences",
+    "PREFERENCES": "The website saves your language and light/dark theme choices in your browser's local storage under language and darkMode. These preferences are not used as analytics identifiers. You can remove them by clearing this website's site data in your browser.",
+    "HOSTING_HEADING": "Hosting",
+    "HOSTING": "This website is hosted on GitHub Pages. GitHub may process technical request information, including IP addresses, to operate and secure its services. See GitHub's privacy statement for details.",
+    "GITHUB_LINK": "About GitHub Pages",
+    "CONTACT_HEADING": "Contact",
+    "CONTACT": "This website is operated by Simon Holland Flarup. For questions about privacy, contact:"
   }
 }
