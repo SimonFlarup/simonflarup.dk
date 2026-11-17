@@ -1,5 +1,36 @@
 import { ExperienceEntry } from './cv.models';
 
+export const education: ExperienceEntry[] = [
+  {
+    company: 'University of Southern Denmark',
+    titleKey: 'CV.EDUCATION.MSC_TITLE',
+    startKey: 'CV.DATE.SEPTEMBER_2021',
+    endKey: 'CV.DATE.JULY_2023',
+    projectKeys: ['CV.EDUCATION.MSC_PROJECT_1', 'CV.EDUCATION.MSC_PROJECT_2'],
+  },
+  {
+    company: 'University of Southern Denmark',
+    titleKey: 'CV.EDUCATION.BSC_TITLE',
+    startKey: 'CV.DATE.SEPTEMBER_2018',
+    endKey: 'CV.DATE.JULY_2021',
+    projectKeys: ['CV.EDUCATION.BSC_PROJECT_1'],
+  },
+  {
+    company: 'Randers HF & VUC',
+    titleKey: 'CV.EDUCATION.HF_TITLE',
+    startKey: 'CV.DATE.AUGUST_2017',
+    endKey: 'CV.DATE.JULY_2018',
+    descriptionKey: 'CV.EDUCATION.HF_DESCRIPTION',
+  },
+  {
+    company: 'Aarhus Tech & Tradium Randers',
+    titleKey: 'CV.EDUCATION.EUX_TITLE',
+    startKey: 'CV.DATE.AUGUST_2015',
+    endKey: 'CV.DATE.AUGUST_2017',
+    descriptionKey: 'CV.EDUCATION.EUX_DESCRIPTION',
+  },
+];
+
 export const workExperience: ExperienceEntry[] = [
   {
     company: 'Universal Robots A/S',
