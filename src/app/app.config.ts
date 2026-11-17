@@ -1,5 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, TitleStrategy } from '@angular/router';
+import { PageTitleStrategy } from './page-title-strategy';
 
 import { routes } from './app.routes';
 import { provideTranslateService } from '@ngx-translate/core';
@@ -10,6 +11,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
+    { provide: TitleStrategy, useClass: PageTitleStrategy },
     provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
