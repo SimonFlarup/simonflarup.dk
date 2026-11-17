@@ -5,10 +5,11 @@ import {
   ionDocumentText,
   ionLogoGithub,
   ionLogoLinkedin,
+  ionSchoolOutline,
 } from '@ng-icons/ionicons';
 import { ImageRow } from './image-row/image-row';
 import { RouterLink } from '@angular/router';
-import { workExperience } from '../cv/cv.data';
+import { education, workExperience } from '../cv/cv.data';
 import { ExperienceList, ExperienceListEntry } from './experience-list/experience-list';
 
 @Component({
@@ -19,6 +20,7 @@ import { ExperienceList, ExperienceListEntry } from './experience-list/experienc
       ionLogoLinkedin,
       ionLogoGithub,
       ionDocumentText,
+      ionSchoolOutline,
     }),
   ],
   templateUrl: './home.html',
@@ -26,6 +28,11 @@ import { ExperienceList, ExperienceListEntry } from './experience-list/experienc
   encapsulation: ViewEncapsulation.None,
 })
 export class Home {
+  readonly education: ExperienceListEntry[] = education.map(entry => ({
+    ...entry,
+    logo: this.companyLogo(entry.company),
+  }));
+
   readonly workExperience: ExperienceListEntry[] = workExperience.map(entry => ({
     ...entry,
     logo: this.companyLogo(entry.company),
@@ -50,6 +57,9 @@ export class Home {
       'Universal Robots A/S': 'images/logos/ur.jpg',
       'BROEN Valve Technologies': 'images/logos/broen.jpg',
       'Aarhus Tech': 'images/logos/aarhustech.jpg',
+      'University of Southern Denmark': 'images/logos/sdu.jpg',
+      'Randers HF & VUC': 'images/logos/randershf.png',
+      'Aarhus Tech & Tradium Randers': 'images/logos/aarhustech.jpg',
     };
     return logos[company];
   }

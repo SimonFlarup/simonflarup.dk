@@ -43,11 +43,14 @@
             </div>
           }
           @if (entry.projectKeys?.length) {
-            <ul class="list-disc space-y-1 pl-6">
-              @for (project of entry.projectKeys; track project) {
-                <li>{{ project | translate }}</li>
-              }
-            </ul>
+            <div>
+              <p class="font-medium">{{ 'CV.PROJECTS' | translate }}</p>
+              <ul class="mt-2 list-disc space-y-1 pl-6">
+                @for (project of entry.projectKeys; track project) {
+                  <li>{{ project | translate }}</li>
+                }
+              </ul>
+            </div>
           }
           @if (entry.portfolio?.length) {
             <div class="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">

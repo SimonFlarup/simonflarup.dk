@@ -31,6 +31,7 @@ describe('ExperienceList', () => {
     expect(element.querySelector('h3')?.textContent).toBe('Engineer');
     expect(element.textContent).toContain('Builds software');
     expect(element.querySelector('img')?.getAttribute('src')).toBe('images/logos/ur.jpg');
+    expect(element.textContent).not.toContain('CV.PROJECTS');
 
     TestBed.inject(TranslateService).use('da');
     await fixture.whenStable();
@@ -39,6 +40,9 @@ describe('ExperienceList', () => {
   });
 
   it('supports education projects without a logo or portfolio', async () => {
+    const translate = TestBed.inject(TranslateService);
+    translate.setTranslation('en', { CV: { PROJECTS: 'Projects' } }, true);
+    translate.setTranslation('da', { CV: { PROJECTS: 'Projekter' } }, true);
     const fixture = await render([{
       company: 'University', titleKey: 'ROLE', startKey: 'START', endKey: 'END',
       projectKeys: ['PROJECT'],
@@ -46,9 +50,15 @@ describe('ExperienceList', () => {
     const element = fixture.nativeElement as HTMLElement;
     expect(element.textContent).toContain('University');
     expect(element.querySelector('ul li')?.textContent).toBe('Thesis');
+    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projects:');
     expect(element.querySelector('img')).toBeNull();
     expect(element.querySelector('article')).toBeNull();
     expect(element.textContent).not.toContain('CV.RESPONSIBILITIES');
+
+    translate.use('da');
+    await fixture.whenStable();
+    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projekter:');
+    expect(element.querySelector('ul li')?.textContent).toBe('Speciale');
   });
 
   it('renders responsibility bullets and updates their translations', async () => {
