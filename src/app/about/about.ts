@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { NgOptimizedImage } from '@angular/common';
 import { NgIcon, provideIcons } from '@ng-icons/core';
@@ -15,7 +16,7 @@ import {
 
 @Component({
   selector: 'app-about',
-  imports: [TranslatePipe, NgOptimizedImage, NgIcon],
+  imports: [TranslatePipe, NgOptimizedImage, NgIcon, RouterLink],
   providers: [
     provideIcons({
       ionPersonSharp,
@@ -43,4 +44,3 @@ export class About {
     return age;
   }
 }
-

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { About } from './about';
 import { provideTranslateService } from '@ngx-translate/core';
+import { provideRouter } from '@angular/router';
 
 describe('About', () => {
   let component: About;
@@ -10,7 +11,7 @@ describe('About', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [About],
-      providers: [provideTranslateService()],
+      providers: [provideTranslateService(), provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(About);
@@ -20,6 +21,18 @@ describe('About', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should link to social profiles, CV, email, and phone', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    expect(Array.from(element.querySelectorAll('.about-details a'), link => link.getAttribute('href')))
+      .toEqual([
+        'https://github.com/simonflarup',
+        'https://www.linkedin.com/in/SimonFlarup',
+        '/cv',
+        'mailto:mail@simonflarup.dk',
+        'tel:+4520995563',
+      ]);
   });
 
   it('should preserve the biography, portrait, and detail groups', () => {

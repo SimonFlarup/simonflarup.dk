@@ -47,3 +47,7 @@
 .about-details hr {
   @apply border-zinc-100 dark:border-zinc-700/40;
 }
+
+.about-details a {
+  @apply underline-offset-4 transition hover:text-red-500 hover:underline dark:hover:text-red-400;
+}

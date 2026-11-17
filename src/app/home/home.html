@@ -7,7 +7,7 @@
     <div class="text-zinc-500 dark:zinc-400 transition mt-6 flex gap-6">
       <a class="hover:text-zinc-600 dark:hover:text-zinc-300" href="https://www.github.com/simonflarup"><ng-icon name="ionLogoGithub" size="24" /></a>
       <a class="hover:text-zinc-600 dark:hover:text-zinc-300" href="https://www.linkedin.com/in/SimonFlarup"><ng-icon name="ionLogoLinkedin" size="24" /></a>
-      <a class="hover:text-zinc-600 dark:hover:text-zinc-300"><ng-icon name="ionDocumentText" size="24" /></a>
+      <a routerLink="/cv" [attr.aria-label]="'CV.TITLE' | translate" class="hover:text-zinc-600 dark:hover:text-zinc-300"><ng-icon name="ionDocumentText" size="24" /></a>
     </div>
   </div>
   <app-image-row/>
