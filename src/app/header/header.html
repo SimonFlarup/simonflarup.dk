@@ -12,17 +12,17 @@
       </a>
     </div>
   <div class="header-navigation">
-    <nav class="header-nav">
+    <nav class="header-nav header-surface">
       <a routerLink="/">{{ 'HOME.TITLE' | translate }}</a>
       <a routerLink="/about">{{ 'ABOUT.TITLE' | translate }}</a>
     </nav>
   </div>
   <div class="header-controls">
     <div class="header-actions">
-    <button (click)="toggleDarkMode()" class="header-button">
+    <button (click)="toggleDarkMode()" class="header-button header-surface">
       {{ darkMode() ? '🌙 ' + ('HEADER.DARK' | translate) : '☀️ ' + ('HEADER.LIGHT' | translate) }}
     </button>
-    <button (click)="toggleLanguage()" class="header-button">
+    <button (click)="toggleLanguage()" class="header-button header-surface">
       {{ language() === 'en' ? '🇬🇧 English' : '🇩🇰 Dansk' }}
     </button>
     </div>
