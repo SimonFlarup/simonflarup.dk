@@ -1,0 +1,21 @@
+@reference "../../styles.css";
+
+.site-footer {
+  @apply border-t border-zinc-100 py-4 mb-4 dark:border-zinc-700/40;
+}
+
+.footer-layout {
+  @apply flex-1 flex items-center;
+}
+
+.footer-nav {
+  @apply flex px-3 py-2 text-sm font-medium text-zinc-800 dark:text-zinc-200;
+}
+
+.footer-nav a {
+  @apply px-3 transition hover:text-red-500 dark:hover:text-red-400;
+}
+
+.footer-credits {
+  @apply text-sm text-zinc-400 dark:text-zinc-500 text-center ml-auto;
+}

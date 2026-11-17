@@ -22,4 +22,17 @@ describe('Footer', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should preserve navigation and technology links', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    expect(Array.from(element.querySelectorAll('nav a'), link => link.getAttribute('href')))
+      .toEqual(['/', '/about', '/privacy']);
+    expect(Array.from(element.querySelectorAll('.footer-credits a'), link => link.getAttribute('href')))
+      .toEqual([
+        'https://angular.dev/',
+        'https://tailwindcss.com/',
+        'https://ionic.io/ionicons',
+        'https://pages.github.com/',
+      ]);
+  });
 });
