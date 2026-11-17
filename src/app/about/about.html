@@ -1,12 +1,12 @@
-<div class="flex gap-16">
-  <div class="flex-3">
-    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+<div class="about-layout">
+  <div class="about-content">
+    <h1 class="about-headline">
       {{ 'ABOUT.HEADLINE' | translate }}
     </h1>
-    <h2 class="text-2xl text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+    <h2 class="about-subline">
       {{ 'ABOUT.SUBLINE' | translate }}
     </h2>
-    <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+    <div class="about-biography">
       <p [innerHTML]="'ABOUT.CONTENT.INTRO' | translate"></p>
       <p>{{ 'ABOUT.CONTENT.BACKGROUND_UR' | translate }}</p>
       <p>{{ 'ABOUT.CONTENT.BACKGROUND_BROEN' | translate }}</p>
@@ -15,80 +15,74 @@
       <p>{{ 'ABOUT.CONTENT.OUTRO' | translate }}</p>
     </div>
   </div>
-  <div class="flex-2 flex flex-col gap-8">
+  <div class="about-sidebar">
     <img
       ngSrc="./images/simon_wall.jpg"
       height="100"
       width="100"
-      class="aspect-9/10 -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 w-full"
+      class="about-portrait"
       priority
       alt="Portrait of Simon with an Universal Robots robot"
     />
-    <div class="flex flex-col gap-4">
-      <ul
-        class="flex flex-col gap-4 text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
-      >
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+    <div class="about-details">
+      <ul>
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionPersonSharp" size="24" />
           </div>
           <p>Simon Holland Flarup {{ 'ABOUT.PRONOUN' | translate }}</p>
         </li>
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionBalloonSharp" size="24" />
           </div>
           <p>{{ 'ABOUT.BIRTHDAY' | translate }} {{ 'ABOUT.AGE' | translate : {age: age} }}</p>
         </li>
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionHomeSharp" size="24" />
           </div>
           <p>{{ 'ABOUT.LOCATION' | translate }}</p>
         </li>
       </ul>
 
-      <hr class="border-zinc-100 dark:border-zinc-700/40" />
+      <hr />
 
-      <ul
-        class="flex flex-col gap-4 text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
-      >
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+      <ul>
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionLogoGithub" size="24" />
           </div>
           <p>{{ 'ABOUT.GITHUB_ACTION' | translate }}</p>
         </li>
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionLogoLinkedin" size="24" />
           </div>
           <p>{{ 'ABOUT.LINKEDIN_ACTION' | translate }}</p>
         </li>
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionDocumentText" size="24" />
           </div>
           <p>{{ 'ABOUT.CV_ACTION' | translate }}</p>
         </li>
       </ul>
 
-      <hr class="border-zinc-100 dark:border-zinc-700/40" />
+      <hr />
 
-      <ul
-        class="flex flex-col gap-4 text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
-      >
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+      <ul>
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionMail" size="24" />
           </div>
           <p>mail&#64;simonflarup.dk</p>
         </li>
-        <li class="flex gap-4 items-center">
-          <div class="text-zinc-500">
+        <li>
+          <div class="about-icon">
             <ng-icon name="ionCallSharp" size="24" />
           </div>
-          <p>(+45 20 99 55 63)</p>
+          <p>(+45) 20 99 55 63</p>
         </li>
       </ul>
     </div>
