@@ -48,6 +48,27 @@ describe('ExperienceList', () => {
     expect(element.querySelector('ul li')?.textContent).toBe('Thesis');
     expect(element.querySelector('img')).toBeNull();
     expect(element.querySelector('article')).toBeNull();
+    expect(element.textContent).not.toContain('CV.RESPONSIBILITIES');
+  });
+
+  it('renders responsibility bullets and updates their translations', async () => {
+    const translate = TestBed.inject(TranslateService);
+    translate.setTranslation('en', { CV: { RESPONSIBILITIES: 'Responsibilities and achievements' } }, true);
+    translate.setTranslation('da', { CV: { RESPONSIBILITIES: 'Ansvar og resultater' } }, true);
+    const fixture = await render([{
+      company: 'Company', titleKey: 'ROLE', startKey: 'START', endKey: 'END',
+      responsibilitiesKeys: ['DESCRIPTION', 'PROJECT'],
+    }]);
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.textContent).toContain('Responsibilities and achievements');
+    expect(Array.from(element.querySelectorAll('ul li'), item => item.textContent))
+      .toEqual(['Builds software', 'Thesis']);
+
+    translate.use('da');
+    await fixture.whenStable();
+    expect(element.textContent).toContain('Ansvar og resultater');
+    expect(Array.from(element.querySelectorAll('ul li'), item => item.textContent))
+      .toEqual(['Udvikler software', 'Speciale']);
   });
 
   it('renders portfolio images and links', async () => {

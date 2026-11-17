@@ -32,8 +32,18 @@
           @if (entry.descriptionSecondaryKey) {
             <p class="italic">{{ entry.descriptionSecondaryKey | translate }}</p>
           }
+          @if (entry.responsibilitiesKeys?.length) {
+            <div>
+              <p class="font-medium">{{ 'CV.RESPONSIBILITIES' | translate }}</p>
+              <ul class="mt-2 list-disc space-y-1 pl-6">
+                @for (responsibility of entry.responsibilitiesKeys; track responsibility) {
+                  <li>{{ responsibility | translate }}</li>
+                }
+              </ul>
+            </div>
+          }
           @if (entry.projectKeys?.length) {
-            <ul class="list-disc space-y-2 pl-4">
+            <ul class="list-disc space-y-1 pl-6">
               @for (project of entry.projectKeys; track project) {
                 <li>{{ project | translate }}</li>
               }
