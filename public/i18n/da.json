@@ -19,6 +19,97 @@
     "SUBLINE": "Jeg hedder Simon Holland Flarup",
     "TITLE": "Om"
   },
+  "CV": {
+    "AGE": "år",
+    "DATE": {
+      "APRIL_2023": "April 2023",
+      "AUGUST_2015": "August 2015",
+      "AUGUST_2016": "August 2016",
+      "AUGUST_2017": "August 2017",
+      "AUGUST_2019": "August 2019",
+      "JANUARY_2021": "Januar 2021",
+      "JULY_2018": "Juli 2018",
+      "JULY_2021": "Juli 2021",
+      "JULY_2023": "Juli 2023",
+      "MAY_2018": "Maj 2018",
+      "PRESENT": "Nu",
+      "SEPTEMBER_2018": "September 2018",
+      "SEPTEMBER_2021": "September 2021"
+    },
+    "EDUCATION": {
+      "BSC_PROJECT_1": "Data-driven mobile application for enhanced guest experiences.",
+      "BSC_TITLE": "Bachelor i Software Engineering",
+      "EUX_DESCRIPTION": "Kombinerede teknisk erhvervsuddannelse med gymnasiale fag.",
+      "EUX_TITLE": "EUX - Teknisk gymnasial uddannelse",
+      "HF_DESCRIPTION": "Gennemførte et accelereret gymnasialt forløb som forberedelse til universitetsstudier.",
+      "HF_TITLE": "Højere Forberedelseseksamen",
+      "MSC_PROJECT_1": "The longevity of modern software: A study of operational risks connected to open source libraries.",
+      "MSC_PROJECT_2": "Mitigating the accumulation of technical debt and addressing existing productivity inhibitors.",
+      "MSC_TITLE": "Civilingeniør i Software Engineering",
+      "TITLE": "Uddannelse"
+    },
+    "KEYWORDS": {
+      "TITLE": "Nøgleord"
+    },
+    "LANGUAGE": {
+      "BASIC": "Grundlæggende",
+      "DANISH": "Dansk",
+      "ENGLISH": "Engelsk",
+      "FLUENT": "Flydende",
+      "GERMAN": "Tysk",
+      "MOTHER_TONGUE": "Modersmål",
+      "TITLE": "Sprog"
+    },
+    "LOCATION": "Odense, Fyn",
+    "OTHER": {
+      "DRIVERS_LICENSE_TITLE": "Kørekort",
+      "DRIVERS_LICENSE_VALUE": "Kategori B",
+      "GLENTEN_TITLE": "Bestyrelsesarbejde",
+      "GLENTEN_VALUE": "Glenten Antennelaug (2018 - 2025)",
+      "TITLE": "Andet"
+    },
+    "PROJECTS": "Projekter",
+    "RESPONSIBILITIES": "Ansvar og resultater",
+    "SUMMARY": {
+      "LINE_1": "Jeg er softwareingeniør med fokus på at bygge robuste og brugervendte softwaresystemer.",
+      "LINE_2": "Min erfaring kombinerer produktudvikling, langsigtet vedligeholdelse og modernisering af eksisterende platforme.",
+      "LINE_3": "Jeg arbejder målrettet med balancen mellem leveringshastighed, kvalitet og systemets langsigtede sundhed.",
+      "TITLE": "Resumé"
+    },
+    "VOLUNTEERING": {
+      "REDMEW_DESCRIPTION": "Bidrager med moderation, værktøjer og community-udvikling i et internationalt gaming-fællesskab.",
+      "REDMEW_TITLE": "Moderator og udvikler",
+      "TITLE": "Frivilligt arbejde"
+    },
+    "WORK": {
+      "APPRENTICE": "Lærling",
+      "APPRENTICE_ROLE": {
+        "DESCRIPTION": "Ledede udviklingen af et softwareautomatiseringsværktøj til elevadministration og vejledningsprocesser."
+      },
+      "BROEN": {
+        "DESCRIPTION": "Arbejdede med IoT-relaterede softwareinitiativer og prototypeudvikling for opkoblede ventilløsninger.",
+        "DESCRIPTION_EXTENDED": "Hjalp med at validere tekniske koncepter til overvågning og fejldetektering i infrastruktursystemer."
+      },
+      "SOFTWARE_DEVELOPER": "Software Developer",
+      "SOFTWARE_ENGINEER": "Software Engineer",
+      "STUDENT_WORKER": "Studentermedhjaelper",
+      "TITLE": "Erhvervserfaring",
+      "UR_FULL": {
+        "DESCRIPTION": "Arbejder som full-stack ingeniør med modernisering og vedligeholdelse af kritisk brugerrettet software til kollaborative robotter.",
+        "DESCRIPTION_EXTENDED": "Bidrager på tværs af arkitektur, implementering og release-kvalitet med fokus på effektiv udvikling og langsigtet vedligeholdelse.",
+        "LI_1": "Teknisk ansvar for centrale initiativer i brugergrænsefladen.",
+        "LI_2": "Migrering og modernisering af legacy-moduler.",
+        "LI_3": "Tværfagligt samarbejde med designere, QA og embedded teams.",
+        "LI_4": "Forbedringer af performance og stabilitet i produktionssoftware.",
+        "LI_5": "Forbedrede udvikler-workflows og testautomatisering.",
+        "LI_6": "Mentoring og vidensdeling i udviklingsteamet."
+      },
+      "UR_PART_1": {
+        "DESCRIPTION": "Udviklede og vedligeholdt softwarefunktioner til robotternes brugerinteraktion i en stor produktionskodebase.",
+        "DESCRIPTION_EXTENDED": "Bidrog til feature-leverancer, fejlrettelser og kvalitetsinitiativer som en del af softwareteamet."
+      }
+    }
+  },
   "FOOTER": {
     "TECH": {
       "HOSTED_ON": "Hostet af",
@@ -30,6 +121,10 @@
     "LIGHT": "Lys"
   },
   "HOME": {
+    "HEADLINE": "Passioneret softwareingeniør, udvikler værdifulde systemer som trives",
+    "INTRO": "Jeg er <b>Simon</b>, civilingeniør med speciale i software engineering og bosat i <b>Odense på Fyn</b>. I øjeblikket beskæftiger jeg mig med udviklingen og vedligeholdelsen af software til brugerstyring af kollaborative robotter hos <b>Universal Robots</b>.",
+    "INTRO_ACTION": "Tag et kig rundt eller besøg mine sociale profiler for at lære mere om mig.",
+    "INTRO_MOTIVATION": "For mig er softwareudvikling mere end at udgive nye funktioner og fejlrettelser. Det er en fin balancegang mellem udviklingsfremdrift, kvalitet– og fremtidssikring.",
     "TITLE": "Forside"
   },
   "PRIVACY_POLICY": {
