@@ -18,8 +18,8 @@ import {
 } from '@ng-icons/ionicons';
 import { CvExperienceSection } from './cv-experience-section/cv-experience-section';
 import { CvKeywords } from './cv-keywords/cv-keywords';
-import { ExperienceEntry, LanguageEntry } from './cv.models';
-import { education, workExperience } from './cv.data';
+import { LanguageEntry } from './cv.models';
+import { education, volunteering, workExperience } from './cv.data';
 import { CvProfile } from './cv-profile/cv-profile';
 import { CvSideSections } from './cv-side-sections/cv-side-sections';
 import { CvSummary } from './cv-summary/cv-summary';
@@ -73,13 +73,7 @@ export class Cv {
     { languageKey: 'CV.LANGUAGE.GERMAN', levelKey: 'CV.LANGUAGE.BASIC' },
   ];
 
-  readonly volunteering: ExperienceEntry = {
-    company: 'Redmew.com - Factorio community',
-    titleKey: 'CV.VOLUNTEERING.REDMEW_TITLE',
-    startKey: 'CV.DATE.MAY_2018',
-    endKey: 'CV.DATE.PRESENT',
-    descriptionKey: 'CV.VOLUNTEERING.REDMEW_DESCRIPTION',
-  };
+  readonly volunteering = volunteering;
 
   readonly keywords =
     'Java - Python - TypeScript - C++ - C# - .NET - OSGi - SCRUM - LUA - PHP - JUnit - Spring Boot - JavaScript - Angular - NX - Cypress - Karma - Jest - Groovy - REST - JSON - Docker - IntelliJ IDEA - Atlassian - Jira - Bitbucket - Confluence - Jenkins';

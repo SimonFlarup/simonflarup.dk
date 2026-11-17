@@ -1,5 +1,13 @@
 import { ExperienceEntry } from './cv.models';
 
+export const volunteering: ExperienceEntry = {
+  company: 'Redmew.com - Factorio community',
+  titleKey: 'CV.VOLUNTEERING.REDMEW_TITLE',
+  startKey: 'CV.DATE.MAY_2018',
+  endKey: 'CV.DATE.PRESENT',
+  descriptionKey: 'CV.VOLUNTEERING.REDMEW_DESCRIPTION',
+};
+
 export const education: ExperienceEntry[] = [
   {
     company: 'University of Southern Denmark',
