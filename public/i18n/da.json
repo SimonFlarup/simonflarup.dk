@@ -1,6 +1,6 @@
 {
   "ABOUT": {
-    "AGE": "{{age}} år",
+    "AGE": "({{age}} år)",
     "BIRTHDAY": "Født i 1998",
     "CONTENT": {
       "BACKGROUND_APPRENTICE": "Som lærling fik jeg muligheden for at lede designet, udviklingen og operationen af et digitaliseringsværktøj til effektivisering af administrationen blandt elevoptag og vejledning. Denne erfaring motiverede mig til at gå målrettet efter at blive civilingeniør.",
@@ -8,7 +8,7 @@
       "BACKGROUND_EDUCATION": "Som adgangskrav til universitet, blev jeg nødt til at gennemføre en gymnasial uddannelse. Et personligt uddannelsesforløb blev oprettet for at jeg hurtigt kunne blive optaget på et universitet. Dette forløb bestod af gennemførelsen af en 2-årig HF på 11 måneder.",
       "BACKGROUND_UR": "Min baggrund kommer fra forskellige projekter og stillinger indenfor softwareudvikling. Jeg beskæftiger mig i øjeblikket med udvikling og vedligeholdelse af software til brugerstyring af verdens førende kollaborative robot arme. Mit ansvar har hjulpet med fornyet fremtidssikring og fjernelse af teknisk gæld der har samlet sig, for at forbedre fremdriften i videreudvikling.",
       "INTRO": "Jeg er en ung softwareingeniør, bosat i Odense. Jeg er uddannet Civilingeniør i Software Engineering fra Syddansk Universitet. Jeg brænder for at skabe software løsninger hvor effektiv udvikling involverer balancering af <b>fremdrift</b>, <b>kvalitet</b> og <b>fremtidssikring</b>.",
-      "OUTRO": "Jeg dimitterede som Civilingeniør i Software Engineering i 2023, og jeg har siden da vokset i min nuværende position how Universal Robots A/S til at være hovedansvarlig for brugergrænsefladen til PolyScope 5. Hvis du stadig er nysgerrig, eller tænker jeg er lige den de mangler, så lad os tage en snak."
+      "OUTRO": "Jeg dimitterede som Civilingeniør i Software Engineering i 2023, og jeg har siden da vokset i min nuværende position hos Universal Robots A/S til at være hovedansvarlig for brugergrænsefladen til PolyScope 5. Hvis du stadig er nysgerrig, eller tænker jeg er lige den de mangler, så <strong>lad os tage en snak.</strong>"
     },
     "CV_ACTION": "Hent mit CV",
     "GITHUB_ACTION": "Find mig på GitHub",
@@ -20,7 +20,6 @@
     "TITLE": "Om"
   },
   "CV": {
-    "TITLE": "CV",
     "AGE": "år",
     "DATE": {
       "APRIL_2023": "April 2023",
@@ -77,6 +76,7 @@
       "LINE_3": "Jeg arbejder målrettet med balancen mellem leveringshastighed, kvalitet og systemets langsigtede sundhed.",
       "TITLE": "Resumé"
     },
+    "TITLE": "CV",
     "VOLUNTEERING": {
       "REDMEW_DESCRIPTION": "Bidrager med moderation, værktøjer og community-udvikling i et internationalt gaming-fællesskab.",
       "REDMEW_TITLE": "Moderator og udvikler",
@@ -118,50 +118,50 @@
     }
   },
   "HEADER": {
-    "MENU": "Menu",
-    "SWITCH_TO_LIGHT": "Skift til lyst tema",
-    "SWITCH_TO_DARK": "Skift til mørkt tema",
-    "SWITCH_TO_DANISH": "Skift til dansk",
-    "SWITCH_TO_ENGLISH": "Skift til engelsk",
     "DARK": "Mørk",
-    "LIGHT": "Lys"
+    "LIGHT": "Lys",
+    "MENU": "Menu",
+    "SWITCH_TO_DANISH": "Skift til dansk",
+    "SWITCH_TO_DARK": "Skift til mørkt tema",
+    "SWITCH_TO_ENGLISH": "Skift til engelsk",
+    "SWITCH_TO_LIGHT": "Skift til lyst tema"
   },
   "HOME": {
     "EXPERIENCE": {
-      "VIEW_CV": "Se CV",
-      "READ_MORE": "Læs mere på universal-robots.com",
       "POLYSCOPE_5": "Den velkendte platform til styring af kollaborative robotter.",
-      "POLYSCOPE_X": "Næste generations platform til styring af kollaborative robotter."
+      "POLYSCOPE_X": "Næste generations platform til styring af kollaborative robotter.",
+      "READ_MORE": "Læs mere på universal-robots.com",
+      "VIEW_CV": "Se CV"
     },
     "HEADLINE": "Passioneret softwareingeniør, udvikler værdifulde systemer som trives",
-    "INTRO": "Jeg er <b>Simon</b>, civilingeniør med speciale i software engineering og bosat i <b>Odense på Fyn</b>. I øjeblikket beskæftiger jeg mig med udviklingen og vedligeholdelsen af software til brugerstyring af kollaborative robotter hos <b>Universal Robots</b>.",
+    "INTRO": "Jeg er <strong>Simon</strong>, civilingeniør med speciale i software engineering og bosat i <strong>Odense på Fyn</strong>. I øjeblikket beskæftiger jeg mig med udviklingen og vedligeholdelsen af software til brugerstyring af kollaborative robotter hos <strong>Universal Robots</strong>.",
     "INTRO_ACTION": "Tag et kig rundt eller besøg mine sociale profiler for at lære mere om mig.",
     "INTRO_MOTIVATION": "For mig er softwareudvikling mere end at udgive nye funktioner og fejlrettelser. Det er en fin balancegang mellem udviklingsfremdrift, kvalitet– og fremtidssikring.",
     "TITLE": "Forside"
   },
   "NOT_FOUND": {
-    "TITLE": "Siden blev ikke fundet",
-    "HEADING": "Det beklager jeg, men vi er faret vild",
     "DESCRIPTION": "Siden, du leder efter, findes ikke eller er blevet flyttet.",
-    "HOME_ACTION": "Tilbage til forsiden"
+    "HEADING": "Det beklager jeg, men vi er faret vild",
+    "HOME_ACTION": "Tilbage til forsiden",
+    "TITLE": "Siden blev ikke fundet"
   },
   "PRIVACY_POLICY": {
-    "TITLE": "Privatlivspolitik",
     "ANALYTICS_HEADING": "Privatlivsvenlig besøgsstatistik",
     "ANALYTICS_INTRO": "Denne hjemmeside bruger Cloudflare Web Analytics til at forstå besøg og forbedre sidernes ydeevne. Statistik indsamles gennem et JavaScript fra Cloudflare.",
-    "DATA_INTRO": "Statistikken omfatter:",
-    "DATA_PAGES": "Besøgte domæner og sidestier samt henvisende hjemmesider.",
-    "DATA_DEVICE": "Browser, operativsystem og enhedstype.",
-    "DATA_COUNTRY": "Den besøgendes land.",
-    "DATA_PERFORMANCE": "Indlæsningstider og målinger af ydeevne, herunder Core Web Vitals.",
     "ANALYTICS_PRIVACY": "Cloudflare Web Analytics er cookiefri og bruger ikke fingerprinting eller sporing på tværs af hjemmesider. Din browser opretter forbindelse til Cloudflare for at hente scriptet og sende målinger. Statistikken bruges til at forstå den samlede trafik, ikke til at identificere enkelte besøgende.",
     "CLOUDFLARE_LINK": "Om Cloudflare Web Analytics",
-    "PREFERENCES_HEADING": "Gemte indstillinger",
-    "PREFERENCES": "Hjemmesiden gemmer dit valg af sprog og lyst/mørkt tema i browserens lokale lager under language og darkMode. Disse indstillinger bruges ikke som identifikatorer til statistik. Du kan fjerne dem ved at rydde hjemmesidens data i din browser.",
-    "HOSTING_HEADING": "Hosting",
-    "HOSTING": "Hjemmesiden hostes af GitHub Pages. GitHub kan behandle tekniske oplysninger om anmodninger, herunder IP-adresser, for at drive og sikre sine tjenester. Se GitHubs privatlivspolitik for flere oplysninger.",
-    "GITHUB_LINK": "Om GitHub Pages",
+    "CONTACT": "Hjemmesiden drives af Simon Holland Flarup. Har du spørgsmål om privatliv, kan du kontakte:",
     "CONTACT_HEADING": "Kontakt",
-    "CONTACT": "Hjemmesiden drives af Simon Holland Flarup. Har du spørgsmål om privatliv, kan du kontakte:"
+    "DATA_COUNTRY": "Den besøgendes land.",
+    "DATA_DEVICE": "Browser, operativsystem og enhedstype.",
+    "DATA_INTRO": "Statistikken omfatter:",
+    "DATA_PAGES": "Besøgte domæner og sidestier samt henvisende hjemmesider.",
+    "DATA_PERFORMANCE": "Indlæsningstider og målinger af ydeevne, herunder Core Web Vitals.",
+    "GITHUB_LINK": "Om GitHub Pages",
+    "HOSTING": "Hjemmesiden hostes af GitHub Pages. GitHub kan behandle tekniske oplysninger om anmodninger, herunder IP-adresser, for at drive og sikre sine tjenester. Se GitHubs privatlivspolitik for flere oplysninger.",
+    "HOSTING_HEADING": "Hosting",
+    "PREFERENCES": "Hjemmesiden gemmer dit valg af sprog og lyst/mørkt tema i browserens lokale lager under language og darkMode. Disse indstillinger bruges ikke som identifikatorer til statistik. Du kan fjerne dem ved at rydde hjemmesidens data i din browser.",
+    "PREFERENCES_HEADING": "Gemte indstillinger",
+    "TITLE": "Privatlivspolitik"
   }
 }

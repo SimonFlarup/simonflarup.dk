@@ -8,7 +8,7 @@
       "BACKGROUND_EDUCATION": "Before being able to gain admittance to an university, I had to graduate from an upper secondary education. To fast track this process, an educational program was personalized for me to complete a two-year education within 11 months.",
       "BACKGROUND_UR": "I have experience with various software development positions and projects. I'm currently empowering the development and maintenance of interactive software for the worlds leading collaborative robotics company. Attributing to a renewed longevity and resolving accumulated technical debt for improved development velocity.",
       "INTRO": "A young software engineer located in Odense, Denmark. I have an Master in Software Engineering from the University of Southern Denmark. I value creating software solutions where efficient development means balancing <b>velocity</b>, <b>quality</b> and <b>longevity</b>.",
-      "OUTRO": "I graduated as a MSc in Software Engineering in 2023, and have since grown in my current position at Universal Robots A/S to be responsible for the user interface of PolyScope 5. If you are still curious, or think I could be someone you need, then let's have a chat."
+      "OUTRO": "I graduated as a MSc in Software Engineering in 2023, and have since grown in my current position at Universal Robots A/S to be responsible for the user interface of PolyScope 5. If you are still curious, or think I could be someone you need, then <strong>let's have a chat.</strong>"
     },
     "CV_ACTION": "Download CV",
     "GITHUB_ACTION": "Follow on GitHub",
@@ -20,7 +20,6 @@
     "TITLE": "About"
   },
   "CV": {
-    "TITLE": "CV",
     "AGE": "years old",
     "DATE": {
       "APRIL_2023": "April 2023",
@@ -77,6 +76,7 @@
       "LINE_3": "I believe that software engineering is not only about delivering functionality. It is about creating a balance of development velocity, quality assurance and system longevity. I am looking for exciting opportunities to develop and apply my passion for creating great digital systems.",
       "TITLE": "Summary"
     },
+    "TITLE": "CV",
     "VOLUNTEERING": {
       "REDMEW_DESCRIPTION": "Developer and administrator for the online community Redmew in the video game Factorio. Contributed with development of scenarios and modifications for Factorio, code review and approvals, maintenance of online servers and head of crowdsourcing localization.",
       "REDMEW_TITLE": "Moderator and developer",
@@ -118,50 +118,50 @@
     }
   },
   "HEADER": {
-    "MENU": "Menu",
-    "SWITCH_TO_LIGHT": "Switch to light mode",
-    "SWITCH_TO_DARK": "Switch to dark mode",
-    "SWITCH_TO_DANISH": "Switch to Danish",
-    "SWITCH_TO_ENGLISH": "Switch to English",
     "DARK": "Dark",
-    "LIGHT": "Light"
+    "LIGHT": "Light",
+    "MENU": "Menu",
+    "SWITCH_TO_DANISH": "Switch to Danish",
+    "SWITCH_TO_DARK": "Switch to dark mode",
+    "SWITCH_TO_ENGLISH": "Switch to English",
+    "SWITCH_TO_LIGHT": "Switch to light mode"
   },
   "HOME": {
     "EXPERIENCE": {
-      "VIEW_CV": "View CV",
-      "READ_MORE": "Read more at universal-robots.com",
       "POLYSCOPE_5": "The established platform for controlling collaborative robots.",
-      "POLYSCOPE_X": "The next-generation platform for controlling collaborative robots."
+      "POLYSCOPE_X": "The next-generation platform for controlling collaborative robots.",
+      "READ_MORE": "Read more at universal-robots.com",
+      "VIEW_CV": "View CV"
     },
     "HEADLINE": "Passionate Software Engineer, making impactful systems that thrives",
-    "INTRO": "I'm <b>Simon</b> a passionate software engineer based in <b>Odense, Denmark</b>. I develop the current and next generation user interaction software for the collaborative robots by <b>Universal Robots</b>.",
+    "INTRO": "I'm <strong>Simon</strong> a passionate software engineer based in <strong>Odense, Denmark</strong>. I develop the current and next generation user interaction software for the collaborative robots by <strong>Universal Robots</strong>.",
     "INTRO_ACTION": "Take a look around or visit my social profiles to learn more about me.",
     "INTRO_MOTIVATION": "To me, software engineering is more than just shipping new features and fixing bugs. It's a fine balance of development velocity, quality assurance and system longevity.",
     "TITLE": "Home"
   },
   "NOT_FOUND": {
-    "TITLE": "Page not found",
-    "HEADING": "I'm sorry, but we've lost our way",
     "DESCRIPTION": "The page you are looking for does not exist or has been moved.",
-    "HOME_ACTION": "Back to Home"
+    "HEADING": "I'm sorry, but we've lost our way",
+    "HOME_ACTION": "Back to Home",
+    "TITLE": "Page not found"
   },
   "PRIVACY_POLICY": {
-    "TITLE": "Privacy Policy",
     "ANALYTICS_HEADING": "Privacy-friendly visitor statistics",
     "ANALYTICS_INTRO": "This website uses Cloudflare Web Analytics to understand visits and improve page performance. Statistics are collected through a JavaScript beacon supplied by Cloudflare.",
-    "DATA_INTRO": "The analytics reports include:",
-    "DATA_PAGES": "Visited domains and page paths, and referring websites.",
-    "DATA_DEVICE": "Browser, operating system, and device type.",
-    "DATA_COUNTRY": "The visitor's country.",
-    "DATA_PERFORMANCE": "Page loading times and performance measurements, including Core Web Vitals.",
     "ANALYTICS_PRIVACY": "Cloudflare Web Analytics is cookie-free and does not fingerprint visitors or track individuals across websites. Your browser connects to Cloudflare to load the script and send measurements. The statistics are used to understand overall traffic, not to identify individual visitors.",
     "CLOUDFLARE_LINK": "About Cloudflare Web Analytics",
-    "PREFERENCES_HEADING": "Saved preferences",
-    "PREFERENCES": "The website saves your language and light/dark theme choices in your browser's local storage under language and darkMode. These preferences are not used as analytics identifiers. You can remove them by clearing this website's site data in your browser.",
-    "HOSTING_HEADING": "Hosting",
-    "HOSTING": "This website is hosted on GitHub Pages. GitHub may process technical request information, including IP addresses, to operate and secure its services. See GitHub's privacy statement for details.",
-    "GITHUB_LINK": "About GitHub Pages",
+    "CONTACT": "This website is operated by Simon Holland Flarup. For questions about privacy, contact:",
     "CONTACT_HEADING": "Contact",
-    "CONTACT": "This website is operated by Simon Holland Flarup. For questions about privacy, contact:"
+    "DATA_COUNTRY": "The visitor's country.",
+    "DATA_DEVICE": "Browser, operating system, and device type.",
+    "DATA_INTRO": "The analytics reports include:",
+    "DATA_PAGES": "Visited domains and page paths, and referring websites.",
+    "DATA_PERFORMANCE": "Page loading times and performance measurements, including Core Web Vitals.",
+    "GITHUB_LINK": "About GitHub Pages",
+    "HOSTING": "This website is hosted on GitHub Pages. GitHub may process technical request information, including IP addresses, to operate and secure its services. See GitHub's privacy statement for details.",
+    "HOSTING_HEADING": "Hosting",
+    "PREFERENCES": "The website saves your language and light/dark theme choices in your browser's local storage under language and darkMode. These preferences are not used as analytics identifiers. You can remove them by clearing this website's site data in your browser.",
+    "PREFERENCES_HEADING": "Saved preferences",
+    "TITLE": "Privacy Policy"
   }
 }

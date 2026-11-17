@@ -51,3 +51,7 @@
 .about-details a {
   @apply min-w-0 break-words underline-offset-4 transition hover:text-red-500 hover:underline dark:hover:text-red-400;
 }
+
+p strong {
+  @apply text-red-500 dark:text-red-400;
+}
