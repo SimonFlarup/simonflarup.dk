@@ -1,15 +1,15 @@
 @reference "../../styles.css";
 
 .site-header {
-  @apply relative z-50 flex mb-5 top-0 pt-6;
+  @apply relative z-50 mb-5 grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-4 top-0 pt-6 lg:flex lg:gap-0;
 }
 
 .header-portrait {
-  @apply rounded-full bg-zinc-100 object-cover dark:bg-zinc-800;
+  @apply size-16 rounded-full bg-zinc-100 object-cover sm:size-20 lg:size-28 dark:bg-zinc-800;
 }
 
 .header-navigation {
-  @apply flex-1 flex justify-center items-center;
+  @apply order-3 col-span-2 flex min-w-0 justify-center items-center lg:order-2 lg:flex-1;
 }
 
 .header-surface {
@@ -25,13 +25,13 @@
 }
 
 .header-controls {
-  @apply content-center ml-auto;
+  @apply order-2 min-w-0 content-center ml-auto lg:order-3;
 }
 
 .header-actions {
-  @apply flex gap-2;
+  @apply flex flex-wrap justify-end gap-2;
 }
 
 .header-button {
-  @apply px-4;
+  @apply whitespace-nowrap px-3 sm:px-4;
 }

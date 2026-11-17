@@ -1,11 +1,11 @@
 @reference "../../styles.css";
 
 .about-layout {
-  @apply flex gap-16;
+  @apply flex flex-col gap-10 lg:flex-row lg:gap-16;
 }
 
 .about-content {
-  @apply flex-3;
+  @apply min-w-0 lg:flex-3;
 }
 
 .about-headline {
@@ -21,11 +21,11 @@
 }
 
 .about-sidebar {
-  @apply flex-2 flex flex-col gap-8;
+  @apply flex min-w-0 flex-col gap-8 lg:flex-2;
 }
 
 .about-portrait {
-  @apply aspect-9/10 -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 w-full;
+  @apply hidden aspect-9/10 -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 w-full max-w-sm self-center lg:block lg:max-w-none;
 }
 
 .about-details {
@@ -41,7 +41,7 @@
 }
 
 .about-icon {
-  @apply text-zinc-500;
+  @apply shrink-0 text-zinc-500;
 }
 
 .about-details hr {
@@ -49,5 +49,5 @@
 }
 
 .about-details a {
-  @apply underline-offset-4 transition hover:text-red-500 hover:underline dark:hover:text-red-400;
+  @apply min-w-0 break-words underline-offset-4 transition hover:text-red-500 hover:underline dark:hover:text-red-400;
 }

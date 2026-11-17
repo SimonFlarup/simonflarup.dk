@@ -45,4 +45,13 @@ describe('About', () => {
     expect(element.querySelectorAll('.about-details li')).toHaveLength(8);
     expect(element.querySelectorAll('.about-details hr')).toHaveLength(2);
   });
+
+  it('should keep the biography before the portrait and personal details in reading order', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const layout = element.querySelector('.about-layout');
+    expect(layout?.firstElementChild?.classList.contains('about-content')).toBe(true);
+    expect(layout?.lastElementChild?.classList.contains('about-sidebar')).toBe(true);
+    expect(element.querySelector('.about-sidebar')?.lastElementChild?.classList.contains('about-details'))
+      .toBe(true);
+  });
 });
