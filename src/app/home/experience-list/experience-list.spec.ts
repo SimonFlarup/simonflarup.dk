@@ -50,14 +50,14 @@ describe('ExperienceList', () => {
     const element = fixture.nativeElement as HTMLElement;
     expect(element.textContent).toContain('University');
     expect(element.querySelector('ul li')?.textContent).toBe('Thesis');
-    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projects:');
+    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projects');
     expect(element.querySelector('img')).toBeNull();
     expect(element.querySelector('article')).toBeNull();
     expect(element.textContent).not.toContain('CV.RESPONSIBILITIES');
 
     translate.use('da');
     await fixture.whenStable();
-    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projekter:');
+    expect(element.querySelector('ul')?.previousElementSibling?.textContent).toBe('Projekter');
     expect(element.querySelector('ul li')?.textContent).toBe('Speciale');
   });
 
@@ -79,6 +79,21 @@ describe('ExperienceList', () => {
     expect(element.textContent).toContain('Ansvar og resultater');
     expect(Array.from(element.querySelectorAll('ul li'), item => item.textContent))
       .toEqual(['Udvikler software', 'Speciale']);
+  });
+
+  it('supports compact entries without dates, logos, or empty detail blocks', async () => {
+    const fixture = await render([{ titleKey: 'ROLE', companyKey: 'DESCRIPTION' }]);
+    fixture.componentRef.setInput('showLogos', false);
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelectorAll('li ng-icon')).toHaveLength(0);
+    expect(element.querySelector('li .text-xs')).toBeNull();
+    expect(element.querySelector('li .border-l-2')).toBeNull();
+    expect(element.textContent).toContain('Builds software');
+
+    TestBed.inject(TranslateService).use('da');
+    await fixture.whenStable();
+    expect(element.textContent).toContain('Udvikler software');
   });
 
   it('renders portfolio images and links', async () => {

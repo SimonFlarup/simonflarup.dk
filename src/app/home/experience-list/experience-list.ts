@@ -4,7 +4,11 @@ import { ionBriefcaseOutline } from '@ng-icons/ionicons';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ExperienceEntry } from '../../cv/cv.models';
 
-export interface ExperienceListEntry extends ExperienceEntry {
+export interface ExperienceListEntry extends Omit<ExperienceEntry, 'company' | 'startKey' | 'endKey'> {
+  company?: string;
+  companyKey?: string;
+  startKey?: string;
+  endKey?: string;
   logo?: string;
   portfolio?: {
     title: string;
@@ -23,5 +27,6 @@ export interface ExperienceListEntry extends ExperienceEntry {
 export class ExperienceList {
   readonly titleKey = input.required<string>();
   readonly icon = input('ionBriefcaseOutline');
+  readonly showLogos = input(true);
   readonly entries = input.required<readonly ExperienceListEntry[]>();
 }
