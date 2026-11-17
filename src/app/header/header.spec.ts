@@ -45,4 +45,22 @@ describe('Header', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should preserve navigation and preference controls', async () => {
+    const element = fixture.nativeElement as HTMLElement;
+    expect(Array.from(element.querySelectorAll('nav a'), link => link.getAttribute('href')))
+      .toEqual(['/', '/about']);
+    const buttons = element.querySelectorAll('button');
+    expect(buttons).toHaveLength(2);
+
+    const wasDarkMode = component.darkMode();
+    buttons[0].click();
+    await fixture.whenStable();
+    expect(component.darkMode()).toBe(!wasDarkMode);
+
+    const previousLanguage = component.language();
+    buttons[1].click();
+    await fixture.whenStable();
+    expect(component.language()).toBe(previousLanguage === 'en' ? 'da' : 'en');
+  });
 });

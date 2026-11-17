@@ -1,0 +1,38 @@
+@reference "../../styles.css";
+
+.site-header {
+  @apply relative z-50 flex mb-5 top-0 pt-6;
+}
+
+.header-portrait {
+  @apply rounded-full bg-zinc-100 object-cover dark:bg-zinc-800;
+}
+
+.header-navigation {
+  @apply flex-1 flex justify-center items-center;
+}
+
+.header-nav,
+.header-button {
+  @apply flex rounded-full py-2 bg-white/90 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10;
+}
+
+.header-nav {
+  @apply px-3;
+}
+
+.header-nav a {
+  @apply px-3 transition hover:text-red-500 dark:hover:text-red-400;
+}
+
+.header-controls {
+  @apply content-center ml-auto;
+}
+
+.header-actions {
+  @apply flex gap-2;
+}
+
+.header-button {
+  @apply px-4;
+}
