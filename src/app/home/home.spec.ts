@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Home } from './home';
 import { provideRouter } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
-import { education } from '../cv/cv.data';
+import { education, volunteering } from '../cv/cv.data';
 
 describe('Home', () => {
   let component: Home;
@@ -22,6 +22,19 @@ describe('Home', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display Other after Education', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const other = element.querySelector('app-experience-list[titleKey="CV.OTHER.TITLE"]');
+    expect(other).not.toBeNull();
+    expect(other?.previousElementSibling?.getAttribute('titleKey')).toBe('CV.EDUCATION.TITLE');
+    expect(other?.querySelectorAll('ol > li')).toHaveLength(3);
+    expect(component.other[0]).toBe(volunteering);
+    expect(other?.textContent).toContain('CV.OTHER.DRIVERS_LICENSE_VALUE');
+    expect(other?.textContent).toContain('Glenten Antennelaug');
+    expect(other?.querySelector('a')?.getAttribute('href')).toBe('/cv');
+    expect(other?.querySelector('img')).toBeNull();
   });
 
   it('should display the shared work history with portfolio cards and a CV link', () => {

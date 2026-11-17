@@ -6,10 +6,11 @@ import {
   ionLogoGithub,
   ionLogoLinkedin,
   ionSchoolOutline,
+  ionPricetagOutline,
 } from '@ng-icons/ionicons';
 import { ImageRow } from './image-row/image-row';
 import { RouterLink } from '@angular/router';
-import { education, workExperience } from '../cv/cv.data';
+import { education, volunteering, workExperience } from '../cv/cv.data';
 import { ExperienceList, ExperienceListEntry } from './experience-list/experience-list';
 
 @Component({
@@ -21,6 +22,7 @@ import { ExperienceList, ExperienceListEntry } from './experience-list/experienc
       ionLogoGithub,
       ionDocumentText,
       ionSchoolOutline,
+      ionPricetagOutline,
     }),
   ],
   templateUrl: './home.html',
@@ -28,6 +30,20 @@ import { ExperienceList, ExperienceListEntry } from './experience-list/experienc
   encapsulation: ViewEncapsulation.None,
 })
 export class Home {
+  readonly other: ExperienceListEntry[] = [
+    volunteering,
+    {
+      titleKey: 'CV.OTHER.DRIVERS_LICENSE_TITLE',
+      companyKey: 'CV.OTHER.DRIVERS_LICENSE_VALUE',
+    },
+    {
+      titleKey: 'CV.OTHER.GLENTEN_TITLE',
+      company: 'Glenten Antennelaug',
+      startKey: '2018',
+      endKey: '2025',
+    },
+  ];
+
   readonly education: ExperienceListEntry[] = education.map(entry => ({
     ...entry,
     logo: this.companyLogo(entry.company),
