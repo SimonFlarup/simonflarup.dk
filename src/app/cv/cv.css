@@ -1,11 +1,11 @@
 @reference "../../styles.css";
 
 app-cv .cv-section {
-  @apply flex flex-col gap-1 rounded-2xl border-2 border-zinc-200 py-3 px-4 dark:border-zinc-700/40;
+  @apply flex flex-col gap-1 rounded-2xl border-2 border-zinc-200 py-3 px-4 print:py-2 print:px-3 dark:border-zinc-700/40;
 }
 
 app-cv .cv-heading {
-  @apply print:text-sm font-semibold text-zinc-900 dark:text-zinc-100;
+  @apply print:text-xs font-semibold text-zinc-900 dark:text-zinc-100;
 }
 
 app-cv hr {
@@ -13,7 +13,7 @@ app-cv hr {
 }
 
 app-cv .cv-text {
-  @apply print:text-xs text-sm text-zinc-500 dark:text-zinc-400;
+  @apply print:text-[11px] text-sm text-zinc-500 dark:text-zinc-400;
 }
 
 app-cv .cv-grid-2col {
@@ -22,6 +22,10 @@ app-cv .cv-grid-2col {
 
 app-cv .cv-grid-3col {
   @apply grid sm:grid-cols-2 md:grid-cols-3 gap-3;
+}
+
+app-cv .cv-profile-items {
+  @apply print:grid-cols-3 print:gap-x-2 print:gap-y-1;
 }
 
 app-cv .cv-personal {
@@ -33,5 +37,25 @@ app-cv .cv-detail-title {
 }
 
 app-cv .cv-detail-content {
-  @apply mt-2 flex flex-col gap-1;
+  @apply mt-2 print:mt-0 flex flex-col gap-1 print:gap-0;
+}
+
+@media print {
+  app-cv .cv-section {
+    break-inside: avoid-page;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  app-cv app-cv-heading,
+  app-cv app-cv-entry-header,
+  app-cv hr {
+    break-after: avoid-page;
+  }
+
+  app-cv p,
+  app-cv li {
+    orphans: 3;
+    widows: 3;
+  }
 }

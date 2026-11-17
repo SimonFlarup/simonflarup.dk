@@ -53,7 +53,7 @@ import { CvVolunteering } from './cv-volunteering/cv-volunteering';
     }),
   ],
   templateUrl: './cv.html',
-  styleUrl: './cv.css',
+  styleUrls: ['./cv.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class Cv {
@@ -76,7 +76,7 @@ export class Cv {
   readonly volunteering = volunteering;
 
   readonly keywords =
-    'Java - Python - TypeScript - C++ - C# - .NET - OSGi - SCRUM - LUA - PHP - JUnit - Spring Boot - JavaScript - Angular - NX - Cypress - Karma - Jest - Groovy - REST - JSON - Docker - IntelliJ IDEA - Atlassian - Jira - Bitbucket - Confluence - Jenkins';
+    'Java - Python - TypeScript - C++ - C# - .NET - OSGi - SCRUM - LUA - PHP - JUnit - Spring Boot - JavaScript - Angular - NX - Cypress - Karma - Jest - Vitest - Groovy - REST - JSON - Docker - IntelliJ IDEA - Atlassian - Jira - Bitbucket - Confluence - Jenkins - Agentic AI - Claude Code - GitHub Copilot';
 
   private calculateAge(dateOfBirth: Date): number {
     const today = new Date();

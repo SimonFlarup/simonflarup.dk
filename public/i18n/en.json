@@ -39,9 +39,9 @@
     "EDUCATION": {
       "BSC_PROJECT_1": "Data-driven mobile application for enhanced guest experiences.",
       "BSC_TITLE": "Bachelor of Science - Software Engineering",
-      "EUX_DESCRIPTION": "Suspended combined upper secondary education and vocational education within information technology, networking and computer programming. Suspended for seeking direct admission to university.",
+      "EUX_DESCRIPTION": "Combined upper secondary education and vocational education within information technology, networking and computer programming. Paused for direct admission to university.",
       "EUX_TITLE": "Data technician (EUX)",
-      "HF_DESCRIPTION": "Completed an accelerated upper secondary education path as preparation for university studies. 2 years accredited in 11 months.",
+      "HF_DESCRIPTION": "Accelerated upper secondary education to gain university enrollment. 2 years accredited in 11 months.",
       "HF_TITLE": "Higher Preparatory Examination",
       "MSC_PROJECT_1": "The longevity of modern software: A study of operational risks connected to open source libraries.",
       "MSC_PROJECT_2": "Mitigating the accumulation of technical debt and addressing existing productivity inhibitors.",
@@ -71,9 +71,8 @@
     "PROJECTS": "Projects",
     "RESPONSIBILITIES": "Responsibilities and achievements",
     "SUMMARY": {
-      "LINE_1": "Passionate Software Engineer, seeking new opportunities and experiences after over four years as a software engineer at Universal Robots A/S. I have been involved in the development and maintenance of new and existing projects across different technology stack including Java/Spring Boot and Typescript/Angular. Currently I drive the maintenance of business critical software extending the longevity in anticipation of the launch of the next generation software.",
-      "LINE_2": "With practical experience in Java, TypeScript, Angular, Spring Boot, and Docker, I ensure operational reliability for over 100,000+ collaborative robots globally. From developing intuitive APIs to providing long-term support for major clients",
-      "LINE_3": "I believe that software engineering is not only about delivering functionality. It is about creating a balance of development velocity, quality assurance and system longevity. I am looking for exciting opportunities to develop and apply my passion for creating great digital systems.",
+      "LINE_1": "Passionate Software Engineer, seeking new opportunities and experiences after six years as a software engineer at Universal Robots A/S. I have been involved in development and maintenance of new and existing projects across different technology stack including Java/Spring Boot and Typescript/Angular. Currently I lead a team responsible for safety compliance of our two mainline software, ensuring strict compliance with ISO standards, long-term maintenance and 3rd-line support.",
+      "LINE_2": "I believe software engineering is about creating a balance of development velocity, quality assurance and system longevity. Furthered by the emergence of Agentic AI. I am looking for exciting opportunities to develop and apply my passion for creating great software solutions.",
       "TITLE": "Summary"
     },
     "TITLE": "CV",
@@ -98,12 +97,12 @@
       "UR_FULL": {
         "DESCRIPTION": "Versatile software engineer leading the technical development of PolyScope 5, driving business-critical advancements for major accounts and ensuring reliability across 100,000+ deployed robots.",
         "DESCRIPTION_EXTENDED": "Full-stack development on the next-generation PolyScope X platform, focusing on team planning and execution to uphold a reputation of highest quality, integrity, and transparency.",
-        "LI_1": "Led development for PolyScope 5, managing technical strategies, sprint planning, and collaboration with key accounts.",
-        "LI_2": "Delivered 14 feature releases, achieving technical ownership and advancing user-facing software across Universal Robots’ ecosystem.",
+        "LI_1": "Led team of 5 developers, managing technical strategies, sprint planning, and collaboration with key accounts.",
+        "LI_2": "Delivered 8 on-target and in-scope software releases in a row.",
         "LI_3": "Designed and implemented multi-stacked architectures using Java, Spring Boot, TypeScript, Angular, Docker, and Quarkus.",
         "LI_4": "Co-developed public APIs, improving integration accessibility for users and third-party developers.",
-        "LI_5": "Played a pivotal role in PolyScope X, contributing to five impactful releases.",
-        "LI_6": "Provided long-term software support for major clients, ensuring reliability and customer satisfaction across critical deployments."
+        "LI_5": "Produced technical evidence for intellectual property injunctions.",
+        "LI_6": "Provided 3rd-line support for major clients, including on-site engineering visits."
       },
       "UR_PART_1": {
         "DESCRIPTION": "Contributing to the development and optimization of PolyScope 5, the control and programming interface empowering Universal Robots' collaborative robots. Worked closely with the team to enhance software architecture, reduce technical debt, and introduce new functionality, ensuring seamless operation and integration for industrial automation.",

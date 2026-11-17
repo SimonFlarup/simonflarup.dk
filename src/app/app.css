@@ -1,7 +1,7 @@
 @reference "../styles.css";
 
 .app-background {
-  @apply min-h-screen overflow-hidden bg-zinc-50 dark:bg-black;
+  @apply min-h-screen overflow-hidden bg-zinc-50 dark:bg-black print:overflow-visible;
 }
 
 .app-layout {
@@ -14,6 +14,10 @@
 
 .app-content {
   @apply grow;
+}
+
+.app-header {
+  @apply print:hidden;
 }
 
 .app-footer {

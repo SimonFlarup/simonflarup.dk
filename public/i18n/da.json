@@ -39,9 +39,9 @@
     "EDUCATION": {
       "BSC_PROJECT_1": "Data-driven mobile application for enhanced guest experiences.",
       "BSC_TITLE": "Bachelor i Software Engineering",
-      "EUX_DESCRIPTION": "Kombinerede teknisk erhvervsuddannelse med gymnasiale fag.",
-      "EUX_TITLE": "EUX - Teknisk gymnasial uddannelse",
-      "HF_DESCRIPTION": "Gennemførte et accelereret gymnasialt forløb som forberedelse til universitetsstudier.",
+      "EUX_DESCRIPTION": "Kombineret gymnasial uddannelse og erhvervsuddannelse inden for informationsteknologi, netværk og programmering. Sat på pause for at søge direkte optagelse på universitetet.",
+      "EUX_TITLE": "Datatekniker (EUX)",
+      "HF_DESCRIPTION": "Accelereret gymnasialt uddannelsesforløb med henblik på optagelse på universitetet. To års uddannelse gennemført på 11 måneder.",
       "HF_TITLE": "Højere Forberedelseseksamen",
       "MSC_PROJECT_1": "The longevity of modern software: A study of operational risks connected to open source libraries.",
       "MSC_PROJECT_2": "Mitigating the accumulation of technical debt and addressing existing productivity inhibitors.",
@@ -60,7 +60,7 @@
       "MOTHER_TONGUE": "Modersmål",
       "TITLE": "Sprog"
     },
-    "LOCATION": "Odense, Fyn",
+    "LOCATION": "5220 Odense SØ, Danmark",
     "OTHER": {
       "DRIVERS_LICENSE_TITLE": "Kørekort",
       "DRIVERS_LICENSE_VALUE": "Kategori B",
@@ -71,43 +71,42 @@
     "PROJECTS": "Projekter",
     "RESPONSIBILITIES": "Ansvar og resultater",
     "SUMMARY": {
-      "LINE_1": "Jeg er softwareingeniør med fokus på at bygge robuste og brugervendte softwaresystemer.",
-      "LINE_2": "Min erfaring kombinerer produktudvikling, langsigtet vedligeholdelse og modernisering af eksisterende platforme.",
-      "LINE_3": "Jeg arbejder målrettet med balancen mellem leveringshastighed, kvalitet og systemets langsigtede sundhed.",
+      "LINE_1": "Passioneret softwareingeniør, der søger nye muligheder og erfaringer efter seks år som softwareingeniør hos Universal Robots A/S. Jeg har været involveret i udvikling og vedligeholdelse af nye og eksisterende projekter på tværs af forskellige softwarestakke, herunder Java/Spring Boot og TypeScript/Angular. I øjeblikket leder jeg et hold med ansvar for, at vores to primære softwareplatforme overholder sikkerhedsdirektiver, med fokus på nøje overholdelse af ISO-standarder, langsigtet vedligeholdelse og 3rd-line support.",
+      "LINE_2": "Jeg mener, at softwareudvikling handler om at skabe balance mellem udviklingsfremdrift, kvalitetssikring og softwarens levetid. Fremkomsten af agentbaseret AI gør denne balance endnu vigtigere. Jeg søger spændende muligheder for at udvikle og anvende min passion for at skabe gode softwareløsninger.",
       "TITLE": "Resumé"
     },
     "TITLE": "CV",
     "VOLUNTEERING": {
-      "REDMEW_DESCRIPTION": "Bidrager med moderation, værktøjer og community-udvikling i et internationalt gaming-fællesskab.",
+      "REDMEW_DESCRIPTION": "Udvikler og administrator for onlinefællesskabet Redmew i computerspillet Factorio. Har bidraget med udvikling af scenarier og modifikationer til Factorio, kodegennemgang, vedligeholdelse af onlineservere og haft hovedansvaret for fællesskabsdrevne oversættelser.",
       "REDMEW_TITLE": "Moderator og udvikler",
       "TITLE": "Frivilligt arbejde"
     },
     "WORK": {
       "APPRENTICE": "Lærling",
       "APPRENTICE_ROLE": {
-        "DESCRIPTION": "Ledede udviklingen af et softwareautomatiseringsværktøj til elevadministration og vejledningsprocesser."
+        "DESCRIPTION": "Ansvarlig for udvikling af software til intern brug med fokus på at forbedre processerne for elevoptag og vejledning på erhvervsskolen. Kontaktperson for fagbrugere. Web- og databaseudvikling samt idriftsættelse af servere."
       },
       "BROEN": {
-        "DESCRIPTION": "Arbejdede med IoT-relaterede softwareinitiativer og prototypeudvikling for opkoblede ventilløsninger.",
-        "DESCRIPTION_EXTENDED": "Hjalp med at validere tekniske koncepter til overvågning og fejldetektering i infrastruktursystemer."
+        "DESCRIPTION": "Bidrog til et pilotprojekt, der undersøgte Industri 4.0 og Internet of Things (IoT) gennem udviklingen af et cyberfysisk system. Fokus på prototypeudvikling, netværksforbindelser og cloudinfrastruktur til industrielle automatiseringsløsninger i realtid.",
+        "DESCRIPTION_EXTENDED": "Udviklede en indlejret platform og tilhørende prototyper til Industri 4.0-anvendelser med fokus på systemarkitektur og funktionalitet. Designede og implementerede IoT-forbindelser med NB-IoT for at sikre pålidelig dataoverførsel fra industrielle sensorer. Udviklede og optimerede desuden cloudbaserede systemer til databehandling og lagring med Microsoft Azure for at forbedre skalerbarhed og effektivitet."
       },
-      "SOFTWARE_DEVELOPER": "Software Developer",
-      "SOFTWARE_ENGINEER": "Software Engineer",
-      "STUDENT_WORKER": "Studentermedhjaelper",
+      "SOFTWARE_DEVELOPER": "Softwareudvikler",
+      "SOFTWARE_ENGINEER": "Softwareingeniør",
+      "STUDENT_WORKER": "Studentermedhjælper",
       "TITLE": "Erhvervserfaring",
       "UR_FULL": {
-        "DESCRIPTION": "Arbejder som full-stack ingeniør med modernisering og vedligeholdelse af kritisk brugerrettet software til kollaborative robotter.",
-        "DESCRIPTION_EXTENDED": "Bidrager på tværs af arkitektur, implementering og release-kvalitet med fokus på effektiv udvikling og langsigtet vedligeholdelse.",
-        "LI_1": "Teknisk ansvar for centrale initiativer i brugergrænsefladen.",
-        "LI_2": "Migrering og modernisering af legacy-moduler.",
-        "LI_3": "Tværfagligt samarbejde med designere, QA og embedded teams.",
-        "LI_4": "Forbedringer af performance og stabilitet i produktionssoftware.",
-        "LI_5": "Forbedrede udvikler-workflows og testautomatisering.",
-        "LI_6": "Mentoring og vidensdeling i udviklingsteamet."
+        "DESCRIPTION": "Alsidig softwareingeniør med ansvar for den tekniske udvikling af PolyScope 5, forretningskritiske forbedringer for store kunder og driftssikkerhed for over 100.000 robotter i brug.",
+        "DESCRIPTION_EXTENDED": "Full-stack-udvikling på næste generations PolyScope X-platform med fokus på teamets planlægning og gennemførelse for at fastholde et omdømme præget af højeste kvalitet, integritet og gennemsigtighed.",
+        "LI_1": "Ledede et hold på fem udviklere med ansvar for tekniske strategier, sprint planlægning og samarbejde med store kunder.",
+        "LI_2": "Leverede otte softwareudgivelser i træk til tiden og inden for det aftalte omfang.",
+        "LI_3": "Designede og implementerede arkitekturer på tværs af softwarestakke med Java, Spring Boot, TypeScript, Angular, Docker og Quarkus.",
+        "LI_4": "Var med til at udvikle offentlige API'er, der gjorde integration lettere for brugere og tredjepartsudviklere.",
+        "LI_5": "Udarbejdede teknisk bevismateriale til sager om retslige forbud vedrørende immaterielle rettigheder.",
+        "LI_6": "Ydede 3rd-line support til store kunder, herunder internationale rejsebesøg."
       },
       "UR_PART_1": {
-        "DESCRIPTION": "Udviklede og vedligeholdt softwarefunktioner til robotternes brugerinteraktion i en stor produktionskodebase.",
-        "DESCRIPTION_EXTENDED": "Bidrog til feature-leverancer, fejlrettelser og kvalitetsinitiativer som en del af softwareteamet."
+        "DESCRIPTION": "Bidrog til udvikling og optimering af PolyScope 5, styrings- og programmeringsgrænsefladen til Universal Robots' kollaborative robotter. Arbejdede tæt sammen med teamet om at forbedre softwarearkitekturen, reducere teknisk gæld og tilføje ny funktionalitet for at sikre problemfri drift og integration i industriel automatisering.",
+        "DESCRIPTION_EXTENDED": "Optimerede softwarearkitekturen for at øge tilpasningsevnen og effektiviteten samt reducere teknisk gæld. Ledede migreringer af dependencies med Maven og forbedrede tredjepartsintegrationer med OSGi. Udviklede brugergrænsefladefunktionalitet i Swing, forbedrede CI/CD-pipelines med Jenkins og samarbejdede om fejlfinding for at sikre driftssikkerhed."
       }
     }
   },

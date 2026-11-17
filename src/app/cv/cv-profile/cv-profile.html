@@ -1,6 +1,6 @@
 <section>
-  <div class="flex flex-col md:flex-row md:items-center gap-6">
-    <div class="w-24 shrink-0 mx-auto md:mx-0 hidden print:block">
+  <div class="flex flex-col md:flex-row md:items-center gap-6 print:flex-row print:items-center">
+    <div class="w-20 shrink-0 mx-auto md:mx-0 hidden print:block print:mx-0">
       <img
         ngSrc="images/simon_portrait_ur.jpg"
         width="96"
@@ -10,7 +10,7 @@
         priority
       />
     </div>
-    <div class="w-full">
+    <div class="w-full print:w-auto print:min-w-0 print:flex-1">
       <h1 class="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
         Simon Holland Flarup
       </h1>
@@ -20,7 +20,7 @@
 
   <hr class="my-2" />
 
-  <div class="cv-grid-3col text-sm cv-text">
+  <div class="cv-grid-3col cv-profile-items text-sm cv-text">
     <app-cv-personal-item [icon]="'ionBalloonSharp'">
       <p>{{ age() }} {{ 'CV.AGE' | translate }}</p>
     </app-cv-personal-item>
@@ -43,4 +43,3 @@
     </app-cv-personal-item>
   </div>
 </section>
-
