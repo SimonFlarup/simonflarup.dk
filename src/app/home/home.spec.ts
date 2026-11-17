@@ -33,7 +33,7 @@ describe('Home', () => {
     expect(component.other[0]).toBe(volunteering);
     expect(other?.textContent).toContain('CV.OTHER.DRIVERS_LICENSE_VALUE');
     expect(other?.textContent).toContain('Glenten Antennelaug');
-    expect(other?.querySelector('a')?.getAttribute('href')).toBe('/cv');
+    expect(other?.querySelector('a')).toBeNull();
     expect(other?.querySelector('img')).toBeNull();
   });
 
