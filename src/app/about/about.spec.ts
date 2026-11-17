@@ -38,7 +38,9 @@ describe('About', () => {
   it('should preserve the biography, portrait, and detail groups', () => {
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelector('.about-headline')?.textContent).toContain('ABOUT.HEADLINE');
-    expect(element.querySelectorAll('.about-biography p')).toHaveLength(6);
+    const paragraphs = element.querySelectorAll('.about-biography p');
+    expect(paragraphs).toHaveLength(7);
+    expect(paragraphs[2].textContent).toContain('ABOUT.CONTENT.PROFESSIONAL_GROWTH');
     expect(element.querySelector('.about-portrait')?.getAttribute('alt'))
       .toBe('Portrait of Simon with an Universal Robots robot');
     expect(element.querySelectorAll('.about-details ul')).toHaveLength(3);
