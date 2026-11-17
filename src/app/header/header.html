@@ -19,12 +19,25 @@
   </div>
   <div class="header-controls">
     <div class="header-actions">
-    <button (click)="toggleDarkMode()" class="header-button header-surface">
-      {{ darkMode() ? '🌙 ' + ('HEADER.DARK' | translate) : '☀️ ' + ('HEADER.LIGHT' | translate) }}
-    </button>
-    <button (click)="toggleLanguage()" class="header-button header-surface">
-      {{ language() === 'en' ? '🇬🇧 English' : '🇩🇰 Dansk' }}
-    </button>
+      <button type="button" popovertarget="header-menu" class="header-menu-trigger header-button header-surface">
+        {{ 'HEADER.MENU' | translate }}
+        <ng-icon name="ionChevronDown" size="12" aria-hidden="true" />
+      </button>
+      <button type="button" (click)="toggleDarkMode()" class="header-theme-toggle header-button header-surface"
+              [attr.aria-label]="(darkMode() ? 'HEADER.SWITCH_TO_LIGHT' : 'HEADER.SWITCH_TO_DARK') | translate">
+        <ng-icon [name]="darkMode() ? 'ionMoonOutline' : 'ionSunnyOutline'" size="20" aria-hidden="true" />
+        <span class="header-control-label">{{ (darkMode() ? 'HEADER.DARK' : 'HEADER.LIGHT') | translate }}</span>
+      </button>
+      <button type="button" (click)="toggleLanguage()" class="header-language-toggle header-button header-surface"
+              [attr.aria-label]="(language() === 'en' ? 'HEADER.SWITCH_TO_DANISH' : 'HEADER.SWITCH_TO_ENGLISH') | translate">
+        <ng-icon name="ionGlobeOutline" size="20" aria-hidden="true" />
+        <span class="header-control-label">{{ language() === 'en' ? 'English' : 'Dansk' }}</span>
+      </button>
     </div>
   </div>
+  <nav id="header-menu" popover #mobileMenu class="header-menu"
+       [attr.aria-label]="'HEADER.MENU' | translate" (click)="mobileMenu.hidePopover()">
+    <a routerLink="/">{{ 'HOME.TITLE' | translate }}</a>
+    <a routerLink="/about">{{ 'ABOUT.TITLE' | translate }}</a>
+  </nav>
 </header>

@@ -2,10 +2,13 @@ import { Component, signal } from '@angular/core';
 import {RouterLink} from "@angular/router";
 import { NgOptimizedImage } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { ionChevronDown, ionGlobeOutline, ionMoonOutline, ionSunnyOutline } from '@ng-icons/ionicons';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, NgOptimizedImage, TranslatePipe],
+  imports: [RouterLink, NgOptimizedImage, TranslatePipe, NgIcon],
+  providers: [provideIcons({ ionChevronDown, ionGlobeOutline, ionMoonOutline, ionSunnyOutline })],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

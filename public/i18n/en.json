@@ -118,6 +118,11 @@
     }
   },
   "HEADER": {
+    "MENU": "Menu",
+    "SWITCH_TO_LIGHT": "Switch to light mode",
+    "SWITCH_TO_DARK": "Switch to dark mode",
+    "SWITCH_TO_DANISH": "Switch to Danish",
+    "SWITCH_TO_ENGLISH": "Switch to English",
     "DARK": "Dark",
     "LIGHT": "Light"
   },

@@ -118,6 +118,11 @@
     }
   },
   "HEADER": {
+    "MENU": "Menu",
+    "SWITCH_TO_LIGHT": "Skift til lyst tema",
+    "SWITCH_TO_DARK": "Skift til mørkt tema",
+    "SWITCH_TO_DANISH": "Skift til dansk",
+    "SWITCH_TO_ENGLISH": "Skift til engelsk",
     "DARK": "Mørk",
     "LIGHT": "Lys"
   },

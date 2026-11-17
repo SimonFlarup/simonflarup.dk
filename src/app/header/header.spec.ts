@@ -48,9 +48,9 @@ describe('Header', () => {
 
   it('should preserve navigation and preference controls', async () => {
     const element = fixture.nativeElement as HTMLElement;
-    expect(Array.from(element.querySelectorAll('nav a'), link => link.getAttribute('href')))
+    expect(Array.from(element.querySelectorAll('.header-nav a'), link => link.getAttribute('href')))
       .toEqual(['/', '/about']);
-    const buttons = element.querySelectorAll('button');
+    const buttons = element.querySelectorAll<HTMLButtonElement>('.header-theme-toggle, .header-language-toggle');
     expect(buttons).toHaveLength(2);
 
     const wasDarkMode = component.darkMode();
@@ -62,5 +62,17 @@ describe('Header', () => {
     buttons[1].click();
     await fixture.whenStable();
     expect(component.language()).toBe(previousLanguage === 'en' ? 'da' : 'en');
+  });
+
+  it('should connect the mobile Menu button to a dismissible navigation popover', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const trigger = element.querySelector('[popovertarget]');
+    const menu = element.querySelector('#header-menu');
+    expect(trigger?.getAttribute('popovertarget')).toBe(menu?.id);
+    expect(menu?.hasAttribute('popover')).toBe(true);
+    expect(Array.from(menu?.querySelectorAll('a') ?? [], link => link.getAttribute('href')))
+      .toEqual(['/', '/about']);
+    expect(element.querySelector('.header-theme-toggle')?.hasAttribute('aria-label')).toBe(true);
+    expect(element.querySelector('.header-language-toggle')?.hasAttribute('aria-label')).toBe(true);
   });
 });
