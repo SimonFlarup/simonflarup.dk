@@ -1,3 +1,33 @@
-p b {
-  color: #ef4444;
+@reference "../../styles.css";
+
+app-home .home-layout {
+  @apply flex flex-col;
+}
+
+app-home .home-headline {
+  @apply text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100;
+}
+
+app-home .home-intro {
+  @apply mt-6 text-base text-zinc-600 dark:text-zinc-400;
+}
+
+app-home .home-socials {
+  @apply text-zinc-500 transition mt-6 flex gap-6;
+}
+
+app-home .home-socials a {
+  @apply hover:text-zinc-600 dark:hover:text-zinc-300;
+}
+
+app-home .home-work {
+  @apply my-8 block;
+}
+
+app-home .home-section {
+  @apply mb-8 block;
+}
+
+app-home .home-cv-link {
+  @apply flex shrink-0 items-center gap-2 rounded-xl border border-zinc-200 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800;
 }

@@ -1,22 +1,22 @@
-<div class="flex flex-col">
+<div class="home-layout">
   <div>
-    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl xs:text-2xl">{{ 'HOME.HEADLINE' | translate }}</h1>
-    <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400" [innerHTML]=" 'HOME.INTRO' | translate "></p>
-    <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">{{ 'HOME.INTRO_MOTIVATION' | translate }}</p>
-    <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">{{ 'HOME.INTRO_ACTION' | translate }}</p>
-    <div class="text-zinc-500 dark:zinc-400 transition mt-6 flex gap-6">
-      <a class="hover:text-zinc-600 dark:hover:text-zinc-300" href="https://www.github.com/simonflarup"><ng-icon name="ionLogoGithub" size="24" /></a>
-      <a class="hover:text-zinc-600 dark:hover:text-zinc-300" href="https://www.linkedin.com/in/SimonFlarup"><ng-icon name="ionLogoLinkedin" size="24" /></a>
-      <a routerLink="/cv" [attr.aria-label]="'CV.TITLE' | translate" class="hover:text-zinc-600 dark:hover:text-zinc-300"><ng-icon name="ionDocumentText" size="24" /></a>
+    <h1 class="home-headline">{{ 'HOME.HEADLINE' | translate }}</h1>
+    <p class="home-intro" [innerHTML]=" 'HOME.INTRO' | translate "></p>
+    <p class="home-intro">{{ 'HOME.INTRO_MOTIVATION' | translate }}</p>
+    <p class="home-intro">{{ 'HOME.INTRO_ACTION' | translate }}</p>
+    <div class="home-socials">
+      <a href="https://www.github.com/simonflarup"><ng-icon name="ionLogoGithub" size="24" /></a>
+      <a href="https://www.linkedin.com/in/SimonFlarup"><ng-icon name="ionLogoLinkedin" size="24" /></a>
+      <a routerLink="/cv" [attr.aria-label]="'CV.TITLE' | translate"><ng-icon name="ionDocumentText" size="24" /></a>
     </div>
   </div>
   <app-image-row/>
-  <app-experience-list class="my-8 block" titleKey="CV.WORK.TITLE" [entries]="workExperience">
-    <a list-action routerLink="/cv" class="flex shrink-0 items-center gap-2 rounded-xl border border-zinc-200 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800">
+  <app-experience-list class="home-work" titleKey="CV.WORK.TITLE" [entries]="workExperience">
+    <a list-action routerLink="/cv" class="home-cv-link">
       <ng-icon name="ionDocumentText" size="20" aria-hidden="true" />
       {{ 'HOME.EXPERIENCE.VIEW_CV' | translate }}
     </a>
   </app-experience-list>
-  <app-experience-list class="mb-8 block" titleKey="CV.EDUCATION.TITLE" icon="ionSchoolOutline" [entries]="education" />
-  <app-experience-list class="mb-8 block" titleKey="CV.OTHER.TITLE" icon="ionPricetagOutline" [entries]="other" [showLogos]="false"/>
+  <app-experience-list class="home-section" titleKey="CV.EDUCATION.TITLE" icon="ionSchoolOutline" [entries]="education" />
+  <app-experience-list class="home-section" titleKey="CV.OTHER.TITLE" icon="ionPricetagOutline" [entries]="other" [showLogos]="false"/>
 </div>
