@@ -1,0 +1,60 @@
+<section class="rounded-2xl border border-zinc-200 p-4 text-zinc-600 sm:p-6 dark:border-zinc-800 dark:text-zinc-400">
+  <header class="mb-6 flex items-center justify-between gap-4">
+    <h2 class="flex items-center gap-3 text-xl font-semibold text-zinc-800 sm:text-2xl dark:text-zinc-100">
+      <ng-icon [name]="icon()" size="32" class="shrink-0 text-zinc-500" aria-hidden="true" />
+      {{ titleKey() | translate }}
+    </h2>
+    <ng-content select="[list-action]" />
+  </header>
+
+  <ol class="space-y-5">
+    @for (entry of entries(); track entry.company + entry.titleKey) {
+      <li>
+        <div class="flex items-center gap-4">
+          <div class="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-zinc-100 ring-1 ring-zinc-200 sm:size-16 dark:bg-zinc-800 dark:ring-zinc-700">
+            @if (entry.logo) {
+              <img [src]="entry.logo" alt="" width="40" height="40" loading="lazy" class="size-10 object-contain" />
+            } @else {
+              <ng-icon [name]="icon()" size="28" aria-hidden="true" />
+            }
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs text-zinc-500">{{ entry.startKey | translate }} &mdash; {{ entry.endKey | translate }}</p>
+            <h3 class="mt-1 text-sm font-semibold text-zinc-800 dark:text-zinc-100">{{ entry.titleKey | translate }}</h3>
+            <p class="mt-1 text-sm">{{ entry.company }}</p>
+          </div>
+        </div>
+
+        <div class="mt-4 ml-7 space-y-5 border-l-2 border-zinc-200 py-1 pl-4 text-sm leading-relaxed sm:ml-8 dark:border-zinc-800">
+          @if (entry.descriptionKey) {
+            <p class="italic">{{ entry.descriptionKey | translate }}</p>
+          }
+          @if (entry.descriptionSecondaryKey) {
+            <p class="italic">{{ entry.descriptionSecondaryKey | translate }}</p>
+          }
+          @if (entry.projectKeys?.length) {
+            <ul class="list-disc space-y-2 pl-4">
+              @for (project of entry.projectKeys; track project) {
+                <li>{{ project | translate }}</li>
+              }
+            </ul>
+          }
+          @if (entry.portfolio?.length) {
+            <div class="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">
+              @for (project of entry.portfolio; track project.title) {
+                <article class="min-w-0 md:pl-4">
+                  <img [src]="project.image" [alt]="project.title" loading="lazy" class="aspect-[4/3] w-full object-contain" />
+                  <h4 class="mt-2 text-lg font-semibold">{{ project.title }}</h4>
+                  <p>{{ project.descriptionKey | translate }}</p>
+                  <a [href]="project.href" class="underline underline-offset-2 transition hover:text-zinc-900 dark:hover:text-zinc-100">
+                    {{ 'HOME.EXPERIENCE.READ_MORE' | translate }}<span class="sr-only">: {{ project.title }}</span>
+                  </a>
+                </article>
+              }
+            </div>
+          }
+        </div>
+      </li>
+    }
+  </ol>
+</section>

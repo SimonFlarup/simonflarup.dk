@@ -122,6 +122,12 @@
     "LIGHT": "Lys"
   },
   "HOME": {
+    "EXPERIENCE": {
+      "VIEW_CV": "Se CV",
+      "READ_MORE": "Læs mere på universal-robots.com",
+      "POLYSCOPE_5": "Den velkendte platform til styring af kollaborative robotter.",
+      "POLYSCOPE_X": "Næste generations platform til styring af kollaborative robotter."
+    },
     "HEADLINE": "Passioneret softwareingeniør, udvikler værdifulde systemer som trives",
     "INTRO": "Jeg er <b>Simon</b>, civilingeniør med speciale i software engineering og bosat i <b>Odense på Fyn</b>. I øjeblikket beskæftiger jeg mig med udviklingen og vedligeholdelsen af software til brugerstyring af kollaborative robotter hos <b>Universal Robots</b>.",
     "INTRO_ACTION": "Tag et kig rundt eller besøg mine sociale profiler for at lære mere om mig.",

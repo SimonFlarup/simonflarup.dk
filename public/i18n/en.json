@@ -122,6 +122,12 @@
     "LIGHT": "Light"
   },
   "HOME": {
+    "EXPERIENCE": {
+      "VIEW_CV": "View CV",
+      "READ_MORE": "Read more at universal-robots.com",
+      "POLYSCOPE_5": "The established platform for controlling collaborative robots.",
+      "POLYSCOPE_X": "The next-generation platform for controlling collaborative robots."
+    },
     "HEADLINE": "Passionate Software Engineer, making impactful systems that thrives",
     "INTRO": "I'm <b>Simon</b> a passionate software engineer based in <b>Odense, Denmark</b>. I develop the current and next generation user interaction software for the collaborative robots by <b>Universal Robots</b>.",
     "INTRO_ACTION": "Take a look around or visit my social profiles to learn more about me.",
