@@ -1,12 +1,12 @@
 <main>
-  <div class="dark:bg-black bg-zinc-50 overflow-hidden" style="min-height:100vh">
-    <div class="flex justify-center lg:px-12">
-      <div class="flex flex-col w-full lg:max-w-7xl lg:px-12 px-2 md:px-4 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 gap-4" style="min-height:100vh">
-        <app-header class="print:hidden"/>
-        <div class="grow">
+  <div class="app-background">
+    <div class="app-layout">
+      <div class="app-container">
+        <app-header class="app-chrome"/>
+        <div class="app-content">
           <router-outlet />
         </div>
-        <app-footer class="print:hidden"/>
+        <app-footer class="app-footer"/>
       </div>
     </div>
   </div>
