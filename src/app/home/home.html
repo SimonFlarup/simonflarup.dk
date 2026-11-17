@@ -11,5 +11,10 @@
     </div>
   </div>
   <app-image-row/>
+  <app-experience-list class="my-8 block" titleKey="CV.WORK.TITLE" [entries]="workExperience">
+    <a list-action routerLink="/cv" class="flex shrink-0 items-center gap-2 rounded-xl border border-zinc-200 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800">
+      <ng-icon name="ionDocumentText" size="20" aria-hidden="true" />
+      {{ 'HOME.EXPERIENCE.VIEW_CV' | translate }}
+    </a>
+  </app-experience-list>
 </div>
-
