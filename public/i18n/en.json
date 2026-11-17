@@ -134,6 +134,12 @@
     "INTRO_MOTIVATION": "To me, software engineering is more than just shipping new features and fixing bugs. It's a fine balance of development velocity, quality assurance and system longevity.",
     "TITLE": "Home"
   },
+  "NOT_FOUND": {
+    "TITLE": "Page not found",
+    "HEADING": "I'm sorry, but we've lost our way",
+    "DESCRIPTION": "The page you are looking for does not exist or has been moved.",
+    "HOME_ACTION": "Back to Home"
+  },
   "PRIVACY_POLICY": {
     "TITLE": "Privacy Policy"
   }

@@ -18,8 +18,8 @@ describe('PageTitleStrategy', () => {
     TestBed.configureTestingModule({
       providers: [
         provideRouter([
-          ...routes.map(route => ({ ...route, component: TestPage })),
           { path: 'untitled', component: TestPage },
+          ...routes.map(route => ({ ...route, component: TestPage })),
         ]),
         { provide: TitleStrategy, useClass: PageTitleStrategy },
         provideTranslateService({ lang: 'en' }),
@@ -30,11 +30,13 @@ describe('PageTitleStrategy', () => {
       HOME: { TITLE: 'Home' },
       ABOUT: { TITLE: 'About' },
       CV: { TITLE: 'CV' },
+      NOT_FOUND: { TITLE: 'Page not found' },
     });
     translate.setTranslation('da', {
       HOME: { TITLE: 'Forside' },
       ABOUT: { TITLE: 'Om' },
       CV: { TITLE: 'CV' },
+      NOT_FOUND: { TITLE: 'Siden blev ikke fundet' },
     });
   });
 
@@ -66,5 +68,12 @@ describe('PageTitleStrategy', () => {
     await harness.navigateByUrl('/untitled');
     await firstValueFrom(TestBed.inject(TranslateService).use('da'));
     expect(document.title).toBe('Simon Holland Flarup');
+  });
+
+  it('sets and translates the title for an unknown route', async () => {
+    await RouterTestingHarness.create('/missing/nested/page');
+    expect(document.title).toBe('Page not found | Simon Holland Flarup');
+    await firstValueFrom(TestBed.inject(TranslateService).use('da'));
+    expect(document.title).toBe('Siden blev ikke fundet | Simon Holland Flarup');
   });
 });

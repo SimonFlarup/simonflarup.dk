@@ -134,6 +134,12 @@
     "INTRO_MOTIVATION": "For mig er softwareudvikling mere end at udgive nye funktioner og fejlrettelser. Det er en fin balancegang mellem udviklingsfremdrift, kvalitet– og fremtidssikring.",
     "TITLE": "Forside"
   },
+  "NOT_FOUND": {
+    "TITLE": "Siden blev ikke fundet",
+    "HEADING": "Det beklager jeg, men vi er faret vild",
+    "DESCRIPTION": "Siden, du leder efter, findes ikke eller er blevet flyttet.",
+    "HOME_ACTION": "Tilbage til forsiden"
+  },
   "PRIVACY_POLICY": {
     "TITLE": "Privatlivspolitik"
   }
